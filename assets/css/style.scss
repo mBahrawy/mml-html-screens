@@ -1,0 +1,329 @@
+/*==================================================
+=                     Get theme variables             =
+==================================================*/
+
+@import 'theme-options';
+/*==================================================
+=                     Global             =
+==================================================*/
+
+body {
+  background-color: #FAFBFD;
+  overflow-x: hidden;
+  a,
+  button {
+    text-decoration: none !important;
+    @include transition(all, 0.15s, ease);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  input,
+  textarea {
+    color: $dark-blue;
+    font-weight: normal;
+    font-family: $open-sans, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+  }
+}
+
+.box-container {
+  margin: 0 150px;
+}
+
+/*============== Heading =================*/
+
+h1 {
+  font-size: 48px !important;
+  line-height: 58px;
+  &.banner {
+    font-size: 78px;
+    line-height: 91px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/*============== Paragraphs =================*/
+
+.caption {
+  color: $dim-grey;
+  font-family: $open-sans, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 12px;
+}
+
+p {
+  color: $dim-grey;
+  font-weight: normal;
+  font-family: $open-sans, Arial, Helvetica, sans-serif;
+  &.body-large {
+    color: $dark-blue;
+    font-size: 20px;
+    line-height: 34px;
+  }
+  &.body-small {
+    color: $dim-grey;
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+
+/*============== Buttons =================*/
+
+.btn {
+  border: none;
+  padding: 10px 25px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-decoration: underline !important;
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+  &.btn-primary {
+    color: #fff;
+    background-color: $main-color;
+    &:hover {
+      background-color: $main-color-sub-1;
+    }
+    &:focus {
+      background-color: $main-color-sub-2;
+    }
+    &.disabled,
+    &:disabled {
+      background-color: #c5c5c5;
+    }
+  }
+  &.btn-secondary {
+    color: $dark-blue;
+    background-color: $sec-color;
+    &:hover {
+      background-color: $sec-color-sub-1;
+    }
+    &:focus {
+      background-color: $sec-color-sub-2;
+    }
+    &.disabled,
+    &:disabled {
+      background-color: #c5c5c5;
+    }
+  }
+  &.btn-dark {
+    color: #fff;
+    background-color: $dark-blue;
+    &:hover {
+      background-color: $dark-blue-sub-1;
+    }
+    &:focus {
+      background-color: $dark-blue-sub-2;
+    }
+    &.disabled,
+    &:disabled {
+      background-color: #c5c5c5;
+    }
+  }
+  &.btn-light {
+    color: $dark-blue;
+    background-color: #fff;
+    &:hover {}
+    &:focus {
+      background-color: #c5c5c5;
+    }
+    &.disabled,
+    &:disabled {
+      color: #fff;
+      background-color: #c5c5c5;
+    }
+  }
+  &.btn-round {
+    @include border-radius(500px);
+    color: #fff;
+    background-color: $dark-blue;
+    &:hover {
+      background-color: $dark-blue-sub-1;
+    }
+    &:focus {
+      background-color: $dark-blue-sub-2;
+    }
+    &.disabled,
+    &:disabled {
+      background-color: #c5c5c5;
+    }
+  }
+}
+
+/*============== TextBoxes =================*/
+
+.textbox {
+  box-sizing: border-box;
+  border: none;
+  padding: 6px 10px 5px 12px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: $dim-grey;
+  width: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &:hover {
+    border: 1px solid #CED0DA;
+  }
+  &:focus {
+    border: 1px solid $main-color;
+    outline: none;
+    caret-color: $main-color;
+  }
+  &.alert {
+    border: 1px solid #ED1C24;
+  }
+  &.ok {
+    border: 1px solid #23B99E;
+  }
+  &.disabled,
+  &:disabled {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/*==================================================
+=                     Navbars             =
+==================================================*/
+
+@import 'navbar';
+/*==================================================
+=                  Used Objects             =
+==================================================*/
+
+.underlined-heading {
+  /*  margin: 0 0 68px;
+    h3 {
+        .world-water-day {
+            color: $dark-blue;
+            font-family: $open-sans;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 36px;
+            display: block;
+        }
+    }
+    span {
+        display: block;
+        width: 60px;
+        height: 5px;
+        background-color: $main-color;
+    }*/
+}
+
+.separator {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 24px auto;
+  width: 80%;
+  display: block;
+}
+
+form.search-box-group {
+  position: relative;
+  input[type="text"] {
+    width: 100%;
+  }
+  button {
+    color: #989898;
+    position: absolute;
+    top: 9px;
+    right: 3px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+/*==================================================
+=                     Sections                     =
+==================================================*/
+
+#wrapper {
+  margin-top: 110px;
+}
+
+/*======== Announce section ========*/
+
+#announce {}
+
+/*======== Hero section ========*/
+
+#hero {
+   /* 
+    min-height: 600px;
+    background-image: url('../img/girl.JPG');
+    background-size: cover;
+    */
+}
+
+/*======== Subscribe section ========*/
+
+/*==================================================
+=             Footer Section             =
+==================================================*/
+
+footer {}
+
+/*==================================================
+=             Media Queries             =
+==================================================*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {}
+
+/* Custom */
+
+@media only screen and (max-width: 320px) {}

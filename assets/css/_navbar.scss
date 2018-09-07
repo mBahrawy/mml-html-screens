@@ -1,0 +1,292 @@
+    /*========== For Grey Navbar =================*/
+
+    #grey-navbar {
+        height: 42px;
+        width: 100%;
+        padding: 0px 10%;
+        box-sizing: border-box;
+        background-color: #555;
+        a {
+            font-family: $flama, helvetica, Arial, sans-serif;
+            font-size: 12px;
+        }
+        div.col-sm-8,
+        div.col-sm-4 {
+            padding: 0;
+        }
+        nav {
+            ul {
+                list-style: none;
+                margin: 13px 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    a {
+                        color: #fff;
+                        border-top: 5px solid transparent;
+                        padding: 10px 18px 0;
+                        margin-right: 8px;
+                        line-height: 0;
+                        &.active {
+                            border-top: 5px solid #fff;
+                        }
+                        &:hover {
+                            text-decoration: underline !important;
+                        }
+                    }
+                }
+            }
+        }
+        .icon-group {
+            float: right;
+            div {
+                display: inline-block;
+                padding: 10px 0 0 26px;
+                a {
+                    color: #fff
+                }
+            }
+            .social-media {
+                a {
+                    border-bottom: 2px solid transparent;
+                    padding-bottom: 3px;
+                    margin-left: 18px;
+                    &:hover {
+                        border-bottom: 3px solid #fff;
+                    }
+                }
+            }
+            .languages {
+                color: #fff;
+                a {
+                    border-bottom: 2px solid transparent;
+                    padding-bottom: 3px;
+                }
+                a.active {
+                    border-bottom: 3px solid #fff;
+                }
+            }
+        }
+    }
+
+    /*========== Main nav  =================*/
+
+    #main-nav-wrapper {
+        
+        box-sizing: border-box;
+        height: 76px;
+        width: 100%;
+        border: 1px solid #E9E9E9;
+        opacity: 0.95;
+        background-color: #FFFFFF;
+        padding: 0 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+
+
+
+
+
+
+        .site-logo {
+            flex: 0 0 77px;
+            a {
+                background-image: url('../img/sprite-sheet.png');
+                height: 36px;
+                width: 77px;
+                display: block;
+                background-position: 0px -45px;
+                background-size: 212px;
+            }
+        }
+
+        .nav-buttons {
+            flex: 0 0 px;    /* don't grow, don't shrink, stay fixed at 230px */
+
+
+            a,button{
+                color:$light-grey;
+                margin-right: 12px;
+            }
+            a.sign-up{
+                padding: 8px 11px;
+                font-size: 13px;
+                line-height: 2;
+                color:#fff;
+                margin: 0 25px;
+            }
+            form,
+            a { 
+                display: inline;
+            }
+            input[type='text'] {
+                display: none;
+            }
+            button {
+                border: none;
+                background: none;
+                margin: 8px 0 0 7px;
+                padding: 0;
+            }
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+
+
+
+        .nav-links-wrapper {
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    font-family: $Graphik;
+                    font-size: 13px;
+                    font-weight: 800;
+                    line-height: 21px;
+                    text-align: center;
+                    padding: 0 12px;
+                    height: 42px;
+                    padding-top: 28px;
+                    border-bottom: 4px solid transparent;
+                    img {
+                        padding: 0 0 0 5px;
+                        width: 9px;
+                    }
+                }
+                li.active {
+                    color: #30B7EA;
+                    border-bottom: 4px solid #00AEEF;
+                }
+            }
+        }
+  
+        div{
+            padding: 0;
+        }
+    }
+
+    .main-nav {
+        display: block;
+        background-color: #fff;
+    }
+
+    .toggle-mobile-nav-btn {
+        display: none !important;
+
+
+    }
+
+    
+
+
+
+    /* Large Devices, Wide Screens */
+
+    @media only screen and (max-width: 1200px) {
+     /*========== For Main Navbar =================*/
+        #grey-navbar {
+            padding: 0px 5%;
+        }
+    }
+
+    /* Special breakboint for nav */
+
+    @media only screen and (max-width: 1070px) {
+
+        .main-nav {
+            display: none;
+        }
+        .toggle-mobile-nav-btn {
+            display: inline-block !important;
+            width: 12px;
+
+
+            &.collabsed{
+                .bars{
+                    display: block;
+                    color:$light-grey;
+                }
+                .x{
+                    display: none;
+                }
+    
+            }
+
+            &.opend{
+               .bars{
+                    display: none;
+                }
+                .x{
+                    display: block;
+                }
+
+    
+            
+        }
+
+        }
+        .nav-search{
+          //  display: none;
+        }
+    }
+
+
+    @media only screen and (max-width: 992px) {
+     /*========== For Main Navbar =================*/
+     #grey-navbar {
+        padding: 0px 0;
+
+        nav{
+            ul{
+                li{
+                    a{
+                        padding: 10px 8px 0;  
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+    }
+
+
+
+
+    
+    /* Small Devices, Tablets */
+
+    @media only screen and (max-width: 768px) {
+        /*========== For Grey Navbar =================*/
+        #grey-navbar {
+            display: none;
+        }
+        /*========== For Main Navbar =================*/
+        #main-nav-wrapper {
+            height: 51px;
+        }
+        #main-nav {
+            line-height: 0;
+            text-align: center;
+        }
+        #main-menu {
+            display: block;
+        }
+    }
+
+    /* Extra Small Devices, Phones */
+
+    @media only screen and (max-width: 480px) {}
+
+    /* Custom, iPhone Retina */
+
+    @media only screen and (max-width: 320px) {}

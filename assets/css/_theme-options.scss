@@ -1,0 +1,78 @@
+/*==================================================
+=                     Colors             =
+==================================================*/
+$main-color: rgba(0, 174, 239, 0.77);
+$main-color-sub-1:#82D3F2;
+$main-color-sub-2:#2DA9D8;
+$active-nav-item-underlined: #00AEEF;
+
+$sec-color:#F6BE00;
+$sec-color-sub-1:#F9D866;
+$sec-color-sub-2:#E3B001;
+
+
+$dark-blue:#1D2530;
+$dark-blue-sub-1:#777C82;
+$dark-blue-sub-2:#1B232D;
+
+$light-blue:#F1F4F8;
+
+$dim-grey:#4D5A6B;
+$light-grey:#B6B6B6;
+$base-grey:#F4F6F9;
+
+/*==================================================
+=                     Fonts             =
+==================================================*/
+
+  /*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+
+  */
+
+$open-sans : 'Open Sans';
+$lato : 'Lato';
+
+
+@font-face {
+    font-family: "meta-serf-pro";
+    src: url("../fonts/MetaSerifPro/MetaSerifPro-Medium.woff2") format('woff2'), url("../fonts/MetaSerifPro/MetaSerifPro-Black.woff") format('woff');
+}
+$metaSerfPro : 'meta-serf-pro';
+
+@font-face {
+    font-family: "graphic";
+    src: url("../fonts/Graphik/Graphik-Regular.woff2") format('woff2'), url("../fonts/Graphik/Graphik-Regular.woff") format('woff');
+}
+
+$Graphik: 'graphic';
+
+@font-face {
+    font-family: 'Flama-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Flama-Bold'), url('../fonts/Flama/Flama-Bold.woff') format('woff');
+    }
+
+$flama :'Flama-Bold';
+
+/*==================================================
+=                     Mixins             =
+==================================================*/
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+
+}
+
+
+@mixin transition ($property, $time, $animation) {
+  -moz-transition: $property $time $animation;
+  -ms-transition: $property $time $animation;
+  -webkit-transition: $property $time $animation;
+  -o-transition: $property $time $animation;
+}
