@@ -78,7 +78,7 @@ font-family: 'Lato', sans-serif;
     background-color: transparent !important;
     padding: 0 !important; }
     .sm-clean li a {
-      line-height: 49px !important; }
+      }
       .sm-clean li a.active {
         border-bottom: 4px solid #00AEEF;
         color: #00AEEF !important; }
@@ -103,7 +103,8 @@ font-family: 'Lato', sans-serif;
   border-radius: 0px;
   display: block; }
   .sm-clean a {
-    font-weight: bold !important; }
+    
+   }
     .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active {
       padding: 13px 20px;
       /* make room for the toggle button (sub indicator) */

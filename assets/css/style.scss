@@ -16,7 +16,7 @@ body {
     @include transition(all, 0.15s, ease);
   }
   h1,
-  h2,
+  h2, 
   h3,
   h4,
   h5,
@@ -25,7 +25,12 @@ body {
   span,
   a,
   input,
-  textarea {
+  textarea,
+  label,
+  select,
+  span,
+  small,
+  button{
     color: $dark-blue;
     font-weight: normal;
     font-family: $open-sans, Arial, Helvetica, sans-serif;
@@ -110,11 +115,15 @@ p {
   text-align: center;
   margin-bottom: 10px;
   display: inline-block;
-  text-decoration: underline !important;
+  text-decoration: none !important;
+  @include border-radius(500px);
+
+
   svg {
     width: 100px;
     height: 100px;
   }
+
   &.btn-primary {
     color: #fff;
     background-color: $main-color;
@@ -275,26 +284,27 @@ form.search-box-group {
 }
 
 /*==================================================
-=                     Sections                     =
+=                     Main wrapper                     =
 ==================================================*/
 
 #wrapper {
-  margin-top: 110px;
+  margin-top: 70px;
 }
 
-/*======== Announce section ========*/
 
-#announce {}
+/*==================================================
+=        New service provider registration             =
+==================================================*/
+
+@import 'service-provider-registration';
+
+
+
 
 /*======== Hero section ========*/
 
-#hero {
-   /* 
-    min-height: 600px;
-    background-image: url('../img/girl.JPG');
-    background-size: cover;
-    */
-}
+@import 'hero';
+
 
 /*======== Subscribe section ========*/
 
@@ -302,7 +312,7 @@ form.search-box-group {
 =             Footer Section             =
 ==================================================*/
 
-footer {}
+@import 'footer'; 
 
 /*==================================================
 =             Media Queries             =
