@@ -58,7 +58,7 @@ $sm-clean__desktop-vp:									1070px !default;		// switch from collapsible to d
 		
 			li {
 				a {
-					line-height: 49px !important;
+					line-height: 49px;
 					&.active {
 						border-bottom: 4px solid $active-nav-item-underlined;
 						color: $active-nav-item-underlined !important;
@@ -265,7 +265,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// Main menu items
 	a {
-        font-weight: bold !important;
+      //  font-weight: bold !important;
 
 		&,
 		&:hover,

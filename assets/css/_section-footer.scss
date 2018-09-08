@@ -1,0 +1,132 @@
+body {
+  .container {
+    margin: auto;
+  }
+}
+
+footer {
+  .footer-site-logo {
+    width: 200px;
+    height: 35px;
+    background-image: url('../img/logo2.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    margin: 5px 0 25px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  a,
+  h3,
+  h4,
+  p,
+  small,
+  span {
+    color: #d5d3d4;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 5px 0 20px;
+    line-height: 20px;
+
+    small {
+      font-size: 11px;
+      display: block;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        line-height: 22px;
+
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.soical-links,
+    &.app-links {
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &.app-links {
+
+      h4,
+      ul {
+        display: inline-block;
+      }
+
+      h4 {
+        margin-right: 20px;
+      }
+
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  form {
+    input[type="email"] {
+      @include border-radius(500px);
+      font-size: 12px;
+    }
+
+    button {
+      background-color: #6fb0cf !important;
+      color: #ffffff !important;
+      font-weight: 600;
+      @include border-radius(500px);
+      height: 38px;
+      top: -0px !important;
+      font-size: 14px;
+      padding: 0 16px;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  .copy-rights {
+    padding: 80px 0 20px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0a0a0a+0,09263d+100 */
+  background: rgb(10, 10, 10);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(10, 10, 10, 1) 0%, rgba(9, 38, 61, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(10, 10, 10, 1) 0%, rgba(9, 38, 61, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(10, 10, 10, 1) 0%, rgba(9, 38, 61, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a0a0a', endColorstr='#09263d', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  z-index: 1;
+  position: relative;
+  padding-top: 250px;
+
+  .curve {
+    position: absolute;
+    top: -190px;
+  }
+}

@@ -1,5 +1,5 @@
 
-#register-form-container {
+#register-form-container , .content-wrapper{
   margin: auto;
   text-align: left;
 
@@ -10,7 +10,7 @@
     background-color: #fff;
     width: 100%;
     padding: 50px;
-    border-radius: 4px;
+    @include border-radius(4px);
     box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
     -webkit-box-shadow: 0 18px 50px -21px rgba(0, 0, 0, 0.62);
     -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
