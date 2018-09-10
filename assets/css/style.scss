@@ -22,7 +22,7 @@
 
 @import 'page-service-provider-registration';
 @import 'page-service-provider-login';
-
+@import 'page-service-provider-dashboard';
 
 /*==================================================
 =                     Sections                     =
@@ -32,6 +32,12 @@
 @import 'section-hero'; // ===== Hero section ========
 @import 'section-footer'; // ===== Footer section ========
  
+/*==================================================
+=                     Modules                     =
+==================================================*/
+
+@import 'module-responsive-tabs';
+
 /*==================================================
 =                   Media Queries                  =
 ==================================================*/

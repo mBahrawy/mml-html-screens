@@ -1,0 +1,227 @@
+#user-quick-panel {
+  .user-info {
+    border-right: 1px solid #d7d7d7;
+
+    img {
+      border-radius: 500px;
+      width: 110px;
+      float: left;
+    }
+
+    div {
+      float: left;
+      box-sizing: border-box;
+      padding: 0 0 0 20px;
+
+      h4 {
+        margin: 0 0 5px;
+        ;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0 0 10px !important;
+        padding: 0;
+
+        li {
+          font-size: 13px;
+          line-height: 18px;
+        }
+
+        margin-bottom: 20px;
+      }
+
+      a.btn {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .summary-info {
+    ul {
+      margin: 1px 5px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        line-height: 30px;
+        font-size: 14px;
+
+        svg {
+          min-width: 20px;
+          margin-right: 5px;
+          color: #317aaa;
+        }
+      }
+    }
+  }
+}
+
+#dashboard-container {
+  .content {
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    padding: 50px 5px;
+    overflow: hidden;
+
+    .wide-head {
+      h3 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .in-progress {
+    .row {
+      padding: 10px 30px;
+      border-bottom: dashed 3px #ddd;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(2n) {
+        background-color: rgba(165, 206, 255, 0.1);
+      }
+
+      .order-info {
+        div {
+          border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+          padding-bottom: 20px;
+
+          h4 {
+            color: #474747;
+            font-size: 18px;
+            margin-bottom: 4px;
+            font-weight: 200;
+            margin-top: 15px;
+          }
+
+          p {
+            margin: 0 0 2px 20px;
+            color: #3c3c3c;
+            font-size: 14px;
+
+            span {
+              font-style: italic;
+              color: #2c7ba8;
+            }
+          }
+
+          ul {
+            margin: 0;
+
+            li {
+              line-height: 18px;
+              font-size: 14px;
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+            padding: 20px 0 12px;
+          }
+        }
+
+        div.d {
+          display: flex;
+
+          div {
+            border-bottom: none;
+          }
+
+          div.info,
+          div.links {
+            flex-basis: 50%;
+          }
+
+          div.info {
+            h4:first-child {
+              margin-top: 0;
+            }
+
+            border-right: 1px solid rgba(221, 221, 221, 0.48);
+          }
+
+          div.links {
+            padding: 20px 30px 0;
+            box-sizing: border-box;
+
+            a {
+              display: inline-table;
+            }
+          }
+        }
+      }
+
+      .order-location {
+        padding-top: 20px;
+
+        h4 {
+          margin-top: 10px;
+          font-size: 14px;
+
+          svg {
+            color: #ff8f60;
+          }
+        }
+      }
+    }
+  }
+
+ .pending{
+        div.col-md-3,.col-md-2,.col-md-4{
+            margin: 28px 0;
+
+            &:not(:last-child){
+            
+            border-right: 1px solid rgba(221,221,221,0.48);
+            }
+            &:not(:first-child){
+                            padding-left: 30px;
+                box-sizing: border-box;
+            }
+        }
+        
+        .order-info{
+            h4{
+                
+                font-size: 14px !important;
+            }
+            p,li{
+                font-size: 13px !important;
+            }
+            .d{
+                .info , .links{
+                   border-right :none !important;
+                    flex-basis: 100% !important;
+                }
+                .links{
+                    padding: 20px 0 !important;
+                }
+                padding: 0 ;
+            }
+            
+            .links{
+                a{
+                    font-size: 12px;
+                    padding: 8px 16px;
+                    display: block !important;
+                    svg{
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .finished{
+      .row{
+          opacity: 0.7;
+      }
+  }
+
+}

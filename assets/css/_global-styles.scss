@@ -1,6 +1,6 @@
 
 body {
-  background-color: #FAFBFD;
+  background-color: #fff;
   overflow-x: hidden;
   a,
   button {
@@ -16,6 +16,7 @@ body {
   p,
   span,
   a,
+  li,
   input,
   textarea,
   label,
@@ -138,11 +139,14 @@ p {
   color:#fff;
 }
 
-
-  svg {
-    width: 100px;
-    height: 100px;
-  }
+&.btn-default{
+  background-color: #dadada;
+  color: #333333;
+}
+&.btn-small{
+  padding: 5px 14px;
+  font-size: 12px;
+}
 
   &.btn-primary {
     color: #fff;
@@ -273,6 +277,28 @@ div.button-group{
 /*==================================================
 =                  Used Objects             =
 ==================================================*/
+
+
+
+.wide-head {
+  margin: -55px -23px -50px;
+  padding: 1px 23px 50px;
+}
+
+.blue-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c6bb1+0,1ba9be+100 */
+  background: rgb(44, 107, 177);
+  /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(44, 107, 177, 1) 0%, rgba(27, 169, 190, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(44, 107, 177, 1) 0%, rgba(27, 169, 190, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(44, 107, 177, 1) 0%, rgba(27, 169, 190, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c6bb1', endColorstr='#1ba9be', GradientType=1);
+  /* IE6-9 */
+}
+
 
 .underlined-heading {
   /*  margin: 0 0 68px;

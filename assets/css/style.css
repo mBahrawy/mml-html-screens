@@ -30,7 +30,7 @@ font-family: 'Lato', sans-serif;
 =                     Global             =
 ==================================================*/
 body {
-  background-color: #FAFBFD;
+  background-color: #fff;
   overflow-x: hidden; }
   body a,
   body button {
@@ -48,6 +48,7 @@ body {
   body p,
   body span,
   body a,
+  body li,
   body input,
   body textarea,
   body label,
@@ -145,9 +146,12 @@ p {
   .btn.btn-orange {
     background-color: #ff8f60;
     color: #fff; }
-  .btn svg {
-    width: 100px;
-    height: 100px; }
+  .btn.btn-default {
+    background-color: #dadada;
+    color: #333333; }
+  .btn.btn-small {
+    padding: 5px 14px;
+    font-size: 12px; }
   .btn.btn-primary {
     color: #fff;
     background-color: rgba(0, 174, 239, 0.77); }
@@ -237,6 +241,23 @@ div.button-group {
 /*==================================================
 =                  Used Objects             =
 ==================================================*/
+.wide-head {
+  margin: -55px -23px -50px;
+  padding: 1px 23px 50px; }
+
+.blue-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c6bb1+0,1ba9be+100 */
+  background: #2c6bb1;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #2c6bb1 0%, #1ba9be 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #2c6bb1 0%, #1ba9be 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #2c6bb1 0%, #1ba9be 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c6bb1', endColorstr='#1ba9be', GradientType=1);
+  /* IE6-9 */ }
+
 .underlined-heading {
   /*  margin: 0 0 68px;
     h3 {
@@ -355,6 +376,21 @@ form.search-box-group {
       border-bottom: 4px solid #00AEEF; }
   #main-nav-wrapper div {
     padding: 0; }
+  #main-nav-wrapper a.has-image {
+    padding-right: 70px !important;
+    position: relative; }
+    #main-nav-wrapper a.has-image:before {
+      content: "|";
+      padding-right: 22px;
+      color: #a6a6a6; }
+    #main-nav-wrapper a.has-image img {
+      padding: 0 !important;
+      position: absolute;
+      top: 20px;
+      right: 12px;
+      z-index: 2;
+      width: 40px !important;
+      border-radius: 30px; }
 
 .main-nav {
   display: block;
@@ -421,7 +457,7 @@ body .light-curves {
 #register-form-container, .content-wrapper {
   margin: auto;
   text-align: left; }
-  #register-form-container div.form-content, .content-wrapper div.form-content {
+  #register-form-container div.form-content, #register-form-container div.content, .content-wrapper div.form-content, .content-wrapper div.content {
     text-align: left;
     background-color: #fff;
     width: 100%;
@@ -434,43 +470,49 @@ body .light-curves {
     -webkit-box-shadow: 0 18px 50px -21px rgba(0, 0, 0, 0.62);
     -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
     -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59); }
-    #register-form-container div.form-content .step, .content-wrapper div.form-content .step {
+    #register-form-container div.form-content .step, #register-form-container div.content .step, .content-wrapper div.form-content .step, .content-wrapper div.content .step {
       margin: 20px 7%; }
-      #register-form-container div.form-content .step .input-field, .content-wrapper div.form-content .step .input-field {
+      #register-form-container div.form-content .step .input-field, #register-form-container div.content .step .input-field, .content-wrapper div.form-content .step .input-field, .content-wrapper div.content .step .input-field {
         position: relative;
         margin-bottom: 10px; }
-        #register-form-container div.form-content .step .input-field label, .content-wrapper div.form-content .step .input-field label {
+        #register-form-container div.form-content .step .input-field label, #register-form-container div.content .step .input-field label, .content-wrapper div.form-content .step .input-field label, .content-wrapper div.content .step .input-field label {
           display: none;
           position: absolute;
           top: 20px;
           left: 40px;
           font-size: 15px;
           color: #cacaca; }
-          #register-form-container div.form-content .step .input-field label.active, .content-wrapper div.form-content .step .input-field label.active {
+          #register-form-container div.form-content .step .input-field label.active, #register-form-container div.content .step .input-field label.active, .content-wrapper div.form-content .step .input-field label.active, .content-wrapper div.content .step .input-field label.active {
             display: block;
             top: 5px;
             color: #585858;
             font-size: 10px;
             font-weight: 600; }
-        #register-form-container div.form-content .step .input-field svg, .content-wrapper div.form-content .step .input-field svg {
+        #register-form-container div.form-content .step .input-field svg, #register-form-container div.content .step .input-field svg, .content-wrapper div.form-content .step .input-field svg, .content-wrapper div.content .step .input-field svg {
           color: #5c85be;
           position: absolute;
           font-size: 18px;
           top: 18px;
           left: 12px; }
         #register-form-container div.form-content .step .input-field input,
-        #register-form-container div.form-content .step .input-field textarea, .content-wrapper div.form-content .step .input-field input,
-        .content-wrapper div.form-content .step .input-field textarea {
+        #register-form-container div.form-content .step .input-field textarea, #register-form-container div.content .step .input-field input,
+        #register-form-container div.content .step .input-field textarea, .content-wrapper div.form-content .step .input-field input,
+        .content-wrapper div.form-content .step .input-field textarea, .content-wrapper div.content .step .input-field input,
+        .content-wrapper div.content .step .input-field textarea {
           width: 100%;
           border: none;
           padding: 13px 5px 5px 15px; }
-        #register-form-container div.form-content .step .input-field textarea, .content-wrapper div.form-content .step .input-field textarea {
+        #register-form-container div.form-content .step .input-field textarea, #register-form-container div.content .step .input-field textarea, .content-wrapper div.form-content .step .input-field textarea, .content-wrapper div.content .step .input-field textarea {
           min-height: 150px; }
         #register-form-container div.form-content .step .input-field input,
         #register-form-container div.form-content .step .input-field textarea,
-        #register-form-container div.form-content .step .input-field select, .content-wrapper div.form-content .step .input-field input,
+        #register-form-container div.form-content .step .input-field select, #register-form-container div.content .step .input-field input,
+        #register-form-container div.content .step .input-field textarea,
+        #register-form-container div.content .step .input-field select, .content-wrapper div.form-content .step .input-field input,
         .content-wrapper div.form-content .step .input-field textarea,
-        .content-wrapper div.form-content .step .input-field select {
+        .content-wrapper div.form-content .step .input-field select, .content-wrapper div.content .step .input-field input,
+        .content-wrapper div.content .step .input-field textarea,
+        .content-wrapper div.content .step .input-field select {
           height: 50px;
           border: none;
           border-bottom: 1px solid rgba(204, 204, 204, 0.52);
@@ -478,83 +520,99 @@ body .light-curves {
           color: #3e3e3e; }
           #register-form-container div.form-content .step .input-field input::placeholder,
           #register-form-container div.form-content .step .input-field textarea::placeholder,
-          #register-form-container div.form-content .step .input-field select::placeholder, .content-wrapper div.form-content .step .input-field input::placeholder,
+          #register-form-container div.form-content .step .input-field select::placeholder, #register-form-container div.content .step .input-field input::placeholder,
+          #register-form-container div.content .step .input-field textarea::placeholder,
+          #register-form-container div.content .step .input-field select::placeholder, .content-wrapper div.form-content .step .input-field input::placeholder,
           .content-wrapper div.form-content .step .input-field textarea::placeholder,
-          .content-wrapper div.form-content .step .input-field select::placeholder {
+          .content-wrapper div.form-content .step .input-field select::placeholder, .content-wrapper div.content .step .input-field input::placeholder,
+          .content-wrapper div.content .step .input-field textarea::placeholder,
+          .content-wrapper div.content .step .input-field select::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #9c9c9c;
             opacity: 1;
             /* Firefox */ }
           #register-form-container div.form-content .step .input-field input:-ms-input-placeholder,
           #register-form-container div.form-content .step .input-field textarea:-ms-input-placeholder,
-          #register-form-container div.form-content .step .input-field select:-ms-input-placeholder, .content-wrapper div.form-content .step .input-field input:-ms-input-placeholder,
+          #register-form-container div.form-content .step .input-field select:-ms-input-placeholder, #register-form-container div.content .step .input-field input:-ms-input-placeholder,
+          #register-form-container div.content .step .input-field textarea:-ms-input-placeholder,
+          #register-form-container div.content .step .input-field select:-ms-input-placeholder, .content-wrapper div.form-content .step .input-field input:-ms-input-placeholder,
           .content-wrapper div.form-content .step .input-field textarea:-ms-input-placeholder,
-          .content-wrapper div.form-content .step .input-field select:-ms-input-placeholder {
+          .content-wrapper div.form-content .step .input-field select:-ms-input-placeholder, .content-wrapper div.content .step .input-field input:-ms-input-placeholder,
+          .content-wrapper div.content .step .input-field textarea:-ms-input-placeholder,
+          .content-wrapper div.content .step .input-field select:-ms-input-placeholder {
             /* Internet Explorer 10-11 */
             color: #dbdbdb; }
           #register-form-container div.form-content .step .input-field input::-ms-input-placeholder,
           #register-form-container div.form-content .step .input-field textarea::-ms-input-placeholder,
-          #register-form-container div.form-content .step .input-field select::-ms-input-placeholder, .content-wrapper div.form-content .step .input-field input::-ms-input-placeholder,
+          #register-form-container div.form-content .step .input-field select::-ms-input-placeholder, #register-form-container div.content .step .input-field input::-ms-input-placeholder,
+          #register-form-container div.content .step .input-field textarea::-ms-input-placeholder,
+          #register-form-container div.content .step .input-field select::-ms-input-placeholder, .content-wrapper div.form-content .step .input-field input::-ms-input-placeholder,
           .content-wrapper div.form-content .step .input-field textarea::-ms-input-placeholder,
-          .content-wrapper div.form-content .step .input-field select::-ms-input-placeholder {
+          .content-wrapper div.form-content .step .input-field select::-ms-input-placeholder, .content-wrapper div.content .step .input-field input::-ms-input-placeholder,
+          .content-wrapper div.content .step .input-field textarea::-ms-input-placeholder,
+          .content-wrapper div.content .step .input-field select::-ms-input-placeholder {
             /* Microsoft Edge */
             color: #dbdbdb; }
         #register-form-container div.form-content .step .input-field select,
-        #register-form-container div.form-content .step .input-field .input-numbers, .content-wrapper div.form-content .step .input-field select,
-        .content-wrapper div.form-content .step .input-field .input-numbers {
+        #register-form-container div.form-content .step .input-field .input-numbers, #register-form-container div.content .step .input-field select,
+        #register-form-container div.content .step .input-field .input-numbers, .content-wrapper div.form-content .step .input-field select,
+        .content-wrapper div.form-content .step .input-field .input-numbers, .content-wrapper div.content .step .input-field select,
+        .content-wrapper div.content .step .input-field .input-numbers {
           position: absolute;
           right: 0;
           top: 0;
           height: 50px;
           padding: 0 10px;
           max-width: 80px; }
-        #register-form-container div.form-content .step .input-field select[name="state"], .content-wrapper div.form-content .step .input-field select[name="state"] {
+        #register-form-container div.form-content .step .input-field select[name="state"], #register-form-container div.content .step .input-field select[name="state"], .content-wrapper div.form-content .step .input-field select[name="state"], .content-wrapper div.content .step .input-field select[name="state"] {
           height: 52px;
           position: relative;
           top: -4px;
           left: 0;
           min-width: 100%; }
-        #register-form-container div.form-content .step .input-field.has-icon input, .content-wrapper div.form-content .step .input-field.has-icon input {
+        #register-form-container div.form-content .step .input-field.has-icon input, #register-form-container div.content .step .input-field.has-icon input, .content-wrapper div.form-content .step .input-field.has-icon input, .content-wrapper div.content .step .input-field.has-icon input {
           padding-left: 40px; }
-        #register-form-container div.form-content .step .input-field.has-text, .content-wrapper div.form-content .step .input-field.has-text {
+        #register-form-container div.form-content .step .input-field.has-text, #register-form-container div.content .step .input-field.has-text, .content-wrapper div.form-content .step .input-field.has-text, .content-wrapper div.content .step .input-field.has-text {
           margin-bottom: 40px; }
-          #register-form-container div.form-content .step .input-field.has-text .input-numbers, .content-wrapper div.form-content .step .input-field.has-text .input-numbers {
+          #register-form-container div.form-content .step .input-field.has-text .input-numbers, #register-form-container div.content .step .input-field.has-text .input-numbers, .content-wrapper div.form-content .step .input-field.has-text .input-numbers, .content-wrapper div.content .step .input-field.has-text .input-numbers {
             top: -15px;
             height: 45px; }
-        #register-form-container div.form-content .step .input-field.has-checkbox input[type="checkbox"], .content-wrapper div.form-content .step .input-field.has-checkbox input[type="checkbox"] {
+        #register-form-container div.form-content .step .input-field.has-checkbox input[type="checkbox"], #register-form-container div.content .step .input-field.has-checkbox input[type="checkbox"], .content-wrapper div.form-content .step .input-field.has-checkbox input[type="checkbox"], .content-wrapper div.content .step .input-field.has-checkbox input[type="checkbox"] {
           width: 16px;
           position: absolute;
           top: -15px; }
-        #register-form-container div.form-content .step .input-field.has-checkbox p, .content-wrapper div.form-content .step .input-field.has-checkbox p {
+        #register-form-container div.form-content .step .input-field.has-checkbox p, #register-form-container div.content .step .input-field.has-checkbox p, .content-wrapper div.form-content .step .input-field.has-checkbox p, .content-wrapper div.content .step .input-field.has-checkbox p {
           margin: 0 0 60px 25px; }
-        #register-form-container div.form-content .step .input-field.half, .content-wrapper div.form-content .step .input-field.half {
+        #register-form-container div.form-content .step .input-field.half, #register-form-container div.content .step .input-field.half, .content-wrapper div.form-content .step .input-field.half, .content-wrapper div.content .step .input-field.half {
           width: 47.5%;
           display: inline-block; }
-          #register-form-container div.form-content .step .input-field.half:nth-child(2n), .content-wrapper div.form-content .step .input-field.half:nth-child(2n) {
+          #register-form-container div.form-content .step .input-field.half:nth-child(2n), #register-form-container div.content .step .input-field.half:nth-child(2n), .content-wrapper div.form-content .step .input-field.half:nth-child(2n), .content-wrapper div.content .step .input-field.half:nth-child(2n) {
             margin-left: 4%; }
-        #register-form-container div.form-content .step .input-field.third, .content-wrapper div.form-content .step .input-field.third {
+        #register-form-container div.form-content .step .input-field.third, #register-form-container div.content .step .input-field.third, .content-wrapper div.form-content .step .input-field.third, .content-wrapper div.content .step .input-field.third {
           width: 30.8%;
           display: inline-block; }
-          #register-form-container div.form-content .step .input-field.third, .content-wrapper div.form-content .step .input-field.third {
+          #register-form-container div.form-content .step .input-field.third, #register-form-container div.content .step .input-field.third, .content-wrapper div.form-content .step .input-field.third, .content-wrapper div.content .step .input-field.third {
             margin-left: 0 !important;
             margin-right: 3%; }
-          #register-form-container div.form-content .step .input-field.third:nth-child(3n+2), .content-wrapper div.form-content .step .input-field.third:nth-child(3n+2) {
+          #register-form-container div.form-content .step .input-field.third:nth-child(3n+2), #register-form-container div.content .step .input-field.third:nth-child(3n+2), .content-wrapper div.form-content .step .input-field.third:nth-child(3n+2), .content-wrapper div.content .step .input-field.third:nth-child(3n+2) {
             margin-right: 0 !important; }
-        #register-form-container div.form-content .step .input-field p, .content-wrapper div.form-content .step .input-field p {
+        #register-form-container div.form-content .step .input-field p, #register-form-container div.content .step .input-field p, .content-wrapper div.form-content .step .input-field p, .content-wrapper div.content .step .input-field p {
           margin-bottom: 10px; }
-          #register-form-container div.form-content .step .input-field p span, .content-wrapper div.form-content .step .input-field p span {
+          #register-form-container div.form-content .step .input-field p span, #register-form-container div.content .step .input-field p span, .content-wrapper div.form-content .step .input-field p span, .content-wrapper div.content .step .input-field p span {
             color: #cfcfcf; }
-        #register-form-container div.form-content .step .input-field small, .content-wrapper div.form-content .step .input-field small {
+        #register-form-container div.form-content .step .input-field small, #register-form-container div.content .step .input-field small, .content-wrapper div.form-content .step .input-field small, .content-wrapper div.content .step .input-field small {
           font-size: 14px;
           color: #828282;
           line-height: 22px;
           margin-bottom: 30px;
           display: block; }
         #register-form-container div.form-content .step .input-field p,
-        #register-form-container div.form-content .step .input-field small, .content-wrapper div.form-content .step .input-field p,
-        .content-wrapper div.form-content .step .input-field small {
+        #register-form-container div.form-content .step .input-field small, #register-form-container div.content .step .input-field p,
+        #register-form-container div.content .step .input-field small, .content-wrapper div.form-content .step .input-field p,
+        .content-wrapper div.form-content .step .input-field small, .content-wrapper div.content .step .input-field p,
+        .content-wrapper div.content .step .input-field small {
           margin-right: 90px; }
-        #register-form-container div.form-content .step .input-field .terms, .content-wrapper div.form-content .step .input-field .terms {
+        #register-form-container div.form-content .step .input-field .terms, #register-form-container div.content .step .input-field .terms, .content-wrapper div.form-content .step .input-field .terms, .content-wrapper div.content .step .input-field .terms {
           background-color: rgba(230, 230, 230, 0.41);
           width: 100%;
           margin: 0;
@@ -563,7 +621,7 @@ body .light-curves {
           box-sizing: border-box;
           overflow-y: scroll;
           margin: 20px 0; }
-          #register-form-container div.form-content .step .input-field .terms p, .content-wrapper div.form-content .step .input-field .terms p {
+          #register-form-container div.form-content .step .input-field .terms p, #register-form-container div.content .step .input-field .terms p, .content-wrapper div.form-content .step .input-field .terms p, .content-wrapper div.content .step .input-field .terms p {
             font-size: 14px;
             line-height: 22px;
             margin: 0; }
@@ -579,6 +637,131 @@ body .light-curves {
     font-size: 12px; }
 #login-form-container .step {
   margin: 0 0 40px; }
+
+#user-quick-panel .user-info {
+  border-right: 1px solid #d7d7d7; }
+  #user-quick-panel .user-info img {
+    border-radius: 500px;
+    width: 110px;
+    float: left; }
+  #user-quick-panel .user-info div {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0 0 20px; }
+    #user-quick-panel .user-info div h4 {
+      margin: 0 0 5px; }
+    #user-quick-panel .user-info div ul {
+      list-style: none;
+      margin: 0 0 10px !important;
+      padding: 0;
+      margin-bottom: 20px; }
+      #user-quick-panel .user-info div ul li {
+        font-size: 13px;
+        line-height: 18px; }
+    #user-quick-panel .user-info div a.btn {
+      margin-bottom: 0; }
+#user-quick-panel .summary-info ul {
+  margin: 1px 5px;
+  padding: 0;
+  list-style: none; }
+  #user-quick-panel .summary-info ul li {
+    line-height: 30px;
+    font-size: 14px; }
+    #user-quick-panel .summary-info ul li svg {
+      min-width: 20px;
+      margin-right: 5px;
+      color: #317aaa; }
+
+#dashboard-container .content {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  padding: 50px 5px;
+  overflow: hidden; }
+  #dashboard-container .content .wide-head h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px; }
+#dashboard-container .in-progress .row {
+  padding: 10px 30px;
+  border-bottom: dashed 3px #ddd; }
+  #dashboard-container .in-progress .row:last-child {
+    border-bottom: none; }
+  #dashboard-container .in-progress .row:nth-child(2n) {
+    background-color: rgba(165, 206, 255, 0.1); }
+  #dashboard-container .in-progress .row .order-info div {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+    padding-bottom: 20px; }
+    #dashboard-container .in-progress .row .order-info div h4 {
+      color: #474747;
+      font-size: 18px;
+      margin-bottom: 4px;
+      font-weight: 200;
+      margin-top: 15px; }
+    #dashboard-container .in-progress .row .order-info div p {
+      margin: 0 0 2px 20px;
+      color: #3c3c3c;
+      font-size: 14px; }
+      #dashboard-container .in-progress .row .order-info div p span {
+        font-style: italic;
+        color: #2c7ba8; }
+    #dashboard-container .in-progress .row .order-info div ul {
+      margin: 0; }
+      #dashboard-container .in-progress .row .order-info div ul li {
+        line-height: 18px;
+        font-size: 14px; }
+    #dashboard-container .in-progress .row .order-info div:last-child {
+      border-bottom: none;
+      padding: 20px 0 12px; }
+  #dashboard-container .in-progress .row .order-info div.d {
+    display: flex; }
+    #dashboard-container .in-progress .row .order-info div.d div {
+      border-bottom: none; }
+    #dashboard-container .in-progress .row .order-info div.d div.info,
+    #dashboard-container .in-progress .row .order-info div.d div.links {
+      flex-basis: 50%; }
+    #dashboard-container .in-progress .row .order-info div.d div.info {
+      border-right: 1px solid rgba(221, 221, 221, 0.48); }
+      #dashboard-container .in-progress .row .order-info div.d div.info h4:first-child {
+        margin-top: 0; }
+    #dashboard-container .in-progress .row .order-info div.d div.links {
+      padding: 20px 30px 0;
+      box-sizing: border-box; }
+      #dashboard-container .in-progress .row .order-info div.d div.links a {
+        display: inline-table; }
+  #dashboard-container .in-progress .row .order-location {
+    padding-top: 20px; }
+    #dashboard-container .in-progress .row .order-location h4 {
+      margin-top: 10px;
+      font-size: 14px; }
+      #dashboard-container .in-progress .row .order-location h4 svg {
+        color: #ff8f60; }
+#dashboard-container .pending div.col-md-3, #dashboard-container .pending .col-md-2, #dashboard-container .pending .col-md-4 {
+  margin: 28px 0; }
+  #dashboard-container .pending div.col-md-3:not(:last-child), #dashboard-container .pending .col-md-2:not(:last-child), #dashboard-container .pending .col-md-4:not(:last-child) {
+    border-right: 1px solid rgba(221, 221, 221, 0.48); }
+  #dashboard-container .pending div.col-md-3:not(:first-child), #dashboard-container .pending .col-md-2:not(:first-child), #dashboard-container .pending .col-md-4:not(:first-child) {
+    padding-left: 30px;
+    box-sizing: border-box; }
+#dashboard-container .pending .order-info h4 {
+  font-size: 14px !important; }
+#dashboard-container .pending .order-info p, #dashboard-container .pending .order-info li {
+  font-size: 13px !important; }
+#dashboard-container .pending .order-info .d {
+  padding: 0; }
+  #dashboard-container .pending .order-info .d .info, #dashboard-container .pending .order-info .d .links {
+    border-right: none !important;
+    flex-basis: 100% !important; }
+  #dashboard-container .pending .order-info .d .links {
+    padding: 20px 0 !important; }
+#dashboard-container .pending .order-info .links a {
+  font-size: 12px;
+  padding: 8px 16px;
+  display: block !important; }
+  #dashboard-container .pending .order-info .links a svg {
+    margin-right: 4px; }
+#dashboard-container .finished .row {
+  opacity: 0.7; }
 
 /*==================================================
 =                     Sections                     =
@@ -678,6 +861,135 @@ footer {
   footer .curve {
     position: absolute;
     top: -190px; }
+
+/*==================================================
+=                     Modules                     =
+==================================================*/
+.tab-wrap {
+  transition: 0.3s box-shadow ease;
+  border-radius: 6px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  list-style: none;
+  background-color: #fff;
+  margin: 0px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.02); }
+
+.tab {
+  display: none; }
+  .tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0; }
+  .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0; }
+  .tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0; }
+  .tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0; }
+  .tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0; }
+  .tab:first-of-type:not(:last-of-type) + label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .tab:not(:first-of-type):not(:last-of-type) + label {
+    border-radius: 0; }
+  .tab:last-of-type:not(:first-of-type) + label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .tab:checked + label {
+    background-color: #fff;
+    box-shadow: 0 -1px 0 #fff inset;
+    color: #2377ab;
+    cursor: default; }
+    .tab:checked + label:hover {
+      box-shadow: 0 -1px 0 #fff inset;
+      background-color: #fff; }
+  .tab + label {
+    box-shadow: 0 -1px 0 #eee inset;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #5a5a5a;
+    flex-grow: 3;
+    text-align: center;
+    background-color: #f2f2f2;
+    user-select: none;
+    text-align: center;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 15px; }
+    .tab + label:hover {
+      background-color: #f9f9f9;
+      box-shadow: 0 1px 0 #f4f4f4 inset; }
+  .tab__content {
+    padding: 0px 16px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    transform: translateY(-3px);
+    border-radius: 6px; }
+
+/* boring stuff */
+.tabs-cont {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%; }
+  .tabs-cont > *:not(.tab-wrap) {
+    padding: 0 80px; }
+
+h1,
+h2 {
+  margin: 0;
+  color: #444;
+  text-align: center;
+  font-weight: 400; }
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 30px; }
+
+h3 {
+  font-weight: 400; }
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px; }
 
 /*==================================================
 =                   Media Queries                  =

@@ -107,6 +107,26 @@
         div {
           padding: 0;
         }
+        a.has-image{
+          &:before{
+              content: "|"; 
+              padding-right:22px;
+              color:#a6a6a6;
+          }
+      padding-right: 70px !important;
+          position: relative;
+          img{
+              padding: 0 !important;
+              position: absolute;
+              top:20px;
+              right:12px;
+              z-index: 2;
+              width:40px !important;
+              border-radius: 30px ;
+          }
+      }
+      
+      
       }
 
       .main-nav {
