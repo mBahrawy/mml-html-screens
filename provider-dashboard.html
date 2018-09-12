@@ -130,22 +130,442 @@
           </div>
           <div class="tabs-cont">
             <div class="tab-wrap">
-              <input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
-              <label for="tab4">In progress
+
+                <input type="radio" id="tab1" name="tabGroup2" class="tab" checked>
+                <label for="tab1">Orders
+                  <i class="fas fa-clipboard-list"></i>
+                </label>
+
+
+                <input type="radio" id="tab2" name="tabGroup2" class="tab">
+                <label for="tab2">Queue
+                  <i class="fas fa-clock"></i>
+                </label>
+                
+
+
+              <input type="radio" id="tab3" name="tabGroup2" class="tab" >
+              <label for="tab3">In progress
                 <i class="fas fa-truck"></i>
               </label>
-              <input type="radio" id="tab5" name="tabGroup2" class="tab">
-              <label for="tab5">Pending
-                <i class="fas fa-clipboard-list"></i>
-              </label>
-              <input type="radio" id="tab6" name="tabGroup2" class="tab">
-              <label for="tab6">Messages
+
+
+              <input type="radio" id="tab4" name="tabGroup2" class="tab">
+              <label for="tab4">Messages
                 <i class="fas fa-comments"></i>
               </label>
-              <input type="radio" id="tab7" name="tabGroup2" class="tab">
-              <label for="tab7">Finished
+              <input type="radio" id="tab5" name="tabGroup2" class="tab">
+              <label for="tab5">Finished
                 <i class="fas fa-check-circle"></i>
               </label>
+
+
+              <!--For orders tab-->
+              <div class="tab__content in-progress pending">
+                  <div class="row" id="order-265646">
+                    <div class="col-md-4 col-xs-12 order-info">
+                      <div>
+                        <h4>Client details</h4>
+                        <p>Client’s name:
+                          <span>Matt Rowan</span>
+                        </p>
+                        <p>Client’s Address:
+                          <span> 22668, Denvar, 15th Floor</span>
+                        </p>
+                        <p>Location type:
+                          <span>Apartment</span>
+                        </p>
+                        <p>Contact phone:
+                          <span>+1 226-886-4269</span>
+                        </p>
+                        <p>Alternate phone:
+                          <span>+1 296-810-0015</span>
+                        </p>
+                        <p> Date:
+                          <span>11th July 2018</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>order details</h4>
+                            <ul>
+                              <li>2 Helpers</li>
+                              <li>4 Hours</li>
+                              <li>Ground on site moving</li>
+                              <li>No trucks</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>Payment details</h4>
+                            <p>Total bill
+                              <span>$240</span>
+                            </p>
+                            <p>Net earning
+                              <span>$192</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="links">
+                          <a href="#" class="btn btn-orange">
+                            <i class="fas fa-check"></i> Accept</a>
+                          <a href="#" class="btn btn-default">
+                            <i class="fas fa-times"></i> Decline</a>
+                            <a href="#" class="btn btn-default">
+                                <i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="order-2645646">
+                    <div class="col-md-4 col-xs-12 order-info">
+                      <div>
+                        <h4>Client details</h4>
+                        <p>Client’s name:
+                          <span>Matt Rowan</span>
+                        </p>
+                        <p>Client’s Address:
+                          <span> 22668, Denvar, 15th Floor</span>
+                        </p>
+                        <p>Location type:
+                          <span>Apartment</span>
+                        </p>
+                        <p>Contact phone:
+                          <span>+1 226-886-4269</span>
+                        </p>
+                        <p>Alternate phone:
+                          <span>+1 296-810-0015</span>
+                        </p>
+                        <p> Date:
+                          <span>11th July 2018</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>order details</h4>
+                            <ul>
+                              <li>2 Helpers</li>
+                              <li>4 Hours</li>
+                              <li>Ground on site moving</li>
+                              <li>No trucks</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>Payment details</h4>
+                            <p>Total bill
+                              <span>$240</span>
+                            </p>
+                            <p>Net earning
+                              <span>$192</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 order-info">
+                      <div class="d">
+                          <div class="links">
+                              <a href="#" class="btn btn-orange">
+                                <i class="fas fa-check"></i> Accept</a>
+                              <a href="#" class="btn btn-default">
+                                <i class="fas fa-times"></i> Decline</a>
+                                <a href="#" class="btn btn-default">
+                                    <i class="fas fa-envelope"></i> Contact</a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="order-5646">
+                    <div class="col-md-4 col-xs-12 order-info">
+                      <div>
+                        <h4>Client details</h4>
+                        <p>Client’s name:
+                          <span>Matt Rowan</span>
+                        </p>
+                        <p>Client’s Address:
+                          <span> 22668, Denvar, 15th Floor</span>
+                        </p>
+                        <p>Location type:
+                          <span>Apartment</span>
+                        </p>
+                        <p>Contact phone:
+                          <span>+1 226-886-4269</span>
+                        </p>
+                        <p>Alternate phone:
+                          <span>+1 296-810-0015</span>
+                        </p>
+                        <p> Date:
+                          <span>11th July 2018</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>order details</h4>
+                            <ul>
+                              <li>2 Helpers</li>
+                              <li>4 Hours</li>
+                              <li>Ground on site moving</li>
+                              <li>No trucks</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>Payment details</h4>
+                            <p>Total bill
+                              <span>$240</span>
+                            </p>
+                            <p>Net earning
+                              <span>$192</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 order-info">
+                      <div class="d">
+                          <div class="links">
+                              <a href="#" class="btn btn-orange">
+                                <i class="fas fa-check"></i> Accept</a>
+                              <a href="#" class="btn btn-default">
+                                <i class="fas fa-times"></i> Decline</a>
+                                <a href="#" class="btn btn-default">
+                                    <i class="fas fa-envelope"></i> Contact</a>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                <!--End orders tab-->
+
+              <!--For pending tab-->
+              <div class="tab__content in-progress pending">
+                  <div class="row" id="order-265646">
+                    <div class="col-md-4 col-xs-12 order-info">
+                      <div>
+                        <h4>Client details</h4>
+                        <p>Client’s name:
+                          <span>Matt Rowan</span>
+                        </p>
+                        <p>Client’s Address:
+                          <span> 22668, Denvar, 15th Floor</span>
+                        </p>
+                        <p>Location type:
+                          <span>Apartment</span>
+                        </p>
+                        <p>Contact phone:
+                          <span>+1 226-886-4269</span>
+                        </p>
+                        <p>Alternate phone:
+                          <span>+1 296-810-0015</span>
+                        </p>
+                        <p> Date:
+                          <span>11th July 2018</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>order details</h4>
+                            <ul>
+                              <li>2 Helpers</li>
+                              <li>4 Hours</li>
+                              <li>Ground on site moving</li>
+                              <li>No trucks</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>Payment details</h4>
+                            <p>Total bill
+                              <span>$240</span>
+                            </p>
+                            <p>Net earning
+                              <span>$192</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="links">
+                          <a href="#" class="btn btn-orange">
+                            <i class="fas fa-play-circle"></i>Start order</a>
+                          <a href="#" class="btn btn-default">
+                            <i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="order-2645646">
+                    <div class="col-md-4 col-xs-12 order-info">
+                      <div>
+                        <h4>Client details</h4>
+                        <p>Client’s name:
+                          <span>Matt Rowan</span>
+                        </p>
+                        <p>Client’s Address:
+                          <span> 22668, Denvar, 15th Floor</span>
+                        </p>
+                        <p>Location type:
+                          <span>Apartment</span>
+                        </p>
+                        <p>Contact phone:
+                          <span>+1 226-886-4269</span>
+                        </p>
+                        <p>Alternate phone:
+                          <span>+1 296-810-0015</span>
+                        </p>
+                        <p> Date:
+                          <span>11th July 2018</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>order details</h4>
+                            <ul>
+                              <li>2 Helpers</li>
+                              <li>4 Hours</li>
+                              <li>Ground on site moving</li>
+                              <li>No trucks</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>Payment details</h4>
+                            <p>Total bill
+                              <span>$240</span>
+                            </p>
+                            <p>Net earning
+                              <span>$192</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="links">
+                          <a href="#" class="btn btn-orange">
+                            <i class="fas fa-play-circle"></i>Start order</a>
+                          <a href="#" class="btn btn-default">
+                            <i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="order-5646">
+                    <div class="col-md-4 col-xs-12 order-info">
+                      <div>
+                        <h4>Client details</h4>
+                        <p>Client’s name:
+                          <span>Matt Rowan</span>
+                        </p>
+                        <p>Client’s Address:
+                          <span> 22668, Denvar, 15th Floor</span>
+                        </p>
+                        <p>Location type:
+                          <span>Apartment</span>
+                        </p>
+                        <p>Contact phone:
+                          <span>+1 226-886-4269</span>
+                        </p>
+                        <p>Alternate phone:
+                          <span>+1 296-810-0015</span>
+                        </p>
+                        <p> Date:
+                          <span>11th July 2018</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>order details</h4>
+                            <ul>
+                              <li>2 Helpers</li>
+                              <li>4 Hours</li>
+                              <li>Ground on site moving</li>
+                              <li>No trucks</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="info">
+                          <div>
+                            <h4>Payment details</h4>
+                            <p>Total bill
+                              <span>$240</span>
+                            </p>
+                            <p>Net earning
+                              <span>$192</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 order-info">
+                      <div class="d">
+                        <div class="links">
+                          <a href="#" class="btn btn-orange">
+                            <i class="fas fa-play-circle"></i>Start order</a>
+                          <a href="#" class="btn btn-default">
+                            <i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                <!--End Pending tab-->
+
               <!--For in progress tab-->
               <div class="tab__content in-progress">
                 <div class="row" id="order-16546">
@@ -171,7 +591,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
@@ -203,262 +623,10 @@
                       <i class="fas fa-map-marker-alt"></i> 22668, Denvar, 15th Floor</h4>
                   </div>
                 </div>
-                <div class="row" id="order-132">
-                  <div class="col-md-6 col-xs-12 order-info">
-                    <div>
-                      <h4>Client details</h4>
-                      <p>Client’s name:
-                        <span>Matt Rowan</span>
-                      </p>
-                      <p>Location type:
-                        <span>Apartment</span>
-                      </p>
-                      <p>Contact phone:
-                        <span>+1 226-886-4269</span>
-                      </p>
-                      <p>Alternate phone:
-                        <span>+1 296-810-0015</span>
-                      </p>
-                      <p> Date:
-                        <span>11th July 2018</span>
-                      </p>
-                    </div>
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Task details</h4>
-                          <ul>
-                            <li>2 Helpers</li>
-                            <li>4 Hours</li>
-                            <li>Ground on site moving</li>
-                            <li>No trucks</li>
-                          </ul>
-                          <h4>Payment details</h4>
-                          <p>Total bill
-                            <span>$240</span>
-                          </p>
-                          <p>Net earning
-                            <span>$192</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="links">
-                        <a href="#" class="btn btn-orange">
-                          <i class="fas fa-check"></i> Mark as Done</a>
-                        <a href="#" class="btn btn-default">
-                          <i class="fas fa-envelope"></i> Contact</a>
-                        <a href="#" class="btn btn-default">Complain</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-xs-12 order-location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d98054.03354438797!2d-105.10179974060121!3d39.82519012598526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1536544928988"
-                      width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <h4>
-                      <i class="fas fa-map-marker-alt"></i> 22668, Denvar, 15th Floor</h4>
-                  </div>
-                </div>
+                
               </div>
               <!--end in progress tab-->
-              <!--For pending tab-->
-              <div class="tab__content in-progress pending">
-                <div class="row" id="order-265646">
-                  <div class="col-md-4 col-xs-12 order-info">
-                    <div>
-                      <h4>Client details</h4>
-                      <p>Client’s name:
-                        <span>Matt Rowan</span>
-                      </p>
-                      <p>Client’s Address:
-                        <span> 22668, Denvar, 15th Floor</span>
-                      </p>
-                      <p>Location type:
-                        <span>Apartment</span>
-                      </p>
-                      <p>Contact phone:
-                        <span>+1 226-886-4269</span>
-                      </p>
-                      <p>Alternate phone:
-                        <span>+1 296-810-0015</span>
-                      </p>
-                      <p> Date:
-                        <span>11th July 2018</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Task details</h4>
-                          <ul>
-                            <li>2 Helpers</li>
-                            <li>4 Hours</li>
-                            <li>Ground on site moving</li>
-                            <li>No trucks</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Payment details</h4>
-                          <p>Total bill
-                            <span>$240</span>
-                          </p>
-                          <p>Net earning
-                            <span>$192</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="links">
-                        <a href="#" class="btn btn-orange">
-                          <i class="fas fa-play-circle"></i>Start task</a>
-                        <a href="#" class="btn btn-default">
-                          <i class="fas fa-envelope"></i> Contact</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row" id="order-2645646">
-                  <div class="col-md-4 col-xs-12 order-info">
-                    <div>
-                      <h4>Client details</h4>
-                      <p>Client’s name:
-                        <span>Matt Rowan</span>
-                      </p>
-                      <p>Client’s Address:
-                        <span> 22668, Denvar, 15th Floor</span>
-                      </p>
-                      <p>Location type:
-                        <span>Apartment</span>
-                      </p>
-                      <p>Contact phone:
-                        <span>+1 226-886-4269</span>
-                      </p>
-                      <p>Alternate phone:
-                        <span>+1 296-810-0015</span>
-                      </p>
-                      <p> Date:
-                        <span>11th July 2018</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Task details</h4>
-                          <ul>
-                            <li>2 Helpers</li>
-                            <li>4 Hours</li>
-                            <li>Ground on site moving</li>
-                            <li>No trucks</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Payment details</h4>
-                          <p>Total bill
-                            <span>$240</span>
-                          </p>
-                          <p>Net earning
-                            <span>$192</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="links">
-                        <a href="#" class="btn btn-orange">
-                          <i class="fas fa-play-circle"></i>Start task</a>
-                        <a href="#" class="btn btn-default">
-                          <i class="fas fa-envelope"></i> Contact</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row" id="order-5646">
-                  <div class="col-md-4 col-xs-12 order-info">
-                    <div>
-                      <h4>Client details</h4>
-                      <p>Client’s name:
-                        <span>Matt Rowan</span>
-                      </p>
-                      <p>Client’s Address:
-                        <span> 22668, Denvar, 15th Floor</span>
-                      </p>
-                      <p>Location type:
-                        <span>Apartment</span>
-                      </p>
-                      <p>Contact phone:
-                        <span>+1 226-886-4269</span>
-                      </p>
-                      <p>Alternate phone:
-                        <span>+1 296-810-0015</span>
-                      </p>
-                      <p> Date:
-                        <span>11th July 2018</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Task details</h4>
-                          <ul>
-                            <li>2 Helpers</li>
-                            <li>4 Hours</li>
-                            <li>Ground on site moving</li>
-                            <li>No trucks</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="info">
-                        <div>
-                          <h4>Payment details</h4>
-                          <p>Total bill
-                            <span>$240</span>
-                          </p>
-                          <p>Net earning
-                            <span>$192</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2 col-xs-12 order-info">
-                    <div class="d">
-                      <div class="links">
-                        <a href="#" class="btn btn-orange">
-                          <i class="fas fa-play-circle"></i>Start task</a>
-                        <a href="#" class="btn btn-default">
-                          <i class="fas fa-envelope"></i> Contact</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--End Pending tab-->
+
               <!--Messages tab-->
               <div class="tab__content">
                 <h3>Oranges</h3>
@@ -499,7 +667,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
@@ -564,7 +732,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
@@ -629,7 +797,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
@@ -694,7 +862,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
@@ -759,7 +927,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
@@ -824,7 +992,7 @@
                     <div class="d">
                       <div class="info">
                         <div>
-                          <h4>Task details</h4>
+                          <h4>order details</h4>
                           <ul>
                             <li>2 Helpers</li>
                             <li>4 Hours</li>
