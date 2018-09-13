@@ -92,7 +92,7 @@
 
 
 
-  <div class="light-curves">
+    <div class="light-curves">
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -177,7 +177,7 @@
 
           </div>
           
-          <form action="#" method="post">
+          <!-- <form action="#" method="post"> -->
 
             <div class="step step-1">
 
@@ -185,21 +185,21 @@
               <div class="input-field has-icon">
                 <i class="fas fa-user"></i>
                 <label for="username">Username</label>
-                <input type="text" class="textbox text-box-registration" name="username" placeholder="Username"
+                <input type="text" id="username" class="textbox text-box-registration" name="username" placeholder="Username"
                   maxlength="15">
               </div>
 
               <div class="input-field has-icon">
                 <i class="fas fa-envelope"></i>
                 <label for="email">Email</label>
-                <input type="email" class="textbox text-box-registration" name="email" placeholder="Email" maxlength="20">
+                <input type="email" id="email" class="textbox text-box-registration" name="email" placeholder="Email" maxlength="255">
               </div>
 
 
               <div class="input-field has-icon">
                 <i class="fas fa-unlock-alt"></i>
                 <label for="password">Password</label>
-                <input type="password" class="textbox text-box-registration" name="password" placeholder="Password"
+                <input type="password" id="password" class="textbox text-box-registration" name="password" placeholder="Password"
                   maxlength="20">
               </div>
 
@@ -208,7 +208,7 @@
               <div class="input-field has-icon">
                 <i class="fas fa-unlock-alt"></i>
                 <label for="r-password">Repeat password</label>
-                <input type="password" class="textbox text-box-registration" name="r-password" placeholder="Repeat passowrd"
+                <input type="password" id="repeatpassword" class="textbox text-box-registration" name="r-password" placeholder="Repeat passowrd"
                   maxlength="20">
               </div>
 
@@ -225,56 +225,50 @@
 
               <div class="input-field half">
                 <label for="firstname">First name</label>
-                <input type="text" class="textbox text-box-registration " name="firstname" placeholder="First name"
+                <input type="text" class="textbox text-box-registration" id="firstname" name="firstname" placeholder="First name"
                   maxlength="15">
               </div>
 
               <div class="input-field half">
                 <label for="lastname">Last name</label>
-                <input type="text" class="textbox text-box-registration " name="lastname" placeholder="Last name"
+                <input type="text" class="textbox text-box-registration " id="lastname" name="lastname" placeholder="Last name"
                   maxlength="15">
               </div>
 
               <div class="input-field ">
                 <label for="driver_licence_number">Driver License Number</label>
-                <input type="text" class="textbox text-box-registration " name="driver_licence_number" placeholder="Driver License Number"
+                <input type="text" class="textbox text-box-registration " id="driver_licence_number" name="driver_licence_number" placeholder="Driver License Number"
                   maxlength="20">
               </div>
 
               <div class="input-field ">
                 <label for="driver_licence_number">Social Security Number</label>
-                <input type="text" class="textbox text-box-registration " name="social_security_number" placeholder="Social Security Number"
+                <input type="text" class="textbox text-box-registration " id="social_security_number" name="social_security_number" placeholder="Social Security Number"
                   maxlength="9">
               </div>
-
-
-
             </div>
-
-
-
-            <hr />
+            <hr/>
              <center> Step 3 - Business info </center>
-            <hr />
+            <hr/>
 
             <div class="step step-3">
 
               <div class="input-field half">
                 <label for="businessname">Business name</label>
-                <input type="text" class="textbox text-box-registration " name="business_name" placeholder="Business name"
+                <input type="text" class="textbox text-box-registration " id="business_name" name="business_name" placeholder="Business name"
                   maxlength="15">
               </div>
 
               <div class="input-field half">
                 <label for="location">Your location</label>
-                <input type="text" class="textbox text-box-registration " name="location" placeholder="Your location"
+                <input type="text" class="textbox text-box-registration " id="location" name="location" placeholder="Your location"
                   maxlength="15">
               </div>
 
 
               <div class="input-field half">
                 <label for="primary_phone">Primary phone</label>
-                <input type="tel" class="textbox text-box-registration " name="primary_phone" placeholder="Primary phone"
+                <input type="tel" class="textbox text-box-registration " id="primary_phone" name="primary_phone" placeholder="Primary phone"
                   maxlength="15">
               </div>
 
@@ -282,25 +276,25 @@
 
               <div class="input-field half">
                 <label for="alt_phone">Alternate phone</label>
-                <input type="tel" class="textbox text-box-registration " name="alt_phone" placeholder="Alternate phone"
+                <input type="tel" class="textbox text-box-registration " id="alt_phone" name="alt_phone" placeholder="Alternate phone"
                   maxlength="15">
               </div>
 
 
               <div class="input-field ">
                 <label for="business_address">Business address</label>
-                <input type="text" class="textbox text-box-registration " name="business_address" placeholder="Business address"
+                <input type="text" class="textbox text-box-registration " id="business_address" name="business_address" placeholder="Business address"
                   maxlength="20">
               </div>
 
               <div class="input-field third ">
                 <label for="city">City</label>
-                <input type="text" class="textbox text-box-registration " name="city" placeholder="City" maxlength="9">
+                <input type="text" class="textbox text-box-registration " id="city" name="city" placeholder="City" maxlength="9">
               </div>
 
 
               <div class="input-field third ">
-                <select name="state">
+                <select name="state" id="state">
                   <option value="" selected="selected">State</option>
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
@@ -358,29 +352,29 @@
 
               <div class="input-field third ">
                 <label for="zip">Zip</label>
-                <input type="text" class="textbox text-box-registration " name="zip" placeholder="Zip" maxlength="9">
+                <input type="text" class="textbox text-box-registration " id="zip" name="zip" placeholder="Zip" maxlength="9">
               </div>
 
               <div class="input-field has-text">
                 <P>How many crew members can you provide ?</P>
                 <input class="input-numbers" type="number" maxlength="2" value="1" max="100" class="textbox text-box-registration "
-                  name="crew_members">
+                  id="crew_members" name="crew_members">
               </div>
 
               <div class="input-field has-text">
                 <P>How many miles can you travel for jobs ?</P>
-                <input class="input-numbers" type="number" value="1" class="textbox text-box-registration " name="moving_miles">
+                <input class="input-numbers" type="number" value="1" class="textbox text-box-registration " id="moving_miles" name="moving_miles">
               </div>
 
 
               <div class="input-field has-text">
                 <P>What year did you start your moving business?</P>
-                <input class="input-numbers" type="number" value="1990" class="textbox text-box-registration " name="year_of_start_working">
+                <input class="input-numbers" type="number" value="1990" class="textbox text-box-registration " id="year_of_start_working" name="year_of_start_working">
               </div>
 
               <div class="input-field has-text has-textarea">
                 <P>Do you have your own moving truck ? <span>(Optional)</span></P>
-                <textarea name="truck_information" class="textbox textarea text-box-registration " placeholder="If yes, Please provide it’s info and capacity "></textarea>
+                <textarea id="truck_information" name="truck_information" class="textbox textarea text-box-registration " placeholder="If yes, Please provide it’s info and capacity "></textarea>
               </div>
             </div>
 
@@ -398,9 +392,9 @@
                 <P>Do you carry a valid business license ?</P>
                 <small>If approved you will be asked for your license number. </small>
 
-                <select name="has_valid_business_license">
-                  <option selected="selected" value="yes">Yes</option>
-                  <option value="No">No</option>
+                <select id="has_valid_business_license" name="has_valid_business_license">
+                  <option selected="selected" value="1">Yes</option>
+                  <option value="0">No</option>
                 </select>
               </div>
 
@@ -409,9 +403,9 @@
                 <small>Do you carry insurance that protects customer's goods?
                   If approved you will be asked to provide a policy number.</small>
 
-                <select name="has_business_insurance">
-                  <option value="yes">Yes</option>
-                  <option selected="selected" value="No">No</option>
+                <select id="has_business_insurance" name="has_business_insurance">
+                  <option value="1">Yes</option>
+                  <option selected="selected" value="0">No</option>
                 </select>
               </div>
 
@@ -421,9 +415,9 @@
                   licenses to legally provide intersate (multi-state) and/or intrastate (within your state) moving
                   services.</small>
 
-                <select name="is_full-service_mover">
-                  <option value="yes">Yes</option>
-                  <option selected="selected" value="No">No</option>
+                <select id="is_full_service_mover" name="is_full_service_mover">
+                  <option value="1">Yes</option>
+                  <option selected="selected" value="0">No</option>
                 </select>
               </div>
 
@@ -431,9 +425,9 @@
               <div class="input-field has-text">
                 <P>Are you an existing service provider on our site, looking to create another account?</P>
 
-                <select name="is_existing_service_provider">
-                  <option value="yes">Yes</option>
-                  <option selected="selected" value="No">No</option>
+                <select id="is_existing_service_provider" name="is_existing_service_provider">
+                  <option value="1">Yes</option>
+                  <option selected="selected" value="0">No</option>
                 </select>
               </div>
 
@@ -491,22 +485,22 @@
                   </P>
                 </div>
                 <div class="input-field has-checkbox">
-                  <input type="checkbox" value="agree_checked">
+                  <input id="agree_checked" type="checkbox">
                   <P> I have read the Helper terms of service and agree to these terms.</P>
                 </div>
               </div>
               <div class="input-field has-text has-textarea">
                 <P>Do you have any messages to us? <span>(Optional)</span></P>
-                <textarea name="optional_message" class="textbox textarea text-box-registration " placeholder="If yes, Type message here .. "></textarea>
+                <textarea name="optional_message" id="optional_message" class="textbox textarea text-box-registration " placeholder="If yes, Type message here .. "></textarea>
               </div>
 
-              <button type="submit" class="btn btn-medium btn-orange">Send Application </button>
+              <button id="submit" type="button" class="btn btn-medium btn-orange">Send Application </button>
 
             </div>
 
 
       
-        </form>
+        <!-- </form> -->
 
 
         <hr />
@@ -551,7 +545,6 @@
 
   <section class="box box-container">
   </section>
-
 
   <footer>
 
