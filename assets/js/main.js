@@ -100,4 +100,33 @@
   });
   
   
+
+
+
+
+// Testimonials Slider
+// ==========================================================
   
+
+$('#testimonials-slider').slick({
+  dots: true,
+  speed: 1000,
+  slidesToShow: 3,
+  adaptiveHeight: true,
+  centerMode: true,
+  centerPadding: '0px',
+  autoplay: true,
+  arrows:false,
+  dotsClass: 'slider-dots',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        centerMode: true,
+        slidesToShow: 1,
+        centerPadding: '50px',
+
+      }
+    }
+  ]
+})

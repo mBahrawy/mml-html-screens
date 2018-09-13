@@ -24,11 +24,18 @@ body {
   span,
   small,
   button{
-    color: $dark-blue;
+    color: $dark-grey;
     font-weight: normal;
     font-family: $open-sans, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
+
+    &.bold-600{font-weight: 600 ;}
+    &.bold-700{font-weight: 700 ;}
+    &.bold-800{font-weight: 800 ;}
+
+    &.sub{color:#878787;}
+
   }
   a{
     color:#3a8bb9 ;
@@ -52,23 +59,30 @@ body {
 }
 
 /*============== Heading =================*/
+ 
+h1,h2,h3,h4{
+  color:#5a5a5a;
+  letter-spacing: -1px;
+
+}
+
+h1,h2{
+  width:100%;
+
+}
 
 h1 {
   font-size: 48px !important;
   line-height: 58px;
-  &.banner {
-    font-size: 78px;
-    line-height: 91px;
-  }
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 42px;
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 36px;
 }
 
@@ -101,8 +115,9 @@ p {
   color: $dim-grey;
   font-weight: normal;
   font-family: $open-sans, Arial, Helvetica, sans-serif;
+  line-height: 25px;
   &.body-large {
-    color: $dark-blue;
+    color: $dark-grey;
     font-size: 20px;
     line-height: 34px;
   }
@@ -138,14 +153,24 @@ p {
   background-color: #ff8f60;
   color:#fff;
 }
+&.btn-dark-blue{
+  background-color: #283970;
+  color:#fff;
+}
+
 
 &.btn-default{
   background-color: #dadada;
   color: #333333;
 }
+
 &.btn-small{
   padding: 5px 14px;
   font-size: 12px;
+}
+&.btn-large{
+  padding: 20px 30px;
+  font-size: 16px;
 }
 
   &.btn-primary {
@@ -163,7 +188,7 @@ p {
     }
   }
   &.btn-secondary {
-    color: $dark-blue;
+    color: $dark-grey;
     background-color: $sec-color;
     &:hover {
       background-color: $sec-color-sub-1;
@@ -178,7 +203,7 @@ p {
   }
   &.btn-dark {
     color: #fff;
-    background-color: $dark-blue;
+    background-color: $dark-grey;
     &:hover {
       background-color: $dark-blue-sub-1;
     }
@@ -191,7 +216,7 @@ p {
     }
   }
   &.btn-light {
-    color: $dark-blue;
+    color: $dark-grey;
     background-color: #fff;
     &:hover {}
     &:focus {
@@ -206,7 +231,7 @@ p {
   &.btn-round {
     @include border-radius(500px);
     color: #fff;
-    background-color: $dark-blue;
+    background-color: $dark-grey;
     &:hover {
       background-color: $dark-blue-sub-1;
     }
@@ -278,7 +303,21 @@ div.button-group{
 =                  Used Objects             =
 ==================================================*/
 
+.center{
+  text-align: center;
+}
+.with-bottom-separator{
+  padding-bottom: 90px;
+  border-bottom: 1px solid rgba(232,232,232,0.75);
+}
 
+.row.head {
+  text-align: center;
+  p {
+    display: block;
+    margin: 0 auto;
+  }
+}
 
 .wide-head {
   margin: -55px -23px -50px;
@@ -304,7 +343,7 @@ div.button-group{
   /*  margin: 0 0 68px;
     h3 {
         .world-water-day {
-            color: $dark-blue;
+            color: $dark-grey;
             font-family: $open-sans;
             font-size: 26px;
             font-weight: 600;
@@ -331,7 +370,7 @@ div.button-group{
 form.search-box-group {
   position: relative;
   input[type="text"] {
-    width: 100%;
+    width: 100%; 
   }
   button {
     color: #989898;
