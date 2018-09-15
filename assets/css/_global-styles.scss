@@ -1,15 +1,16 @@
-
 body {
   background-color: #fff;
   overflow-x: hidden;
+
   a,
   button {
     text-decoration: none !important;
     @include transition(all, 0.15s, ease);
   }
+
   h1,
-  h2, 
-  h3, 
+  h2,
+  h3,
   h4,
   h5,
   h6,
@@ -23,72 +24,98 @@ body {
   select,
   span,
   small,
-  button{
+  button {
     color: $dark-grey;
     font-weight: normal;
     font-family: $open-sans, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
 
-    &.bold-600{font-weight: 600 ;}
-    &.bold-700{font-weight: 700 ;}
-    &.bold-800{font-weight: 800 ;}
+    &.bold-600 {
+      font-weight: 600;
+    }
 
-    &.sub{color:#878787;}
+    &.bold-700 {
+      font-weight: 700;
+    }
+
+    &.bold-800 {
+      font-weight: 800;
+    }
+
+    &.sub {
+      color: #878787;
+    }
 
   }
-  a{
-    color:#3a8bb9 ;
-    &.small-link{
-        font-size: 12px;
+
+  a {
+    color: #3a8bb9;
+
+    &.small-link {
+      font-size: 12px;
     }
   }
 }
 
 
 
-#wrapper {
-  margin-top: 70px;
-  position: relative;
-  z-index: 2;
-}
-
-
-.box-container {
-  margin: 0 150px;
-}
-
 /*============== Heading =================*/
- 
-h1,h2,h3,h4{
-  color:#5a5a5a;
+
+h1,
+h2,
+h3,
+h4 {
+  color: #5a5a5a;
   letter-spacing: -1px;
 
 }
 
-h1,h2{
-  width:100%;
+h1,
+h2 {
+  width: 100%;
 
 }
 
 h1 {
   font-size: 48px !important;
   line-height: 58px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 27px !important;
+  }
+
 }
 
 h2 {
   font-size: 28px;
   line-height: 42px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
 }
 
 h3 {
   font-size: 24px;
   line-height: 36px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 30px;
+    line-height: 28px;
+
+  }
 }
 
 h4 {
   font-size: 20px;
   line-height: 28px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 17px;
+  }
 }
 
 h5 {
@@ -116,11 +143,13 @@ p {
   font-weight: normal;
   font-family: $open-sans, Arial, Helvetica, sans-serif;
   line-height: 25px;
+
   &.body-large {
     color: $dark-grey;
     font-size: 20px;
     line-height: 34px;
   }
+
   &.body-small {
     color: $dim-grey;
     font-size: 13px;
@@ -144,100 +173,138 @@ p {
   cursor: pointer;
   @include border-radius(500px);
 
-&.btn-transparent{
-  background-color: transparent;
-  color:#979797;
-}
+  &.btn-transparent {
+    background-color: transparent;
+    color: #979797;
+  }
 
-&.btn-orange{
-  background-color: #ff8f60;
-  color:#fff;
-}
-&.btn-dark-blue{
-  background-color: #283970;
-  color:#fff;
-}
+  &.btn-orange {
+
+    background-color: #ff7034;
+    color: #fff;
+
+    &:hover {
+      background-color: #ff8f60;
+    }
+  }
+
+  &.btn-dark-blue {
+    background-color: #283970;
+    color: #fff;
+
+    &:hover {
+      background-color: #3b4f8e;
+    }
+  }
 
 
-&.btn-default{
-  background-color: #dadada;
-  color: #333333;
-}
+  &.btn-default {
+    background-color: #dadada;
+    color: #333333;
+  }
 
-&.btn-small{
-  padding: 5px 14px;
-  font-size: 12px;
-}
-&.btn-large{
-  padding: 20px 30px;
-  font-size: 16px;
-}
+  &.btn-white {
+    color: #6f6f6f;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+    -o-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+  }
+
+  &.btn-small {
+    padding: 5px 14px;
+    font-size: 12px;
+  }
+
+  &.btn-large {
+    padding: 20px 30px;
+    font-size: 16px;
+  }
 
   &.btn-primary {
     color: #fff;
     background-color: $main-color;
+
     &:hover {
       background-color: $main-color-sub-1;
     }
+
     &:focus {
       background-color: $main-color-sub-2;
     }
+
     &.disabled,
     &:disabled {
       background-color: #c5c5c5;
     }
   }
+
   &.btn-secondary {
     color: $dark-grey;
     background-color: $sec-color;
+
     &:hover {
       background-color: $sec-color-sub-1;
     }
+
     &:focus {
       background-color: $sec-color-sub-2;
     }
+
     &.disabled,
     &:disabled {
       background-color: #c5c5c5;
     }
   }
+
   &.btn-dark {
     color: #fff;
     background-color: $dark-grey;
+
     &:hover {
       background-color: $dark-blue-sub-1;
     }
+
     &:focus {
       background-color: $dark-blue-sub-2;
     }
+
     &.disabled,
     &:disabled {
       background-color: #c5c5c5;
     }
   }
+
   &.btn-light {
     color: $dark-grey;
     background-color: #fff;
+
     &:hover {}
+
     &:focus {
       background-color: #c5c5c5;
     }
+
     &.disabled,
     &:disabled {
       color: #fff;
       background-color: #c5c5c5;
     }
   }
+
   &.btn-round {
     @include border-radius(500px);
     color: #fff;
     background-color: $dark-grey;
+
     &:hover {
       background-color: $dark-blue-sub-1;
     }
+
     &:focus {
       background-color: $dark-blue-sub-2;
     }
+
     &.disabled,
     &:disabled {
       background-color: #c5c5c5;
@@ -245,20 +312,21 @@ p {
   }
 }
 
-div.button-group{
+div.button-group {
   background-color: #fff;
   border-radius: 500px;
   display: inline-block;
   margin-bottom: 20px;
-  
-   box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
-  -webkit-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);;
+
+  box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+  ;
   -moz-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
   -o-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
-  
-  .btn{
-      margin-bottom:0 ;
-      
+
+  .btn {
+    margin-bottom: 0;
+
   }
 
 }
@@ -278,20 +346,25 @@ div.button-group{
   color: $dim-grey;
   width: 250px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
   &:hover {
     border: 1px solid #CED0DA;
   }
+
   &:focus {
     border: 1px solid $main-color;
     outline: none;
     caret-color: $main-color;
   }
+
   &.alert {
     border: 1px solid #ED1C24;
   }
+
   &.ok {
     border: 1px solid #23B99E;
   }
+
   &.disabled,
   &:disabled {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -303,19 +376,68 @@ div.button-group{
 =                  Used Objects             =
 ==================================================*/
 
-.center{
+
+
+#wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  margin: auto;
+  width: 100% !important;
+  max-width: 1500px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.responsive-top-margin {
+  margin-top: 100px;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin-top: 20px;
+  }
+
+}
+
+.responsive-bottom-padding {
+  padding-bottom: 130px;
+
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 80px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding-bottom: 50px;
+  }
+
+}
+
+
+.with-bottom-separator {
+  border-bottom: 1px solid rgba(232, 232, 232, 0.75);
+}
+
+
+.center {
   text-align: center;
 }
-.with-bottom-separator{
-  padding-bottom: 90px;
-  border-bottom: 1px solid rgba(232,232,232,0.75);
-}
+
 
 .row.head {
   text-align: center;
-  p {
-    display: block;
-    margin: 0 auto;
+}
+
+p.sub {
+  display: block;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 14px;
   }
 }
 
@@ -339,25 +461,6 @@ div.button-group{
 }
 
 
-.underlined-heading {
-  /*  margin: 0 0 68px;
-    h3 {
-        .world-water-day {
-            color: $dark-grey;
-            font-family: $open-sans;
-            font-size: 26px;
-            font-weight: 600;
-            line-height: 36px;
-            display: block;
-        }
-    }
-    span {
-        display: block;
-        width: 60px;
-        height: 5px;
-        background-color: $main-color;
-    }*/
-}
 
 .separator {
   height: 1px;
@@ -369,14 +472,16 @@ div.button-group{
 
 form.search-box-group {
   position: relative;
+
   input[type="text"] {
-    width: 100%; 
+    width: 100%;
   }
+
   button {
     color: #989898;
     position: absolute;
     top: 9px;
-    right: 3px;
+    right: 0px;
     border: none;
     background-color: transparent;
     outline: none;

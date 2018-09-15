@@ -19,7 +19,12 @@
           top: 5px;
 
           a {
-            background-image: url(../img/logo1.png);
+            @include transition(background-position, 0s, ease);
+
+            background-position: 0 -370px;
+            background-image: url("../img/logo-sprite.png");
+            background-repeat: no-repeat;
+
             height: 52px;
             width: 303px;
             display: inline-block;
@@ -84,7 +89,7 @@
               border-bottom: 4px solid transparent;
               max-height: 84px;
 
-              a{
+              a {
                 font-family: $open-sans, sans-serif;
                 font-size: 16px;
                 font-weight: 400;
@@ -107,26 +112,29 @@
         div {
           padding: 0;
         }
-        a.has-image{
-          &:before{
-              content: "|"; 
-              padding-right:22px;
-              color:#a6a6a6;
+
+        a.has-image {
+          &:before {
+            content: "|";
+            padding-right: 22px;
+            color: #a6a6a6;
           }
-      padding-right: 70px !important;
+
+          padding-right: 70px !important;
           position: relative;
-          img{
-              padding: 0 !important;
-              position: absolute;
-              top:20px;
-              right:12px;
-              z-index: 2;
-              width:40px !important;
-              border-radius: 30px ;
+
+          img {
+            padding: 0 !important;
+            position: absolute;
+            top: 20px;
+            right: 12px;
+            z-index: 2;
+            width: 40px !important;
+            border-radius: 30px;
           }
-      }
-      
-      
+        }
+
+
       }
 
       .main-nav {
@@ -138,15 +146,27 @@
         display: none !important;
       }
 
-      body{
-        .light-curves{
-          position: absolute;
-          top: -60px;
-          width: 100%;
-          z-index: -1;
-        }
-      }
 
+      .nav-buttons {
+        @media only screen and (min-width: 769px) {
+          display: none;
+        }
+
+        position: absolute;
+        right: 0px;
+
+        a {
+          margin-top: 23px;
+          margin-right: 20px;
+
+          span.bars {
+            svg {
+              font-size: 18px;
+            }
+          }
+        }
+
+      }
 
 
       /* Large Devices, Wide Screens */
@@ -157,6 +177,32 @@
           padding: 0px 5%;
         }
       }
+
+
+
+ /*========== For Mobile =================*/
+ 
+ #nav-container-for-mobile {
+  nav.main-nav {
+    ul#main-menu {
+      margin: 0 20px;
+      li {
+        a {
+          font-weight: 300 !important;
+          color: #6b6b6b;
+          &.active {
+            color: #606060;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
 
       /* Special breakboint for nav */
       @media only screen and (max-width: 1070px) {
@@ -223,7 +269,7 @@
 
         /*========== For Main Navbar =================*/
         #main-nav-wrapper {
-          height: 51px;
+          height: 66px;
 
         }
 
@@ -242,3 +288,7 @@
 
       /* Custom, iPhone Retina */
       @media only screen and (max-width: 320px) {}
+
+
+
+

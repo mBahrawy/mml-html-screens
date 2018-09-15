@@ -102,3 +102,99 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
+
+
+.slick-next.slick-arrow, .slick-prev.slick-arrow{
+    
+  position: absolute;
+  top:48%;
+  background:none;
+  border:none;
+  font-size: 0px;
+  background-color: #fff;
+
+  outline: none;
+  border-radius: 500px;
+  width: 35px;
+  height: 35px;
+  padding: 10px 0px ;
+  cursor: pointer;
+  
+              -webkit-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+      -o-box-shadow: 0 6px 13px 0px rgba(0, 0, 0, 0.09);
+  
+  &:after{
+      font-size: 25px;
+      font-family: monospace;
+     content: ' . '; 
+      
+      color:transparent;
+background-size: 23px 20px ;
+  background-repeat: no-repeat;
+      opacity: 0.8;
+      
+      
+  }
+  
+  
+}
+
+
+// Custom dot styling
+// ===================================
+
+
+  ul.slider-dots {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin: auto;
+
+    li {
+      opacity: 0.5;
+      display: inline-block;
+
+      button {
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 3.5em;
+        cursor: pointer;
+        margin: 0;
+        font-size: 0px !important;
+        font-family: monospace;
+        padding: 0 4px;
+        color: rgba(111, 111, 111, 0.85);
+
+        &:before {
+          content: '.';
+          font-size: 40px !important;
+        }
+      }
+
+      &.slick-active {
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+// Custom navigation buttons
+// ===================================
+
+.slick-next.slick-arrow{
+  right:-30px;
+  padding-left: 6px;
+  &:after{
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im00MC40LDEyMS4zYy0wLjgsMC44LTEuOCwxLjItMi45LDEuMnMtMi4xLTAuNC0yLjktMS4yYy0xLjYtMS42LTEuNi00LjIgMC01LjhsNTEtNTEtNTEtNTFjLTEuNi0xLjYtMS42LTQuMiAwLTUuOCAxLjYtMS42IDQuMi0xLjYgNS44LDBsNTMuOSw1My45YzEuNiwxLjYgMS42LDQuMiAwLDUuOGwtNTMuOSw1My45eiIgZmlsbD0iIzAwMDAwMCIvPgogIDwvZz4KPC9zdmc+Cg==);        
+  }
+}
+.slick-prev.slick-arrow{
+  left:-30px;
+  padding-right: 0px;
+  &:after{
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTg4LjYsMTIxLjNjMC44LDAuOCAxLjgsMS4yIDIuOSwxLjJzMi4xLTAuNCAyLjktMS4yYzEuNi0xLjYgMS42LTQuMiAwLTUuOGwtNTEtNTEgNTEtNTFjMS42LTEuNiAxLjYtNC4yIDAtNS44cy00LjItMS42LTUuOCwwbC01NCw1My45Yy0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTQsNTMuOXoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=);
+  }
+}
