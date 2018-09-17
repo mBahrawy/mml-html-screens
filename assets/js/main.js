@@ -102,6 +102,142 @@ $(".toggle-mobile-nav-btn").click(function () {
 
 
 
+// Image upload
+// ==========================================================
+
+$(function(){
+  // For image picker
+  $("#image-picker").change(function(){
+    var file = this.files[0],
+      reader = new FileReader(),
+      img = $(this).siblings('img.picked-image')
+    reader.onload = function (e) {
+      img.attr('src', e.target.result);
+    }
+    reader.readAsDataURL(file);
+  });
+
+  // For checking file size
+  var fileInput = $('#image-picker');
+  var maxSize = fileInput.data('max-size');
+  var maxSizeInBytes = maxSize*1000000;
+
+  $('form').submit(function(e){
+
+    
+    if( $('form').find('input[type="file"]').length > 0){
+
+      if(fileInput.get(0).files.length){
+          var fileSize = fileInput.get(0).files[0].size; // in bytes
+          if(fileSize>maxSizeInBytes){
+              $('#image-picker+span').html('Your photo size is more than '+maxSize+' MB, please select another one');
+              return false;
+          }
+      }
+    }
+
+  });
+});
+
+
+
+
+
+// Equipments  SP edit profile page
+// ==========================================================
+
+$('button.expand').click(function(e){
+ e.preventDefault();
+  $('div.collapse-container').css("max-height","500px");
+  $('button.collapse').show();
+})
+
+$('button.collapse').click(function(e){
+  e.preventDefault();
+  $(this).hide();
+  $('div.collapse-container').css("max-height","0");
+})
+
+// Time Input field
+// ==========================================================
+
+
+var timePickers = document.getElementsByClassName('timepicker-work');
+
+  for ( var i = 0; i < timePickers.length; i++) { 
+    var timeField = timePickers[i].dataset.time;
+    if(!timeField){
+      timeField = '7:00am'
+    }else{
+      if(timeField == ''){
+        timeField = '7:00am'
+      }
+    }
+    $(timePickers[i]).timepicker({
+      timeFormat: 'h:mm p',
+      interval: 30,
+      minTime: '7',
+      maxTime: '10:00pm',
+      defaultTime: timeField,
+      startTime: '7:00am',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: true
+    });
+}
+
+
+
+$('.day-working .day-off').change(function(){
+  if($(this).prop('checked')){
+    $(this).parent().parent().find('.timepicker-work').prop('disabled', true);
+  }else{
+    $(this).parent().parent().find('.timepicker-work').prop('disabled', false);
+  }
+
+})
+
+// Add new credential 
+// ==========================================================
+
+
+$('.credential-option').change(function(){
+
+  var chatchCheckBox =  $(this).attr('id');
+  var propertyContainer = '.new-'+chatchCheckBox+'-container';
+  var chatchNewInputField = '.new-'+chatchCheckBox;
+
+
+
+
+  if( $(this).prop('checked')){
+
+    $(propertyContainer).slideDown( "fast" );
+    $(chatchNewInputField).prop('disabled', false);
+
+  }else{
+
+    $(propertyContainer).slideUp( "fast" );
+    $(chatchNewInputField).prop('disabled', true);
+
+  }
+});
+
+
+// Truck details 
+// ==========================================================
+
+$('#has-truck').change(function(){
+  if($(this).prop('checked')){
+    $( this ).parent().parent().find('textarea').slideDown("fast");
+    $( this ).parent().parent().find('textarea').prop('disabled', false);
+  }else{
+    $( this ).parent().parent().find('textarea').slideUp("fast");
+    $( this ).parent().parent().find('textarea').prop('disabled', true);
+  }
+})
+
+
 
 
 // Testimonials Slider
@@ -205,4 +341,5 @@ $('#service-provider-slider').slick({
 
 
   ]
-})
+});
+

@@ -240,6 +240,11 @@ p {
     color: #fff; }
     .btn.btn-dark-blue:hover {
       background-color: #3b4f8e; }
+  .btn.btn-paypal {
+    background-color: #31a2d6;
+    color: #fff; }
+    .btn.btn-paypal:hover {
+      background-color: #aacedf; }
   .btn.btn-default {
     background-color: #dadada;
     color: #333333; }
@@ -350,9 +355,22 @@ div.button-group {
 
 .container {
   margin: auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 1500px;
   padding: 0 20px;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 1170px) {
+    .container {
+      width: 85% !important; } }
+  @media only screen and (max-width: 991px) {
+    .container {
+      width: 90% !important; } }
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 100% !important; } }
+
+.container-fluid {
+  width: 100% !important;
   box-sizing: border-box; }
 
 .responsive-top-margin {
@@ -372,6 +390,14 @@ div.button-group {
   @media only screen and (max-width: 480px) {
     .responsive-bottom-padding {
       padding-bottom: 50px; } }
+
+header {
+  margin-bottom: 75px; }
+
+header.inner-light-style {
+  background-image: url(../img/light-curves.svg);
+  min-height: 300px;
+  margin-bottom: -140px; }
 
 .with-bottom-separator {
   border-bottom: 1px solid rgba(232, 232, 232, 0.75); }
@@ -991,6 +1017,65 @@ ul.slider-dots {
   100% {
     transform-origin: top center;
     transform: rotateX(0deg); } }
+.ui-timepicker-container {
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.ui-timepicker, .ui-timepicker-viewport {
+  box-sizing: content-box;
+  height: 205px;
+  display: block;
+  margin: 0; }
+
+.ui-timepicker {
+  list-style: none;
+  padding: 0 1px;
+  text-align: center; }
+
+.ui-timepicker-viewport {
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden; }
+
+.ui-timepicker-standard {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1.1em;
+  background-color: #FFF;
+  border: 1px solid #AAA;
+  color: #222;
+  margin: 0;
+  padding: 2px; }
+  .ui-timepicker-standard a {
+    border: none;
+    color: #717171;
+    display: block;
+    font-size: 15px;
+    padding: .2em .4em;
+    text-decoration: none; }
+  .ui-timepicker-standard .ui-state-hover {
+    background-color: #DADADA;
+    font-weight: 400;
+    color: #212121; }
+  .ui-timepicker-standard .ui-menu-item {
+    margin: 0;
+    padding: 0; }
+
+.ui-timepicker-corners {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  .ui-timepicker-corners .ui-corner-all {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+
+.ui-timepicker-hidden {
+  display: none; }
+
+.ui-timepicker-no-scrollbar .ui-timepicker {
+  border: none; }
+
 /*==================================================
 =                      Pages                       =
 ==================================================*/
@@ -1749,39 +1834,41 @@ div.main-blue-header-theme {
 #login-form-container .step {
   margin: 0 0 40px; }
 
-#user-quick-panel .user-info {
-  border-right: 1px solid #d7d7d7; }
-  #user-quick-panel .user-info img {
-    border-radius: 500px;
-    width: 110px;
-    float: left; }
-  #user-quick-panel .user-info div {
-    float: left;
-    box-sizing: border-box;
-    padding: 0 0 0 20px; }
-    #user-quick-panel .user-info div h4 {
-      margin: 0 0 5px; }
-    #user-quick-panel .user-info div ul {
-      list-style: none;
-      margin: 0 0 10px !important;
-      padding: 0;
-      margin-bottom: 20px; }
-      #user-quick-panel .user-info div ul li {
-        font-size: 13px;
-        line-height: 18px; }
-    #user-quick-panel .user-info div a.btn {
-      margin-bottom: 0; }
-#user-quick-panel .summary-info ul {
-  margin: 1px 5px;
-  padding: 0;
-  list-style: none; }
-  #user-quick-panel .summary-info ul li {
-    line-height: 30px;
-    font-size: 14px; }
-    #user-quick-panel .summary-info ul li svg {
-      min-width: 20px;
-      margin-right: 5px;
-      color: #317aaa; }
+#user-quick-panel {
+  margin-bottom: 90px; }
+  #user-quick-panel .user-info {
+    border-right: 1px solid #d7d7d7; }
+    #user-quick-panel .user-info img {
+      border-radius: 500px;
+      width: 110px;
+      float: left; }
+    #user-quick-panel .user-info div {
+      float: left;
+      box-sizing: border-box;
+      padding: 0 0 0 20px; }
+      #user-quick-panel .user-info div h4 {
+        margin: 0 0 5px; }
+      #user-quick-panel .user-info div ul {
+        list-style: none;
+        margin: 0 0 10px !important;
+        padding: 0;
+        margin-bottom: 20px; }
+        #user-quick-panel .user-info div ul li {
+          font-size: 13px;
+          line-height: 18px; }
+      #user-quick-panel .user-info div a.btn {
+        margin-bottom: 0; }
+  #user-quick-panel .summary-info ul {
+    margin: 1px 5px;
+    padding: 0;
+    list-style: none; }
+    #user-quick-panel .summary-info ul li {
+      line-height: 30px;
+      font-size: 14px; }
+      #user-quick-panel .summary-info ul li svg {
+        min-width: 20px;
+        margin-right: 5px;
+        color: #317aaa; }
 
 #dashboard-container .content {
   position: relative;
@@ -1873,6 +1960,281 @@ div.main-blue-header-theme {
     margin-right: 4px; }
 #dashboard-container .finished .row {
   opacity: 0.7; }
+
+.settings-section .sidebar-col {
+  flex-basis: 250px; }
+  .settings-section .sidebar-col div {
+    position: sticky;
+    top: 15px; }
+    .settings-section .sidebar-col div nav.settings-sidebar {
+      border: 1px solid #ddd;
+      border-bottom: 0;
+      border-radius: 5px; }
+      .settings-section .sidebar-col div nav.settings-sidebar h4 {
+        font-size: 13px;
+        letter-spacing: 0.3px;
+        margin: 0;
+        box-sizing: border-box;
+        display: block;
+        padding: 10px 10px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #586069;
+        background-color: #f3f3f3;
+        border-bottom: 1px solid #e1e4e8; }
+        .settings-section .sidebar-col div nav.settings-sidebar h4:first-child {
+          border-top: 0; }
+      .settings-section .sidebar-col div nav.settings-sidebar ul {
+        margin: 0;
+        list-style: none;
+        padding: 0; }
+        .settings-section .sidebar-col div nav.settings-sidebar ul li {
+          background-color: #fff; }
+          .settings-section .sidebar-col div nav.settings-sidebar ul li a {
+            color: #558699;
+            position: relative;
+            display: block;
+            padding: 10px 10px;
+            border-bottom: 1px solid #e1e4e8;
+            font-size: 13px; }
+            .settings-section .sidebar-col div nav.settings-sidebar ul li a:last-child {
+              border-bottom: 1px solid #e1e4e8; }
+          .settings-section .sidebar-col div nav.settings-sidebar ul li.active {
+            border-left: 2px solid #7a7a7a; }
+            .settings-section .sidebar-col div nav.settings-sidebar ul li.active a {
+              color: #363636;
+              font-weight: 600; }
+          .settings-section .sidebar-col div nav.settings-sidebar ul li:hover {
+            background-color: #f7f7f7; }
+.settings-section .settings-body {
+  background-color: #fff;
+  padding: 0 30px 30px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+  .settings-section .settings-body h5 {
+    margin: 0 0 5px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #292929; }
+  .settings-section .settings-body .col-sm-12,
+  .settings-section .settings-body .col-sm-9,
+  .settings-section .settings-body .col-sm-8,
+  .settings-section .settings-body .col-sm-4,
+  .settings-section .settings-body .col-sm-3 {
+    padding: 0; }
+  .settings-section .settings-body .row.head h4 {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: left; }
+  .settings-section .settings-body .row.container-fluid {
+    padding: 0;
+    margin: 0; }
+    .settings-section .settings-body .row.container-fluid .row {
+      width: 100%; }
+  .settings-section .settings-body form .input-field {
+    max-width: 400px; }
+    .settings-section .settings-body form .input-field input[type="text"],
+    .settings-section .settings-body form .input-field input[type="password"],
+    .settings-section .settings-body form .input-field input[type="email"],
+    .settings-section .settings-body form .input-field textarea {
+      width: 100%; }
+  .settings-section .settings-body form .picked-image {
+    display: block;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 500px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; }
+    .settings-section .settings-body form .picked-image + label {
+      display: block;
+      margin: auto;
+      max-width: 120px; }
+      .settings-section .settings-body form .picked-image + label + input {
+        display: none; }
+        .settings-section .settings-body form .picked-image + label + input + span {
+          text-align: center;
+          display: block;
+          margin-top: 12px;
+          font-size: 13px;
+          color: #d51717; }
+  .settings-section .settings-body .all-equipments .equipment {
+    position: relative;
+    padding: 0 0 10px 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f3f3f3; }
+    .settings-section .settings-body .all-equipments .equipment h5 {
+      margin-bottom: 0; }
+    .settings-section .settings-body .all-equipments .equipment p {
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0; }
+    .settings-section .settings-body .all-equipments .equipment svg.fa-check,
+    .settings-section .settings-body .all-equipments .equipment .fa-dollar-sign {
+      position: absolute; }
+    .settings-section .settings-body .all-equipments .equipment svg.fa-check,
+    .settings-section .settings-body .all-equipments .equipment svg.fa-dollar-sign {
+      left: 0;
+      top: 4px;
+      color: #299946;
+      border: 1px solid #77c485;
+      padding: 1px;
+      font-size: 14px; }
+      .settings-section .settings-body .all-equipments .equipment svg.fa-check.fa-dollar-sign,
+      .settings-section .settings-body .all-equipments .equipment svg.fa-dollar-sign.fa-dollar-sign {
+        border-radius: 500px;
+        width: 15px;
+        padding: 3px;
+        color: #2176d1;
+        border: 1px solid #7794c4; }
+    .settings-section .settings-body .all-equipments .equipment button {
+      background-color: transparent;
+      opacity: 0.5;
+      width: 30px;
+      padding: 6px 5px;
+      left: -5px; }
+      .settings-section .settings-body .all-equipments .equipment button:hover {
+        opacity: 1;
+        background-color: #ddd; }
+      .settings-section .settings-body .all-equipments .equipment button#edit-equipment {
+        top: 25px; }
+      .settings-section .settings-body .all-equipments .equipment button#delete-equipment {
+        top: 50px; }
+  .settings-section .settings-body .add-new-equipment,
+  .settings-section .settings-body .collapse-container {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden; }
+    .settings-section .settings-body .add-new-equipment .radio-label,
+    .settings-section .settings-body .collapse-container .radio-label {
+      display: inline-block;
+      width: 1 100px;
+      padding: 10px;
+      border: solid 2px #ccc;
+      transition: all 0.3s;
+      font-size: 13px;
+      opacity: 0.8; }
+    .settings-section .settings-body .add-new-equipment input[type="radio"],
+    .settings-section .settings-body .collapse-container input[type="radio"] {
+      display: none; }
+      .settings-section .settings-body .add-new-equipment input[type="radio"]:checked + label,
+      .settings-section .settings-body .collapse-container input[type="radio"]:checked + label {
+        border: solid 2px green;
+        opacity: 1;
+        margin-bottom: 20px; }
+        .settings-section .settings-body .add-new-equipment input[type="radio"]:checked + label svg,
+        .settings-section .settings-body .collapse-container input[type="radio"]:checked + label svg {
+          color: green; }
+      .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-has-price:checked + label,
+      .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-has-price:checked + label {
+        border: solid 2px #48c1e2;
+        opacity: 1;
+        margin-bottom: 20px; }
+        .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-has-price:checked + label svg,
+        .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-has-price:checked + label svg {
+          color: #1276b9; }
+    .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5, .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5 + #new-equipment-price,
+    .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5,
+    .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5 + #new-equipment-price {
+      display: none; }
+  .settings-section .settings-body .collapse {
+    display: none; }
+  .settings-section .settings-body .working-hours {
+    max-width: 100% !important;
+    margin: 0; }
+    .settings-section .settings-body .working-hours .day-working {
+      position: relative;
+      width: 550px;
+      border-bottom: 1px solid #f3f3f3;
+      padding: 20px 0; }
+      .settings-section .settings-body .working-hours .day-working:last-child {
+        border-bottom: none; }
+      .settings-section .settings-body .working-hours .day-working h5 {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 15px;
+        min-width: 80px;
+        color: #4b4b4b; }
+      .settings-section .settings-body .working-hours .day-working label.day-off-label {
+        font-size: 15px;
+        display: inline-block;
+        margin-right: 20px; }
+        .settings-section .settings-body .working-hours .day-working label.day-off-label input {
+          position: relative;
+          top: 2px;
+          left: -4px; }
+      .settings-section .settings-body .working-hours .day-working .time-pickers {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 13px; }
+        .settings-section .settings-body .working-hours .day-working .time-pickers p {
+          display: inline-block;
+          margin: 0 5px;
+          font-size: 15px;
+          font-weight: 600;
+          color: #4b4b4b; }
+        .settings-section .settings-body .working-hours .day-working .time-pickers .timepicker-work {
+          text-align: center;
+          width: 120px;
+          display: inline-block; }
+  .settings-section .settings-body .all-credentials .credential {
+    position: relative;
+    padding: 0 0 20px 20px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 10px; }
+    .settings-section .settings-body .all-credentials .credential:last-child {
+      border-bottom: 0; }
+    .settings-section .settings-body .all-credentials .credential svg.fa-check {
+      position: absolute;
+      top: 5px;
+      left: -5px;
+      color: #2ba65d; }
+    .settings-section .settings-body .all-credentials .credential h5 {
+      line-height: 0;
+      margin-bottom: 0;
+      height: 28px; }
+      .settings-section .settings-body .all-credentials .credential h5 button {
+        background-color: transparent;
+        opacity: 0.5;
+        width: 30px;
+        padding: 6px 5px;
+        left: -5px; }
+        .settings-section .settings-body .all-credentials .credential h5 button:hover {
+          opacity: 1;
+          background-color: #ddd; }
+    .settings-section .settings-body .all-credentials .credential p {
+      margin: 0;
+      font-size: 12px; }
+      .settings-section .settings-body .all-credentials .credential p span {
+        color: #2786b3;
+        margin-left: 5px; }
+  .settings-section .settings-body .add-new-credential .new-credential-desc-container,
+  .settings-section .settings-body .add-new-credential .new-credential-policy-number-container,
+  .settings-section .settings-body .add-new-credential .new-credential-policy-issuer-container {
+    display: none; }
+  .settings-section .settings-body .add-new-credential div.checkboxes-container {
+    display: block;
+    margin: 20px 0; }
+    .settings-section .settings-body .add-new-credential div.checkboxes-container label {
+      display: inline-block;
+      font-size: 15px;
+      margin-right: 15px;
+      margin-bottom: 8px; }
+      .settings-section .settings-body .add-new-credential div.checkboxes-container label input {
+        position: relative;
+        top: 2px;
+        margin-right: 5px; }
+  .settings-section .settings-body .truck-details label {
+    margin-bottom: 20px;
+    display: block; }
+    .settings-section .settings-body .truck-details label input {
+      margin-right: 5px; }
+    .settings-section .settings-body .truck-details label + textarea {
+      display: none;
+      margin-bottom: 30px; }
 
 /*==================================================
 =                     Sections                     =
