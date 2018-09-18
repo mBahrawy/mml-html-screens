@@ -394,10 +394,41 @@ div.button-group {
 header {
   margin-bottom: 75px; }
 
-header.inner-light-style {
+@media only screen and (max-width: 768px) {
+  header.has-light-header-curve {
+    margin-bottom: 20px; } }
+header.has-light-header-curve div.light-header-curve {
   background-image: url(../img/light-curves.svg);
-  min-height: 300px;
-  margin-bottom: -140px; }
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 460px; }
+  @media only screen and (max-width: 1600px) {
+    header.has-light-header-curve div.light-header-curve {
+      height: 460px; } }
+  @media only screen and (max-width: 1200px) {
+    header.has-light-header-curve div.light-header-curve {
+      height: 370px; } }
+  @media only screen and (max-width: 991px) {
+    header.has-light-header-curve div.light-header-curve {
+      height: 300px; } }
+  @media only screen and (max-width: 768px) {
+    header.has-light-header-curve div.light-header-curve {
+      height: 200px; } }
+  @media only screen and (max-width: 480px) {
+    header.has-light-header-curve div.light-header-curve {
+      height: 180px; } }
+header.has-light-header-curve #main-nav-wrapper div.site-logo a {
+  background-position: 0 3px; }
+  @media only screen and (max-width: 768px) {
+    header.has-light-header-curve #main-nav-wrapper div.site-logo a {
+      background-position: 0px -370px; } }
+  @media only screen and (max-width: 480px) {
+    header.has-light-header-curve #main-nav-wrapper div.site-logo a {
+      background-position: 0px -519px;
+      max-height: 35px;
+      overflow: hidden; } }
 
 .with-bottom-separator {
   border-bottom: 1px solid rgba(232, 232, 232, 0.75); }
@@ -561,11 +592,16 @@ form.search-box-group {
   display: none !important; }
 
 .nav-buttons {
+  top: 8px;
+  right: 16px !important;
   position: absolute;
   right: 0px; }
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 1009px) {
     .nav-buttons {
       display: none; } }
+  @media only screen and (max-width: 768px) {
+    .nav-buttons {
+      top: 0; } }
   .nav-buttons a {
     margin-top: 23px;
     margin-right: 20px; }
@@ -578,13 +614,24 @@ form.search-box-group {
   #grey-navbar {
     padding: 0px 5%; } }
 /*========== For Mobile =================*/
-#nav-container-for-mobile nav.main-nav ul#main-menu {
-  margin: 0 20px; }
-  #nav-container-for-mobile nav.main-nav ul#main-menu li a {
-    font-weight: 300 !important;
-    color: #6b6b6b; }
-    #nav-container-for-mobile nav.main-nav ul#main-menu li a.active {
-      color: #606060; }
+#nav-container-for-mobile nav.main-nav {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  background-color: #f4f4f4; }
+  #nav-container-for-mobile nav.main-nav ul#main-menu {
+    margin: 0 20px; }
+    #nav-container-for-mobile nav.main-nav ul#main-menu li a {
+      font-weight: 300 !important;
+      color: #6b6b6b; }
+      #nav-container-for-mobile nav.main-nav ul#main-menu li a img {
+        border-radius: 500px;
+        position: absolute;
+        top: 6px;
+        left: 90px;
+        width: 31px;
+        object-fit: cover; }
+      #nav-container-for-mobile nav.main-nav ul#main-menu li a.active {
+        color: #606060; }
 
 /* Special breakboint for nav */
 @media only screen and (max-width: 1070px) {
@@ -1022,7 +1069,8 @@ ul.slider-dots {
   overflow: hidden;
   box-sizing: border-box; }
 
-.ui-timepicker, .ui-timepicker-viewport {
+.ui-timepicker,
+.ui-timepicker-viewport {
   box-sizing: content-box;
   height: 205px;
   display: block;
@@ -1053,6 +1101,9 @@ ul.slider-dots {
     font-size: 15px;
     padding: .2em .4em;
     text-decoration: none; }
+    @media only screen and (max-width: 991px) {
+      .ui-timepicker-standard a {
+        font-size: 13px; } }
   .ui-timepicker-standard .ui-state-hover {
     background-color: #DADADA;
     font-weight: 400;
@@ -1962,7 +2013,7 @@ div.main-blue-header-theme {
   opacity: 0.7; }
 
 .settings-section .sidebar-col {
-  flex-basis: 250px; }
+  text-align: left; }
   .settings-section .sidebar-col div {
     position: sticky;
     top: 15px; }
@@ -2007,6 +2058,7 @@ div.main-blue-header-theme {
           .settings-section .sidebar-col div nav.settings-sidebar ul li:hover {
             background-color: #f7f7f7; }
 .settings-section .settings-body {
+  text-align: left;
   background-color: #fff;
   padding: 0 30px 30px;
   box-sizing: border-box;
@@ -2027,6 +2079,9 @@ div.main-blue-header-theme {
     padding-bottom: 10px;
     width: 100%;
     text-align: left; }
+    .settings-section .settings-body .row.head h4 svg {
+      font-size: 14px;
+      margin: 0 5px 2px 0; }
   .settings-section .settings-body .row.container-fluid {
     padding: 0;
     margin: 0; }
@@ -2041,16 +2096,15 @@ div.main-blue-header-theme {
       width: 100%; }
   .settings-section .settings-body form .picked-image {
     display: block;
-    margin: 20px auto;
+    margin: 0 0 20px;
     overflow: hidden;
-    border-radius: 500px;
-    width: 200px;
-    height: 200px;
+    border-radius: 8px;
+    width: 250px;
+    height: 240px;
     object-fit: cover; }
     .settings-section .settings-body form .picked-image + label {
-      display: block;
-      margin: auto;
-      max-width: 120px; }
+      border-radius: 8px;
+      width: 200px; }
       .settings-section .settings-body form .picked-image + label + input {
         display: none; }
         .settings-section .settings-body form .picked-image + label + input + span {
@@ -2076,10 +2130,9 @@ div.main-blue-header-theme {
       position: absolute; }
     .settings-section .settings-body .all-equipments .equipment svg.fa-check,
     .settings-section .settings-body .all-equipments .equipment svg.fa-dollar-sign {
-      left: 0;
-      top: 4px;
+      left: 4px;
+      top: 5px;
       color: #299946;
-      border: 1px solid #77c485;
       padding: 1px;
       font-size: 14px; }
       .settings-section .settings-body .all-equipments .equipment svg.fa-check.fa-dollar-sign,
@@ -2087,8 +2140,7 @@ div.main-blue-header-theme {
         border-radius: 500px;
         width: 15px;
         padding: 3px;
-        color: #2176d1;
-        border: 1px solid #7794c4; }
+        color: #2176d1; }
     .settings-section .settings-body .all-equipments .equipment button {
       background-color: transparent;
       opacity: 0.5;
@@ -2107,6 +2159,9 @@ div.main-blue-header-theme {
     max-height: 0;
     transition: max-height 0.5s ease-out;
     overflow: hidden; }
+    .settings-section .settings-body .add-new-equipment .new-equipment-price-container,
+    .settings-section .settings-body .collapse-container .new-equipment-price-container {
+      display: none; }
     .settings-section .settings-body .add-new-equipment .radio-label,
     .settings-section .settings-body .collapse-container .radio-label {
       display: inline-block;
@@ -2135,12 +2190,21 @@ div.main-blue-header-theme {
         .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-has-price:checked + label svg,
         .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-has-price:checked + label svg {
           color: #1276b9; }
-    .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5, .settings-section .settings-body .add-new-equipment input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5 + #new-equipment-price,
-    .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5,
-    .settings-section .settings-body .collapse-container input[type="radio"]#new-equipment-is-included:checked + label + input + label + h5 + #new-equipment-price {
-      display: none; }
+  .settings-section .settings-body .expand {
+    outline: none; }
   .settings-section .settings-body .collapse {
-    display: none; }
+    display: none;
+    outline: none;
+    width: 12px; }
+    .settings-section .settings-body .collapse svg {
+      margin: 0;
+      position: relative;
+      left: -4px; }
+  .settings-section .settings-body .service-area button {
+    border-radius: 8px;
+    text-transform: capitalize; }
+    .settings-section .settings-body .service-area button:hover {
+      opacity: 0.8; }
   .settings-section .settings-body .working-hours {
     max-width: 100% !important;
     margin: 0; }
@@ -2149,6 +2213,9 @@ div.main-blue-header-theme {
       width: 550px;
       border-bottom: 1px solid #f3f3f3;
       padding: 20px 0; }
+      @media only screen and (max-width: 991px) {
+        .settings-section .settings-body .working-hours .day-working {
+          width: 450px; } }
       .settings-section .settings-body .working-hours .day-working:last-child {
         border-bottom: none; }
       .settings-section .settings-body .working-hours .day-working h5 {
@@ -2157,10 +2224,19 @@ div.main-blue-header-theme {
         font-size: 15px;
         min-width: 80px;
         color: #4b4b4b; }
+        @media only screen and (max-width: 991px) {
+          .settings-section .settings-body .working-hours .day-working h5 {
+            margin-right: 15px;
+            font-size: 13px;
+            min-width: 70px; } }
       .settings-section .settings-body .working-hours .day-working label.day-off-label {
         font-size: 15px;
         display: inline-block;
         margin-right: 20px; }
+        @media only screen and (max-width: 991px) {
+          .settings-section .settings-body .working-hours .day-working label.day-off-label {
+            margin-right: 8px;
+            font-size: 13px; } }
         .settings-section .settings-body .working-hours .day-working label.day-off-label input {
           position: relative;
           top: 2px;
@@ -2176,10 +2252,17 @@ div.main-blue-header-theme {
           font-size: 15px;
           font-weight: 600;
           color: #4b4b4b; }
+          @media only screen and (max-width: 991px) {
+            .settings-section .settings-body .working-hours .day-working .time-pickers p {
+              font-size: 13px; } }
         .settings-section .settings-body .working-hours .day-working .time-pickers .timepicker-work {
           text-align: center;
           width: 120px;
           display: inline-block; }
+          @media only screen and (max-width: 991px) {
+            .settings-section .settings-body .working-hours .day-working .time-pickers .timepicker-work {
+              font-size: 13px;
+              width: 80px; } }
   .settings-section .settings-body .all-credentials .credential {
     position: relative;
     padding: 0 0 20px 20px;
@@ -2235,6 +2318,52 @@ div.main-blue-header-theme {
     .settings-section .settings-body .truck-details label + textarea {
       display: none;
       margin-bottom: 30px; }
+  .settings-section .settings-body div.licenses-container .input-field p {
+    margin-bottom: 10px; }
+  .settings-section .settings-body div.licenses-container .input-field small {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 20px; }
+  .settings-section .settings-body div.licenses-container .has-licence-option input[type="text"] {
+    display: none; }
+.settings-section form {
+  position: relative; }
+  .settings-section form button[type="submit"] {
+    margin-top: 20px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    background-color: #eaeaea;
+    color: #535353; }
+    .settings-section form button[type="submit"]:hover {
+      background-color: #d3d3d3;
+      color: #2d2d2d; }
+  .settings-section form .input-field {
+    margin-bottom: 15px;
+    max-width: 100% !important; }
+    .settings-section form .input-field input[type="text"],
+    .settings-section form .input-field textarea,
+    .settings-section form .input-field p,
+    .settings-section form .input-field small,
+    .settings-section form .input-field h4,
+    .settings-section form .input-field h5 {
+      max-width: 500px; }
+    .settings-section form .input-field.inline-input {
+      max-width: 500px !important;
+      position: relative;
+      height: 50px; }
+      .settings-section form .input-field.inline-input h5 {
+        margin: 0;
+        position: relative;
+        top: 5px; }
+      .settings-section form .input-field.inline-input input,
+      .settings-section form .input-field.inline-input select {
+        position: absolute;
+        right: 0;
+        top: -2px;
+        max-width: 250px; }
+    .settings-section form .input-field.inline-input-small input,
+    .settings-section form .input-field.inline-input-small select {
+      max-width: 120px; }
 
 /*==================================================
 =                     Sections                     =
@@ -2254,6 +2383,41 @@ footer {
   z-index: 1;
   position: relative;
   padding-top: 250px; }
+  footer .container-fluid {
+    max-width: 1600px; }
+  footer.has-top-curves {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 380px; }
+    @media only screen and (max-width: 1600px) {
+      footer.has-top-curves {
+        padding-top: 320px; } }
+    @media only screen and (max-width: 991px) {
+      footer.has-top-curves {
+        padding-top: 250px; } }
+    @media only screen and (max-width: 768px) {
+      footer.has-top-curves {
+        padding-top: 170px; } }
+    footer.has-top-curves div.footer-top-curves {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 100%;
+      background-image: url("../img/footer-curve.svg");
+      top: -270px;
+      height: 500px; }
+      @media only screen and (max-width: 1600px) {
+        footer.has-top-curves div.footer-top-curves {
+          top: -170px;
+          height: 330px; } }
+      @media only screen and (max-width: 991px) {
+        footer.has-top-curves div.footer-top-curves {
+          top: -120px;
+          height: 240px; } }
+      @media only screen and (max-width: 768px) {
+        footer.has-top-curves div.footer-top-curves {
+          top: -85px;
+          height: 170px; } }
   footer a:hover {
     color: #6fb0cf; }
   footer .footer-site-logo {
@@ -2314,17 +2478,6 @@ footer {
     margin-right: 20px; }
   footer nav.app-links a {
     font-size: 20px; }
-  footer nav.social-links {
-    background-color: #0a0f13;
-    padding: 0 0px 0 16px;
-    display: inline-block;
-    position: relative;
-    z-index: 2; }
-    @media only screen and (max-width: 768px) {
-      footer nav.social-links {
-        background-color: #0a1a27;
-        display: table;
-        margin: 0 auto 0px; } }
   footer form {
     margin-bottom: 20px; }
     footer form input[type="email"] {
@@ -2363,13 +2516,34 @@ footer {
   footer span.social-line {
     background-color: rgba(255, 255, 255, 0.8);
     height: 1px;
-    width: 100%;
-    display: block;
-    margin-bottom: 70px;
+    width: 33.33%;
+    display: inline-block;
     margin-bottom: 0;
-    position: relative;
-    top: -12px;
+    margin-bottom: 0;
+    position: relative; }
+  footer div.social-group {
+    display: flex;
     margin-bottom: 70px; }
+    footer div.social-group span.social-line {
+      background-color: rgba(255, 255, 255, 0.53);
+      height: 1px;
+      width: 50%;
+      display: inline-block;
+      margin-bottom: 0;
+      margin-bottom: 0;
+      position: relative;
+      top: 12px; }
+    footer div.social-group nav.social-links {
+      padding-left: 5px;
+      display: inline-block;
+      z-index: 2;
+      flex-basis: 140px;
+      min-width: 95px; }
+      footer div.social-group nav.social-links ul {
+        margin: 0;
+        padding: 0; }
+        footer div.social-group nav.social-links ul li {
+          margin: 0 5px; }
   @media only screen and (max-width: 768px) {
     footer div.search-col {
       max-width: 380px;

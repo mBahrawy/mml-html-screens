@@ -16,8 +16,7 @@
   <!--normalizer-->
   <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
   <!--Font-awesome-->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
   <!-- SmartMenus core CSS (required) -->
   <link href="assets/css/sm-core-css.css" rel="stylesheet" type="text/css" />
   <!-- "sm-mint" menu theme (optional, you can use your own CSS, too) -->
@@ -28,7 +27,12 @@
 <body>
   <!--[if lte IE 9]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
   <!--HEADER-->
-  <header class="inner-light-style">
+  <header class="has-light-header-curve">
+
+    <div class="light-header-curve">
+
+    </div>
+
     <div id="main-nav-wrapper" class="">
       <div class="site-logo">
         <a href="index.html"></a>
@@ -81,1128 +85,1022 @@
         </a>
       </div>
     </div>
+
+    <div id="nav-container-for-mobile"> </div>
+
   </header>
-  <div id="nav-container-for-mobile"> </div>
+
+  <div class="main-wrapper">
 
 
-  <!--  For Profile section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class="active"><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
+    <!--  For Profile picture   -->
+    <section id="profile-picture-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="active">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-9 settings-body">
-        <div class="row head">
-          <h4>Public profile</h4>
-        </div>
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row container-fluid">
-            <div class="row">
-              <div class="col-sm-8">
-                <div class="input-field">
-                  <h5>Your name</h5>
-                  <input type="text" class="textbox " name="name" placeholder="Name" maxlength="15">
-                </div>
-                <div class="input-field">
-                  <h5>Your Service Bio</h5>
-                  <textarea class="textbox " name="bio" placeholder="professional summary" maxlength="15"></textarea>
-                </div>
-                <div class="input-field">
-                  <h5>Your Company name</h5>
-                  <input type="text" class="textbox " name="company-name" placeholder="Company" maxlength="15">
-                </div>
-              </div>
-              <div class="col-sm-4">
+        <div class="col-sm-9 col-xs-12 settings-body">
+          <div class="row head">
+            <h4>Public profile picture</h4>
+          </div>
+          <form action="#" method="get" enctype="multipart/form-data">
+            <div class="row container-fluid">
+
+              <div class="input-field">
                 <img class="picked-image" src="assets/img/user-img-2.png">
                 <label for="image-picker" class="btn btn-dark">Change photo</label>
                 <!--Img size limit in Megabyte-->
                 <input name='file' class="btn btn-orange" type="file" id="image-picker" accept="image/*" data-max-size="2" />
-                <span class="field-error"></span>
+                <span class="error-field"></span>
               </div>
             </div>
             <button class="btn btn-orange" type="submit">Save</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!--  For Account section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class="active"><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col-sm-9 settings-body">
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Change Password</h4>
-          </div>
-          <div class="col-sm-8">
-            <div class="input-field">
-              <h5>Old password</h5>
-              <input type="password" class="textbox " name="old-password" maxlength="25">
-            </div>
-            <div class="input-field">
-              <h5>Your new password</h5>
-              <input type="password" class="textbox " name="new-password" maxlength="25">
-            </div>
-            <div class="input-field">
-              <h5>Confirm new password</h5>
-              <input type="password" class="textbox " name="confirm-password" maxlength="25">
-            </div>
-          </div>
-          <button class="btn btn-orange" type="submit">Update password</button>
-        </form>
-        <!-- Change property ends-->
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Change Email</h4>
-          </div>
-          <div class="col-sm-8 input-field">
-            <h5>New email</h5>
-            <input type="email" class="textbox " name="new-email" maxlength="15">
-          </div>
-          <button class="btn btn-orange" type="submit">Update Email</button>
-        </form>
-        <!-- Change property ends-->
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Delete account</h4>
-          </div>
-          <div class="col-sm-8 input-field">
-            <p class="sub">Once you delete your account, there is no going back. Please be certain.</p>
-            <h5>Current password</h5>
-            <input type="password" class="textbox " name="password">
-          </div>
-          <button class="btn btn-orange" type="submit">Delete account</button>
-        </form>
-        <!-- Change property ends-->
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <!--  For Profile section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class="active"><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="col-sm-9 settings-body">
-        <form action="#" method="get">
-          <div class="row head">
-            <h4>Payment settings</h4>
-          </div>
-          <div class="input-field get-paid">
-            <p>Your Balance is : <span class="bold-700">$560</span></p>
-            <button class="btn btn-dark-blue btn-get-paid" id="get-paid"><i class="fas fa-credit-card"></i> Get paid
-              now</button>
-          </div>
-        </form>
-        <div class="last-payment">
-          <div class="row head">
-            <h4>Payment details</h4>
-          </div>
-          <p class="bold-700">Last Payment</p>
-          <p class="sub">$700 on Sep 5, 2018 to PayPal account</p>
-        </div>
-        <form action="#" method="get">
-          <div class="row head">
-            <h4>Payment Methods</h4>
-          </div>
-          <div class="input-field get-paid">
-            <p>Connect your PayPal</p>
-            <button class="btn btn-paypal"><i class="fab fa-paypal"></i> PayPal</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!--  For Business section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class="active"><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col-sm-9 settings-body">
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Business information</h4>
-          </div>
-
-
-          primary phone <br>
-          alternative phone<br>
-          business address<br>
-          city<br>
-          state<br>
-          zip<br>
-          crew members<br>
-          miles to travel<br>
-
-
-
-          <div class="col-sm-12">
-
-
-            <div class="row head">
-              <h4><i class="fas fa-plus"></i> Add new equipment</h4>
-            </div>
-
-            <div class="input-field collapse-container">
-              <h5>Equipment name</h5>
-              <input type="text" class="textbox " name="new-equipment-name">
-              <h5>Equipment information</h5>
-              <textarea class="textbox " name="new-equipment-info"></textarea>
-              <input type="radio" checked name="new-equipment-type" id="new-equipment-is-included" value="Equipment is included">
-              <label class="radio-label" for="new-equipment-is-included"><i class="fas fa-check"></i> Equipment is
-                included</label>
-              <input type="radio" name="new-equipment-type" id="new-equipment-has-price" value="Equipment has flat price">
-              <label class="radio-label" for="new-equipment-has-price"><i class="fas fa-dollar-sign"></i> Equipment has
-                flat price</label>
-              <h5>Flat price</h5>
-              <input type="number" id="new-equipment-price" name="new-equipment-price" value="100" class="textbox">
-            </div>
-
-
-
-            <button class="expand btn btn-default btn-small">
-              Add new equipment
-            </button>
-
-            <button class="collapse btn btn-default btn-small">
-              <i class="fas fa-times"></i>
-            </button>
-
-          </div>
-
-
-          <button class="btn btn-orange" type="submit">Save</button>
-
-
-
-        </form>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <!--  For Equipments section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class="active"><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col-sm-9 settings-body">
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>About your equipments</h4>
-          </div>
-          <div class="col-sm-8">
-            <div class="input-field">
-              <textarea class="textbox " name="equipments-summary">If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
-            </div>
-
-
-            <div class="all-equipments">
-              <div class="equipment included">
-                <i class="fas fa-check"></i>
-                <h5>Furniture dolly:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>1-2 flat 4-wheeled furniture dollies with us for every job. Please note that these are not part of
-                  your order, if your move requires a dolly, please let us know so we can make sure they are brought.</p>
-                <p>[always included, no fee]</p>
-
-              </div>
-
-              <div class="equipment included">
-                <i class="fas fa-check"></i>
-                <h5>
-                  Hand truck:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>1-2 Dollies with us for every job. Please note that these are not part of your order, if your move
-                  requires a dolly, please let us know so we can make sure they are brought. </p>
-                <p>[always included, no fee]</p>
-
-              </div>
-
-              <div class="equipment included">
-                <i class="fas fa-check"></i>
-                <h5>
-                  Hand tools for assembly:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p></p>
-                <p>[always included, no fee]</p>
-
-              </div>
-
-              <div class="equipment paid">
-                <i class="fas fa-dollar-sign"></i>
-                <h5>
-                  Plastic wrap:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p></p>
-                <p>[Flat price: $5.00]</p>
-
-              </div>
-
-              <div class="equipment paid">
-                <i class="fas fa-dollar-sign"></i>
-                <h5>
-                  Rope:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p></p>
-                <p>[Flat price: $20.00]</p>
-
-              </div>
-
-
-            </div>
-
-
-          </div>
-          <div class="col-sm-12">
-
-
-            <div class="row head">
-              <h4><i class="fas fa-plus"></i> Add new equipment</h4>
-            </div>
-
-            <div class="input-field collapse-container">
-              <h5>Equipment name</h5>
-              <input type="text" class="textbox " name="new-equipment-name">
-              <h5>Equipment information</h5>
-              <textarea class="textbox " name="new-equipment-info"></textarea>
-              <input type="radio" checked name="new-equipment-type" id="new-equipment-is-included" value="Equipment is included">
-              <label class="radio-label" for="new-equipment-is-included"><i class="fas fa-check"></i> Equipment is
-                included</label>
-              <input type="radio" name="new-equipment-type" id="new-equipment-has-price" value="Equipment has flat price">
-              <label class="radio-label" for="new-equipment-has-price"><i class="fas fa-dollar-sign"></i> Equipment has
-                flat price</label>
-              <h5>Flat price</h5>
-              <input type="number" id="new-equipment-price" name="new-equipment-price" value="100" class="textbox">
-            </div>
-
-
-
-            <button class="expand btn btn-default btn-small">
-              Add new equipment
-            </button>
-
-            <button class="collapse btn btn-default btn-small">
-              <i class="fas fa-times"></i>
-            </button>
-
-          </div>
-
-
-          <button class="btn btn-orange" type="submit">Save</button>
-
-
-
-        </form>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <!--  For Service area section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class="active"><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col-sm-9 settings-body">
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Service area</h4>
-          </div>
-
-          <div class="col-sm-12">
-            <div class="input-field">
-              <input type="text" class="textbox" name="service-location" value="NY, 1126 balue street" placeholder="Your service location">
-              <button id="get-location" class="btn btn-default">Get location</button>
-              <p><i class="fas fa-map-marker-alt"></i> Your service covers a 50 mile radius.</p>
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189605.82256095222!2d-72.83851929843374!3d42.051950463804495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2seg!4v1537135844913"
-              width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-
-          <div class="row head">
-            <h4>Service Area includes</h4>
-          </div>
-          <div class="col-sm-12">
-            <div class="input-field">
-              <p>Add your service areas each separated with a comma</p>
-              <textarea name="service-areas" class="textbox" cols="30" rows="10">Adams  ,Basin ,Alton ,Atlanta ,Avoca  ,Avon  ,Bellona  ,Bergen  ,Bloomfield  ,Branchport ,Brockport ,Byron ,Caledonia ,Canandaigua ,Churchville ,Clarendon ,Clarkson ,Clifton Springs ,Clyde ,Cohocton ,Conesus ,Dansville ,Dresden</textarea>
-
-            </div>
-          </div>
-          <button class="btn btn-orange" type="submit">Save</button>
-        </form>
-
-
-        <!-- Change property ends-->
-
-
-        <!-- Change property starts
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Change Email</h4>
-          </div>
-          <div class="col-sm-8 input-field">
-              <h5>New email</h5>
-              <input type="email" class="textbox " name="new-email" maxlength="15">
-          </div>
-          <button class="btn btn-orange" type="submit">Update Email</button>
-        </form>
-        <!-- Change property ends-->
-
-
-        <!-- Change property starts-
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Delete account</h4>
-          </div>
-          <div class="col-sm-8 input-field">
-              <p class="sub">Once you delete your account, there is no going back. Please be certain.</p>
-              <h5>Current password</h5>
-              <input type="password" class="textbox " name="password">
-          </div>
-          <button class="btn btn-orange" type="submit">Delete account</button>
-        </form>
-        <!-- Change property ends-->
-
-
-      </div>
-    </div>
-  </section>
-
-  <!--  For Working hours section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class="active"><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col-sm-9 settings-body">
-
-
-        <!-- Change property starts-->
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Available working hours</h4>
-          </div>
-
-          <div class="col-sm-12">
-            <div class="input-field working-hours">
-
-
-
-
-              <div class="day-working">
-
-                <h5>Saturday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Saturday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="sat-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="sat-time-to">
-                </div>
-
-              </div>
-
-
-              <div class="day-working">
-
-                <h5>Sunday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Sunday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="sun-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="sun-time-to">
-                </div>
-
-              </div>
-
-
-              <div class="day-working">
-
-                <h5>Monday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Monday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="mon-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="mon-time-to">
-                </div>
-
-              </div>
-
-              <div class="day-working">
-
-                <h5>Tuesday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Tuesday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="tue-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="tue-time-to">
-                </div>
-
-              </div>
-
-              <div class="day-working">
-
-                <h5>Wednesday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Wednesday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="wed-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="wed-time-to">
-                </div>
-
-              </div>
-
-              <div class="day-working">
-
-                <h5>Thursday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Thursday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="thurs-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="thurs-time-to">
-                </div>
-
-              </div>
-
-              <div class="day-working">
-
-                <h5>Friday</h5>
-                <label class="day-off-label">
-                  <input type="checkbox" name="day-off" class="day-off" value="Friday">Day off
-                </label>
-
-                <div class="time-pickers">
-                  <p>From</p>
-                  <input class="timepicker-work textbox" data-time="7:00am" name="fri-time-from">
-                  <p>To</p>
-                  <input class="timepicker-work textbox" data-time="10:00pm" name="fri-time-to">
-                </div>
-
-              </div>
-
-
-
-            </div>
-          </div>
-
-
-
-
-          <button class="btn btn-orange" type="submit">Save</button>
-        </form>
-
-
-        <!-- Change property ends-->
-
-
-        <!-- Change property starts
-          <form action="#" method="get" enctype="multipart/form-data">
-            <div class="row head">
-              <h4>Change Email</h4>
-            </div>
-            <div class="col-sm-8 input-field">
-                <h5>New email</h5>
-                <input type="email" class="textbox " name="new-email" maxlength="15">
-            </div>
-            <button class="btn btn-orange" type="submit">Update Email</button>
           </form>
-          <!-- Change property ends-->
+        </div>
+      </div>
+    </section>
 
+    <!--  For Business section   -->
+    <section id="business-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
 
-        <!-- Change property starts-
-          <form action="#" method="get" enctype="multipart/form-data">
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="active">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+          <form action="#" method="get">
             <div class="row head">
-              <h4>Delete account</h4>
+              <h4>Business information</h4>
             </div>
-            <div class="col-sm-8 input-field">
-                <p class="sub">Once you delete your account, there is no going back. Please be certain.</p>
-                <h5>Current password</h5>
-                <input type="password" class="textbox " name="password">
+
+            <div class="input-field">
+              <h5>Business name</h5>
+              <input type="text" class="textbox" name="primary-phone" value="Perfect choice movers" placeholder="Your business name" maxlength="15">
             </div>
-            <button class="btn btn-orange" type="submit">Delete account</button>
+
+
+            <div class="input-field">
+              <h5>Your Service Bio</h5>
+              <textarea class="textbox " rows="6" name="business-bio" placeholder="Business summary" maxlength="15"></textarea>
+            </div>
+
+            <div class="input-field inline-input ">
+              <h5>Primary phone</h5>
+              <input type="tel" class="textbox " name="primary-phone" value="992-226-4403" placeholder="Primary phone" maxlength="15">
+            </div>
+
+            <div class="input-field inline-input">
+              <h5>Alternate phone</h5>
+              <input type="tel" class="textbox " name="alternate-phone" value="559-876-0012" placeholder="Alternate phone" maxlength="15">
+            </div>
+
+
+            <div class="row head">
+              <h4>Business address</h4>
+            </div>
+
+
+            <div class="input-field inline-input">
+              <h5>Address</h5>
+              <input type="text" class="textbox " name="business-address" value="66 Balue Street" placeholder="Business address" maxlength="15">
+            </div>
+
+            <div class="input-field inline-input">
+              <h5>City</h5>
+              <input type="text" class="textbox " name="business-city" value="myCity" placeholder="Business address" maxlength="15">
+            </div>
+
+            <div class="input-field inline-input">
+              <h5>State</h5>
+
+              <select name="state" class="textbox">
+                <option value="">State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO" selected="selected">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+            <div class="input-field inline-input">
+              <h5>Zip code</h5>
+              <input type="text" class="textbox " name="business-zip" value="112233" placeholder="Zip code" maxlength="15">
+            </div>
+            <div class="input-field inline-input inline-input-small">
+              <h5>How many crew members can you provide ?</h5>
+              <input class="input-numbers textbox" type="number" maxlength="2" value="8" max="100" name="crew_members">
+            </div>
+            <div class="input-field inline-input  inline-input-small">
+              <h5>How many miles can you travel for jobs ?</h5>
+              <input class="input-numbers textbox" type="number" value="300" name="moving_miles">
+            </div>
+            <button class="btn btn-orange" type="submit">Save</button>
           </form>
-          <!-- Change property ends-->
-
-
-      </div>
-    </div>
-  </section>
-
-  <!--  For Truck section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class="active"><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-
-
-            </ul>
-          </nav>
         </div>
       </div>
+    </section>
 
-      <div class="col-sm-9 settings-body">
-
-
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Truck details</h4>
+    <!--  For Equipments section   -->
+    <section id="equipments-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="active">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="col-sm-12">
-            <div class="input-field truck-details">
-              <label>
-                <input type="checkbox" name="has-truck" value="No" id="has-truck">We own a truck
-              </label>
-              <textarea rows="5" class="textbox " name="truck-summary" disabled>If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+          <form action="#" method="get">
+            <div class="row head">
+              <h4>About your equipments</h4>
             </div>
+            <div class="col-sm-12">
+              <div class="input-field">
+                <textarea class="textbox " rows="6" name="equipments-summary">If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
+              </div>
 
-          </div>
 
-          <button class="btn btn-orange" type="submit">Save</button>
+              <div class="all-equipments">
+                <div class="equipment included">
+                  <i class="fas fa-check"></i>
+                  <h5>Furniture dolly:
+                    <button class="btn btn-small btn-default" id="edit-equipment">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-small btn-default" id="delete-equipment">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </h5>
+                  <p>1-2 flat 4-wheeled furniture dollies with us for every job. Please note that these are not part of your order, if your move requires a dolly, please let us know so we can make sure they are brought.</p>
+                  <p>[always included, no fee]</p>
+                </div>
+                <div class="equipment included">
+                  <i class="fas fa-check"></i>
+                  <h5>
+                    Hand truck:
+                    <button class="btn btn-small btn-default" id="edit-equipment">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-small btn-default" id="delete-equipment">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </h5>
+                  <p>1-2 Dollies with us for every job. Please note that these are not part of your order, if your move requires a dolly, please let us know so we can make sure they are brought. </p>
+                  <p>[always included, no fee]</p>
+                </div>
+                <div class="equipment included">
+                  <i class="fas fa-check"></i>
+                  <h5>
+                    Hand tools for assembly:
+                    <button class="btn btn-small btn-default" id="edit-equipment">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-small btn-default" id="delete-equipment">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </h5>
+                  <p></p>
+                  <p>[always included, no fee]</p>
+                </div>
+                <div class="equipment paid">
+                  <i class="fas fa-dollar-sign"></i>
+                  <h5>
+                    Plastic wrap:
+                    <button class="btn btn-small btn-default" id="edit-equipment">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-small btn-default" id="delete-equipment">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </h5>
+                  <p></p>
+                  <p>[Flat price: $5.00]</p>
+                </div>
+                <div class="equipment paid">
+                  <i class="fas fa-dollar-sign"></i>
+                  <h5>
+                    Rope:
+                    <button class="btn btn-small btn-default" id="edit-equipment">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-small btn-default" id="delete-equipment">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </h5>
+                  <p></p>
+                  <p>[Flat price: $20.00]</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
 
-        </form>
-      </div>
-    </div>
-  </section>
+              <div class="row head">
+                <h4>
+                  <i class="fas fa-plus"></i> Add new equipment</h4>
+              </div>
 
-  <!--  For Credentials section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class="active"><a href="#">Credentials</a></li>
-              <li class=""><a href="#">licences</a></li>
-            </ul>
-          </nav>
+              <div class="collapse-container">
+
+                <div class="input-field">
+                  <h5>Equipment name</h5>
+                  <input type="text" class="textbox " name="new-equipment-name">
+                </div>
+
+                <div class="input-field">
+                  <h5>Equipment information</h5>
+                  <textarea class="textbox " name="new-equipment-info"></textarea>
+                </div>
+
+                <div class="input-field new-equipment-type">
+
+                  <input type="radio" checked name="new-equipment-type" id="new-equipment-is-included" value="Equipment is included">
+                  <label class="radio-label" for="new-equipment-is-included">
+                    <i class="fas fa-check"></i> Equipment is included
+                  </label>
+                  <input type="radio" name="new-equipment-type" id="new-equipment-has-price" value="Equipment has flat price">
+                  <label class="radio-label" for="new-equipment-has-price">
+                    <i class="fas fa-dollar-sign"></i> Equipment has flat price</label>
+                </div>
+
+                <div class="input-field new-equipment-price-container">
+                  <h5>Flat price</h5>
+                  <input type="number" id="new-equipment-price" name="new-equipment-price" value="100" class="textbox">
+                </div>
+              </div>
+
+              <button class="expand btn btn-default btn-small">
+                Add new equipment
+              </button>
+
+              <button class="collapse btn btn-default btn-small">
+                <i class="fas fa-times"></i>
+              </button>
+
+            </div>
+            <button class="btn btn-orange" type="submit">Save</button>
+          </form>
+
         </div>
       </div>
+    </section>
 
-      <div class="col-sm-9 settings-body">
-
-
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Credentials & other business information</h4>
+    <!--  For Service area section   -->
+    <section id="service-area-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="active">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="col-sm-12">
-            <div class="input-field">
-              <textarea class="textbox " name="equipments-summary">If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+          <!-- Change property starts-->
+          <form action="#" method="get">
+            <div class="row head">
+              <h4>Service area</h4>
             </div>
 
-
-            <div class="all-credentials">
-
-              <div class="credential">
-                <i class="fas fa-check"></i>
-                <h5>Insured business:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>description</p>
-                <p>Policy number<span>999-9999</span></p>
-                <p>Policy issuer<span>Dryden Mutual Insurance Company</span></p>
+            <div class="col-sm-12">
+              <div class="input-field service-area">
+                <input type="text" class="textbox" name="service-location" value="NY, 1126 balue street" placeholder="Your service location">
+                <button id="get-location" class="btn btn-default">Get location</button>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Your service covers a 50 mile radius.</p>
               </div>
-
-              <div class="credential">
-                <i class="fas fa-check"></i>
-                <h5>Insured business:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>description</p>
-                <p>Policy number<span>999-9999</span></p>
-                <p>Policy issuer<span>Dryden Mutual Insurance Company</span></p>
-              </div>
-
-              <div class="credential">
-                <i class="fas fa-check"></i>
-                <h5>Insured business:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>description</p>
-                <p>Policy number<span>999-9999</span></p>
-                <p>Policy issuer<span>Dryden Mutual Insurance Company</span></p>
-              </div>
-
-
-
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189605.82256095222!2d-72.83851929843374!3d42.051950463804495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2seg!4v1537135844913"
+                width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-
-
-          </div>
-          <div class="col-sm-12 add-new-credential">
-
 
             <div class="row head">
-              <h4><i class="fas fa-plus"></i> Add a new credential</h4>
+              <h4>Service Area includes</h4>
             </div>
+            <div class="col-sm-12">
+              <div class="input-field">
+                <p>Add your service areas each separated with a comma</p>
+                <textarea name="service-areas" class="textbox" cols="30" rows="10">Adams  ,Basin ,Alton ,Atlanta ,Avoca  ,Avon  ,Bellona  ,Bergen  ,Bloomfield  ,Branchport ,Brockport ,Byron ,Caledonia ,Canandaigua ,Churchville ,Clarendon ,Clarkson ,Clifton Springs ,Clyde ,Cohocton ,Conesus ,Dansville ,Dresden</textarea>
 
-            <div class="input-field collapse-container">
-              <h5>Credential name</h5>
-              <input type="text" class="textbox " name="new-credential-name">
-
-              <div class="checkboxes-container">
-
-
-                <label>
-                  <input type="checkbox" name="" class="credential-option" id="credential-desc">Has description
-                </label>
-
-                <label>
-                  <input type="checkbox" name="" class="credential-option" id="credential-policy-number">Has policy
-                  date
-                </label>
-
-                <label>
-                  <input type="checkbox" name="" class="credential-option" id="credential-policy-issuer">Has Policy
-                  issuer
-                </label>
               </div>
-
-              <div class="new-credential-desc-container">
-                <h5>Credential description</h5>
-                <textarea class="textbox new-credential-desc" disabled></textarea>
-              </div>
-
-              <div class="new-credential-policy-number-container">
-                <h5>Credential policy number</h5>
-                <input type="text" class="textbox new-credential-policy-number" disabled>
-              </div>
-
-              <div class="new-credential-policy-issuer-container">
-                <h5>Credential policy issuer</h5>
-                <input type="text" class="textbox new-credential-policy-issuer" disabled>
-              </div>
-
             </div>
+            <button class="btn btn-orange" type="submit">Save</button>
+          </form>
 
-
-
-            <button class="expand btn btn-default btn-small">
-              Add new credential
-            </button>
-
-            <button class="collapse btn btn-default btn-small">
-              <i class="fas fa-times"></i>
-            </button>
-
-          </div>
-
-
-          <button class="btn btn-orange" type="submit">Save</button>
-
-
-
-        </form>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <!--  For Licences section   -->
-  <section class="settings-section container responsive-bottom-padding">
-    <div class="row">
-      <div class="col-sm-3 sidebar-col">
-        <div>
-          <nav class="settings-sidebar">
-            <h4>Personal settings</h4>
-            <ul>
-              <li class=""><a href="#">Profile</a></li>
-              <li class=""><a href="#">Account</a></li>
-              <li class=""><a href="#">Get Paid</a></li>
-            </ul>
-            <h4>Working settings</h4>
-            <ul>
-              <li class=""><a href="#">Business details</a></li>
-              <li class=""><a href="#">Equipments details</a></li>
-              <li class=""><a href="#">Service area</a></li>
-              <li class=""><a href="#">Working hours</a></li>
-              <li class=""><a href="#">Truck details</a></li>
-              <li class=""><a href="#">Credentials</a></li>
-              <li class="active"><a href="#">licences</a></li>
-
-            </ul>
-          </nav>
         </div>
       </div>
+    </section>
 
-      <div class="col-sm-9 settings-body">
+    <!--  For Working hours section   -->
+    <section id="working-hours-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="active">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
 
-
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div class="row head">
-            <h4>Licences</h4>
+              </ul>
+            </nav>
           </div>
+        </div>
+
+        <div class="col-sm-9 settings-body">
 
 
-          <!---
-          <div class="col-sm-12">
-            <div class="input-field">
-              <textarea class="textbox " name="equipments-summary">If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
-            </div>
-
-
-            <div class="all-credentials">
-
-              <div class="credential">
-                <i class="fas fa-check"></i>
-                <h5>Insured business:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>description</p>
-                <p>Policy number<span>999-9999</span></p>
-                <p>Policy issuer<span>Dryden Mutual Insurance Company</span></p>
-              </div>
-
-              <div class="credential">
-                <i class="fas fa-check"></i>
-                <h5>Insured business:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>description</p>
-                <p>Policy number<span>999-9999</span></p>
-                <p>Policy issuer<span>Dryden Mutual Insurance Company</span></p>
-              </div>
-
-              <div class="credential">
-                <i class="fas fa-check"></i>
-                <h5>Insured business:
-                  <button class="btn btn-small btn-default" id="edit-equipment"><i class="fas fa-pencil-alt"></i></button>
-                  <button class="btn btn-small btn-default" id="delete-equipment"><i class="fas fa-trash-alt"></i></button>
-                </h5>
-                <p>description</p>
-                <p>Policy number<span>999-9999</span></p>
-                <p>Policy issuer<span>Dryden Mutual Insurance Company</span></p>
-              </div>
-
-
-
-            </div>
-
-
-          </div>
-          <div class="col-sm-12 add-new-credential">
-
-
+          <!-- Change property starts-->
+          <form action="#" method="get">
             <div class="row head">
-              <h4><i class="fas fa-plus"></i> Add a new credential</h4>
+              <h4>Available working hours</h4>
             </div>
 
-            <div class="input-field collapse-container">
-              <h5>Credential name</h5>
-              <input type="text" class="textbox " name="new-credential-name">
-
-              <div class="checkboxes-container">
+            <div class="col-sm-12">
+              <div class="input-field working-hours">
 
 
-                <label>
-                  <input type="checkbox" name="" class="credential-option" id="credential-desc">Has description
-                </label>
 
-                <label>
-                  <input type="checkbox" name="" class="credential-option" id="credential-policy-number">Has policy
-                  date
-                </label>
 
-                <label>
-                  <input type="checkbox" name="" class="credential-option" id="credential-policy-issuer">Has Policy
-                  issuer
-                </label>
+                <div class="day-working">
+
+                  <h5>Saturday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Saturday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="sat-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="sat-time-to">
+                  </div>
+
+                </div>
+
+
+                <div class="day-working">
+
+                  <h5>Sunday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Sunday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="sun-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="sun-time-to">
+                  </div>
+
+                </div>
+
+
+                <div class="day-working">
+
+                  <h5>Monday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Monday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="mon-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="mon-time-to">
+                  </div>
+
+                </div>
+
+                <div class="day-working">
+
+                  <h5>Tuesday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Tuesday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="tue-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="tue-time-to">
+                  </div>
+
+                </div>
+
+                <div class="day-working">
+
+                  <h5>Wednesday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Wednesday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="wed-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="wed-time-to">
+                  </div>
+
+                </div>
+
+                <div class="day-working">
+
+                  <h5>Thursday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Thursday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="thurs-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="thurs-time-to">
+                  </div>
+
+                </div>
+
+                <div class="day-working">
+
+                  <h5>Friday</h5>
+                  <label class="day-off-label">
+                    <input type="checkbox" name="day-off" class="day-off" value="Friday">Day off
+                  </label>
+
+                  <div class="time-pickers">
+                    <p>From</p>
+                    <input class="timepicker-work textbox" data-time="7:00am" name="fri-time-from">
+                    <p>To</p>
+                    <input class="timepicker-work textbox" data-time="10:00pm" name="fri-time-to">
+                  </div>
+
+                </div>
+
               </div>
+            </div>
 
-              <div class="new-credential-desc-container">
-                <h5>Credential description</h5>
-                <textarea class="textbox new-credential-desc" disabled></textarea>
-              </div>
 
-              <div class="new-credential-policy-number-container">
-                <h5>Credential policy number</h5>
-                <input type="text" class="textbox new-credential-policy-number" disabled>
-              </div>
+            <button class="btn btn-orange" type="submit">Save</button>
+          </form>
 
-              <div class="new-credential-policy-issuer-container">
-                <h5>Credential policy issuer</h5>
-                <input type="text" class="textbox new-credential-policy-issuer" disabled>
+
+        </div>
+      </div>
+    </section>
+
+    <!--  For Truck section   -->
+    <section id="truck-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="active">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+
+          <form action="#" method="get">
+            <div class="row head">
+              <h4>Truck details</h4>
+            </div>
+            <div class="col-sm-12">
+              <div class="input-field truck-details">
+                <label>
+                  <input type="checkbox" name="has-truck" value="No" id="has-truck">We own a truck
+                </label>
+                <textarea rows="5" class="textbox " name="truck-summary" disabled>If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
               </div>
 
             </div>
 
+            <button class="btn btn-orange" type="submit">Save</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--  For Credentials section   -->
+    <section id="credentials-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="active">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
 
 
-            <button class="expand btn btn-default btn-small">
-              Add new credential
-            </button>
+        <div class="col-sm-9 settings-body">
 
-            <button class="collapse btn btn-default btn-small">
-              <i class="fas fa-times"></i>
-            </button>
+          <div class="col-sm-12 settings-body">
+
+
+            <form action="#" method="get">
+              <div class="row head">
+                <h4>Credentials & other business information</h4>
+              </div>
+              <div class="col-sm-12">
+                <div class="input-field">
+                  <textarea class="textbox " rows="6" name="equipments-summary">If you would like us to bring any of the equipment listed, make sure to put this request in your order details when placing your order. If additional fees are listed for this equipment, you must arrange payment for these items directly with us after your order is placed.</textarea>
+                </div>
+
+
+                <div class="all-credentials">
+
+                  <div class="credential">
+                    <i class="fas fa-check"></i>
+                    <h5>Insured business:
+                      <button class="btn btn-small btn-default" id="edit-equipment">
+                        <i class="fas fa-pencil-alt"></i>
+                      </button>
+                      <button class="btn btn-small btn-default" id="delete-equipment">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </h5>
+                    <p>description</p>
+                    <p>Policy number
+                      <span>999-9999</span>
+                    </p>
+                    <p>Policy issuer
+                      <span>Dryden Mutual Insurance Company</span>
+                    </p>
+                  </div>
+
+                  <div class="credential">
+                    <i class="fas fa-check"></i>
+                    <h5>Insured business:
+                      <button class="btn btn-small btn-default" id="edit-equipment">
+                        <i class="fas fa-pencil-alt"></i>
+                      </button>
+                      <button class="btn btn-small btn-default" id="delete-equipment">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </h5>
+                    <p>description</p>
+                    <p>Policy number
+                      <span>999-9999</span>
+                    </p>
+                    <p>Policy issuer
+                      <span>Dryden Mutual Insurance Company</span>
+                    </p>
+                  </div>
+
+                  <div class="credential">
+                    <i class="fas fa-check"></i>
+                    <h5>Insured business:
+                      <button class="btn btn-small btn-default" id="edit-equipment">
+                        <i class="fas fa-pencil-alt"></i>
+                      </button>
+                      <button class="btn btn-small btn-default" id="delete-equipment">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </h5>
+                    <p>description</p>
+                    <p>Policy number
+                      <span>999-9999</span>
+                    </p>
+                    <p>Policy issuer
+                      <span>Dryden Mutual Insurance Company</span>
+                    </p>
+                  </div>
+
+
+
+                </div>
+
+
+              </div>
+              <div class="col-sm-12 add-new-credential">
+
+
+                <div class="row head">
+                  <h4>
+                    <i class="fas fa-plus"></i> Add a new credential</h4>
+                </div>
+
+                <div class="input-field collapse-container">
+                  <h5>Credential name</h5>
+                  <input type="text" class="textbox " name="new-credential-name">
+
+                  <div class="checkboxes-container">
+
+
+                    <label>
+                      <input type="checkbox" name="" class="credential-option" id="credential-desc">Has description
+                    </label>
+
+                    <label>
+                      <input type="checkbox" name="" class="credential-option" id="credential-policy-number">Has policy date
+                    </label>
+
+                    <label>
+                      <input type="checkbox" name="" class="credential-option" id="credential-policy-issuer">Has Policy issuer
+                    </label>
+                  </div>
+
+                  <div class="new-credential-desc-container">
+                    <h5>Credential description</h5>
+                    <textarea class="textbox new-credential-desc" disabled></textarea>
+                  </div>
+
+                  <div class="new-credential-policy-number-container">
+                    <h5>Credential policy number</h5>
+                    <input type="text" class="textbox new-credential-policy-number" disabled>
+                  </div>
+
+                  <div class="new-credential-policy-issuer-container">
+                    <h5>Credential policy issuer</h5>
+                    <input type="text" class="textbox new-credential-policy-issuer" disabled>
+                  </div>
+
+                </div>
+
+
+
+                <button class="expand btn btn-default btn-small">
+                  Add new credential
+                </button>
+
+                <button class="collapse btn btn-default btn-small">
+                  <i class="fas fa-times"></i>
+                </button>
+
+              </div>
+
+
+              <button class="btn btn-orange" type="submit">Save</button>
+
+
+
+            </form>
+
+
+
+          </div>
+        </div>
+    </section>
+
+    <!--  For licenses section   -->
+    <section id="licenses-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="active">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+
+          <form action="#" method="get">
+            <div class="row head">
+              <h4>Licenses</h4>
+            </div>
+
+
+
+            <div class="col-sm-12 licenses-container">
+
+
+
+              <div class="input-field has-licence-option">
+                <P>Do you carry a valid business license ?</P>
+                <small>If approved you will be asked for your license number. </small>
+
+                <select name="has_valid_business_license" class="licence-has-input textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+
+                <input type="text" name="business-licence-number" placeholder="Enter Licence number" class="textbox">
+
+              </div>
+
+
+              <div class="input-field has-licence-option">
+                <P>Do you carry business insurance?</P>
+                <small>Do you carry insurance that protects customer's goods? If approved you will be asked to provide a policy
+                  number.</small>
+
+                <select name="has_business_insurance" class="licence-has-input textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+
+                <input type="text" name="business-insurance-policy-number" placeholder="Enter insurance policy number" class="textbox">
+
+              </div>
+
+              <div class="input-field has-licence-option">
+                <P>Are you a licensed full-service mover?</P>
+                <small>This means you own or lease commercial moving trucks and carry the proper state and federal licenses to legally
+                  provide intersate (multi-state) and/or intrastate (within your state) moving services.
+                </small>
+
+                <select name="is_full-service_mover" class="licence-has-input textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+
+
+              </div>
+
+
+
+
+              <button class="btn btn-orange" type="submit">Save</button>
+
+          </form>
 
           </div>
 
 
-          <button class="btn btn-orange" type="submit">Save</button>
--->
-
-
-        </form>
+        </div>
+    </section>
 
 
 
-      </div>
     </div>
-  </section>
 
+    <footer class="has-top-curves">
 
-  <footer>
+      <div class="footer-top-curves">
+      </div>
+
       <div class="container-fluid">
         <div class="row center-xs">
           <div class="col-md-3 col-sm-12 break-width">
@@ -1212,36 +1110,37 @@
             <p>
               This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
             </p>
-            <nav class="social-links">
-              <ul>
-                <li>
-                  <a href="#">
-                    <i class="fab fa-twitter fa-lg"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fab fa-facebook-f fa-lg"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-  
-                    <i class="fab fa-google-plus-g fa-lg"></i>
-  
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <span class="social-line"></span>
-  
-  
-  
-  
+
+            <div class="social-group">
+              <span class="social-line"></span>
+              <nav class="social-links">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f fa-lg"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+
+                      <i class="fab fa-google-plus-g fa-lg"></i>
+
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <span class="social-line"></span>
+            </div>
+
           </div>
           <div class="col-md-2 col-xs-4 break-width">
             <h4>Home</h4>
-  
+
             <nav>
               <ul>
                 <li>
@@ -1262,9 +1161,9 @@
               </ul>
             </nav>
           </div>
-  
-  
-  
+
+
+
           <div class="col-md-2 col-xs-4  break-width">
             <h4>Help</h4>
             <nav>
@@ -1290,7 +1189,7 @@
               </ul>
             </nav>
           </div>
-  
+
           <div class="col-md-2 col-xs-4  break-width">
             <h4>New helper ?</h4>
             <nav>
@@ -1310,18 +1209,14 @@
               </ul>
             </nav>
           </div>
-  
           <div class="col-md-3 col-sm-12 search-col">
             <h4>Subscribe for news letter
               <small>No spam, we promise</small>
             </h4>
             <form class="search-box-group" action="" name="search-form">
               <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
-              <button type="submit">Subscribe
-              </button>
+              <button type="submit">Subscribe</button>
             </form>
-  
-  
             <nav class="app-links">
               <h4>Get Our App</h4>
               <ul>
@@ -1346,21 +1241,19 @@
         </div>
       </div>
     </footer>
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
+    </script>
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
 
-  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
-  </script>
-  <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
+    <!-- Time picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 
-  <!-- Time picker -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-
-  <!-- Js codes -->
-  <script src="assets/js/main.js"></script>
+    <!-- Js codes -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 

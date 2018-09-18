@@ -206,7 +206,7 @@ p {
     }
   }
 
-  
+
 
   &.btn-default {
     background-color: #dadada;
@@ -399,6 +399,7 @@ div.button-group {
   max-width: 1500px;
   padding: 0 20px;
   box-sizing: border-box;
+
   @media only screen and (max-width: 1170px) {
     width: 85% !important;
   }
@@ -406,12 +407,13 @@ div.button-group {
   @media only screen and (max-width: 991px) {
     width: 90% !important;
   }
+
   @media only screen and (max-width: 768px) {
     width: 100% !important;
   }
 }
 
-.container-fluid{
+.container-fluid {
   width: 100% !important;
   box-sizing: border-box;
 }
@@ -427,7 +429,6 @@ div.button-group {
   @media only screen and (max-width: 480px) {
     margin-top: 20px;
   }
-
 }
 
 .responsive-bottom-padding {
@@ -440,17 +441,67 @@ div.button-group {
   @media only screen and (max-width: 480px) {
     padding-bottom: 50px;
   }
-
 }
 
-header{
+header {
   margin-bottom: 75px;
 }
-header.inner-light-style{
+
+header.has-light-header-curve {
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  div.light-header-curve {
     background-image: url(../img/light-curves.svg);
-    min-height: 300px;
-    margin-bottom: -140px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 460px;
+
+    @media only screen and (max-width: 1600px) {
+      height: 460px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      height: 370px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      height: 300px;
+    }
+    @media only screen and (max-width: 768px) {
+      height: 200px;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 180px;
+    }
+
+  }
+
+  #main-nav-wrapper {
+    div.site-logo {
+      a {
+        background-position: 0 3px;
+
+        @media only screen and (max-width: 768px) {
+          background-position: 0px -370px;
+        }
+
+        @media only screen and (max-width: 480px) {
+          background-position: 0px -519px;
+          max-height: 35px;
+          overflow: hidden;
+          ;
+        }
+
+      }
+    }
+  }
 }
+
+
 
 
 

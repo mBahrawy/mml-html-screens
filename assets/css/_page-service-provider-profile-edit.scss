@@ -1,21 +1,15 @@
 .settings-section {
   .sidebar-col {
-    flex-basis: 250px;
-
+    text-align: left;
     div {
-
       position: sticky;
       top: 15px;
-
-
       nav.settings-sidebar {
         border: 1px solid #ddd;
         border-bottom: 0;
         border-radius: 5px;
-
         h4 {
           font-size: 13px;
-
           letter-spacing: 0.3px;
           margin: 0;
           box-sizing: border-box;
@@ -26,69 +20,54 @@
           color: #586069;
           background-color: rgb(243, 243, 243);
           border-bottom: 1px solid #e1e4e8;
-
           &:first-child {
             border-top: 0;
           }
-
         }
-
         ul {
           margin: 0;
           list-style: none;
           padding: 0;
-
           li {
             background-color: #fff;
-
             a {
               color: #558699;
               position: relative;
               display: block;
               padding: 10px 10px;
               border-bottom: 1px solid #e1e4e8;
-
               &:last-child {
                 border-bottom: 1px solid #e1e4e8;
               }
-
               font-size: 13px;
             }
-
             &.active {
               border-left: 2px solid #7a7a7a;
-
               a {
                 color: #363636;
                 font-weight: 600;
               }
             }
-
             &:hover {
               background-color: #f7f7f7;
-
             }
           }
         }
       }
     }
   }
-
   .settings-body {
-
-
+    text-align: left;
     background-color: #fff;
     padding: 0 30px 30px;
     box-sizing: border-box;
     border-radius: 5px;
-
     h5 {
       margin: 0 0 5px;
       font-weight: 600;
       font-size: 13px;
       color: #292929;
     }
-
     .col-sm-12,
     .col-sm-9,
     .col-sm-8,
@@ -96,29 +75,28 @@
     .col-sm-3 {
       padding: 0;
     }
-
     .row.head {
       h4 {
         border-bottom: 1px solid #e8e8e8;
         padding-bottom: 10px;
         width: 100%;
         text-align: left;
+        svg {
+          font-size: 14px;
+          margin: 0 5px 2px 0;
+        }
       }
     }
-
     .row.container-fluid {
       padding: 0;
       margin: 0;
-
       .row {
         width: 100%;
       }
     }
-
     form {
       .input-field {
         max-width: 400px;
-
         input[type="text"],
         input[type="password"],
         input[type="email"],
@@ -126,29 +104,21 @@
           width: 100%;
         }
       }
-
-
       //  For Image picker
       // ============================
-
-
       .picked-image {
         display: block;
-        margin: 20px auto;
+        margin: 0 0 20px;
         overflow: hidden;
-        border-radius: 500px;
-        width: 200px;
-        height: 200px;
+        border-radius: 8px;
+        width: 250px;
+        height: 240px;
         object-fit: cover;
-
         &+label {
-          display: block;
-          margin: auto;
-          max-width: 120px;
-
+          border-radius: 8px;
+          width: 200px;
           &+input {
             display: none;
-
             &+span {
               text-align: center;
               display: block;
@@ -160,12 +130,8 @@
         }
       }
     }
-
-
     //  For Equipments
     // ============================
-
-
     .all-equipments {
       .equipment {
         position: relative;
@@ -173,71 +139,59 @@
         box-sizing: border-box;
         margin-bottom: 20px;
         border-bottom: 1px solid #f3f3f3;
-
         h5 {
           margin-bottom: 0;
         }
-
         p {
           font-size: 12px;
           line-height: 18px;
           margin: 0;
         }
-
         svg.fa-check,
         .fa-dollar-sign {
           position: absolute;
         }
-
         svg.fa-check,
         svg.fa-dollar-sign {
-          left: 0;
-          top: 4px;
+          left: 4px;
+          top: 5px;
           color: #299946;
-          border: 1px solid #77c485;
           padding: 1px;
           font-size: 14px;
-
           &.fa-dollar-sign {
             border-radius: 500px;
             width: 15px;
             padding: 3px;
             color: #2176d1;
-            border: 1px solid #7794c4;
           }
         }
-
         button {
           background-color: transparent;
           opacity: 0.5;
           width: 30px;
           padding: 6px 5px;
           left: -5px;
-
           &:hover {
             opacity: 1;
             background-color: #ddd;
           }
-
           &#edit-equipment {
             top: 25px;
           }
-
           &#delete-equipment {
             top: 50px;
           }
         }
       }
     }
-
-
-
     .add-new-equipment,
     .collapse-container {
       max-height: 0;
       transition: max-height 0.5s ease-out;
       overflow: hidden;
-
+      .new-equipment-price-container {
+        display: none;
+      }
       .radio-label {
         display: inline-block;
         width: 1 100px;
@@ -247,111 +201,117 @@
         font-size: 13px;
         opacity: 0.8;
       }
-
       input[type="radio"] {
         display: none;
-
         &:checked+label {
           border: solid 2px green;
           opacity: 1;
           margin-bottom: 20px;
-
           svg {
             color: green;
           }
         }
-
         &#new-equipment-has-price:checked+label {
           border: solid 2px rgb(72, 193, 226);
           opacity: 1;
           margin-bottom: 20px;
-
           svg {
             color: rgb(18, 118, 185);
           }
         }
       }
-
-      input[type="radio"]#new-equipment-is-included:checked {
-
-        &+label+input+label+h5,
-        &+label+input+label+h5+#new-equipment-price {
-          display: none;
+    }
+    .expand {
+      outline: none;
+    }
+    .collapse {
+      display: none;
+      outline: none;
+      width: 12px;
+      svg {
+        margin: 0;
+        position: relative;
+        left: -4px;
+      }
+    }
+    .service-area {
+      button {
+        border-radius: 8px;
+        text-transform: capitalize;
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
-
-    .collapse {
-      display: none;
-    }
-
-
-
-
     //  For Working hours
     // ============================
-
-
     .working-hours {
       max-width: 100% !important;
       margin: 0;
-
       .day-working {
         position: relative;
         width: 550px;
         border-bottom: 1px solid #f3f3f3;
         padding: 20px 0;
-
+        @media only screen and (max-width: 991px) {
+          width: 450px;
+        }
         &:last-child {
           border-bottom: none;
         }
-
         h5 {
           display: inline-block;
           margin-right: 20px;
           font-size: 15px;
           min-width: 80px;
           color: #4b4b4b;
+          @media only screen and (max-width: 991px) {
+            margin-right: 15px;
+            font-size: 13px;
+            min-width: 70px;
+          }
         }
-
         label.day-off-label {
           font-size: 15px;
           display: inline-block;
           margin-right: 20px;
-
+          @media only screen and (max-width: 991px) {
+            margin-right: 8px;
+            font-size: 13px;
+          }
           input {
             position: relative;
             top: 2px;
             left: -4px
           }
         }
-
         .time-pickers {
           display: inline-block;
           position: absolute;
           right: 0;
           top: 13px;
-
           p {
             display: inline-block;
             margin: 0 5px;
             font-size: 15px;
             font-weight: 600;
             color: #4b4b4b;
+            @media only screen and (max-width: 991px) {
+              font-size: 13px;
+            }
           }
-
           .timepicker-work {
             text-align: center;
             width: 120px;
             display: inline-block;
+            @media only screen and (max-width: 991px) {
+              font-size: 13px;
+              width: 80px;
+            }
           }
         }
       }
     }
-
-
-
-
     //  For Credentials
     // ============================
     .all-credentials {
@@ -360,41 +320,34 @@
         padding: 0 0 20px 20px;
         border-bottom: 1px solid #ececec;
         margin-bottom: 10px;
-
         &:last-child {
           border-bottom: 0;
         }
-
         svg.fa-check {
           position: absolute;
           top: 5px;
           left: -5px;
           color: #2ba65d;
         }
-
         h5 {
           line-height: 0;
           margin-bottom: 0;
           height: 28px;
-
           button {
             background-color: transparent;
             opacity: 0.5;
             width: 30px;
             padding: 6px 5px;
             left: -5px;
-
             &:hover {
               opacity: 1;
               background-color: #ddd;
             }
           }
         }
-
         p {
           margin: 0;
           font-size: 12px;
-
           span {
             color: #2786b3;
             margin-left: 5px;
@@ -402,25 +355,20 @@
         }
       }
     }
-
     .add-new-credential {
-
       .new-credential-desc-container,
       .new-credential-policy-number-container,
       .new-credential-policy-issuer-container {
         display: none;
       }
-
       div.checkboxes-container {
         display: block;
         margin: 20px 0;
-
         label {
           display: inline-block;
           font-size: 15px;
           margin-right: 15px;
           margin-bottom: 8px;
-
           input {
             position: relative;
             top: 2px;
@@ -429,28 +377,91 @@
         }
       }
     }
-
-
     // For Truck details
     // ==========================
     .truck-details {
       label {
         margin-bottom: 20px;
         display: block;
-
         input {
           margin-right: 5px;
         }
-
         +textarea {
           display: none;
           margin-bottom: 30px;
         }
       }
     }
-
-
-
-    
+    // For licenses
+    // ==========================
+    div.licenses-container {
+      .input-field {
+        p {
+          margin-bottom: 10px;
+        }
+        small {
+          display: block;
+          margin-bottom: 10px;
+          line-height: 20px
+        }
+      }
+      .has-licence-option {
+        input[type="text"] {
+          display: none;
+        }
+      }
+    }
+  }
+  // Form settings
+  // ==========================
+  form {
+    position: relative;
+    button[type="submit"] {
+      margin-top: 20px;
+      border-radius: 8px;
+      text-transform: capitalize;
+      background-color: #eaeaea;
+      color: #535353;
+      &:hover {
+        background-color: #d3d3d3;
+        color: #2d2d2d;
+      }
+    }
+    $input-width: 500px;
+    .input-field {
+      margin-bottom: 15px;
+      max-width: 100% !important;
+      input[type="text"],
+      textarea,
+      p,
+      small,
+      h4,
+      h5 {
+        max-width: $input-width;
+      }
+      &.inline-input {
+        max-width: $input-width !important;
+        position: relative;
+        height: 50px;
+        h5 {
+          margin: 0;
+          position: relative;
+          top: 5px;
+        }
+        input,
+        select {
+          position: absolute;
+          right: 0;
+          top: -2px;
+          max-width: 250px;
+        }
+      }
+      &.inline-input-small {
+        input,
+        select {
+          max-width: 120px;
+        }
+      }
+    }
   }
 }

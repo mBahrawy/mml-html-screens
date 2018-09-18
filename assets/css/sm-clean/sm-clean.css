@@ -73,7 +73,7 @@ font-family: 'Lato', sans-serif;
 =                     Mixins             =
 ==================================================*/
 /* All size bigger than breakpoint */
-@media only screen and (min-width: 1071px) {
+@media only screen and (min-width: 992px) {
   .sm-clean {
     background-color: transparent !important;
     padding: 0 !important; }
@@ -85,7 +85,7 @@ font-family: 'Lato', sans-serif;
     .sm-clean li li a {
       line-height: 21px !important; } }
 /* All size smaller than breakpoint */
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 991px) {
   .sm-clean {
     width: 90%;
     margin: 10px auto 6px;
@@ -176,7 +176,7 @@ font-family: 'Lato', sans-serif;
     .sm-clean ul ul ul ul ul a:active {
       border-left: 40px solid transparent; }
 
-@media (min-width: 1070px) {
+@media (min-width: 991px) {
   /* Switch to desktop layout
   -----------------------------------------------
      These transform the menu tree from

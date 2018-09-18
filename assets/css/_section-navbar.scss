@@ -1,4 +1,5 @@
       /*========== Main nav  =================*/
+      
       #main-nav-wrapper {
         box-sizing: border-box;
         height: 85px;
@@ -12,26 +13,21 @@
         -webkit-box-shadow: 0 -3px 24px 0px rgba(0, 0, 0, 0.23);
         -moz-box-shadow: 0 -3px 24px 0px rgba(0, 0, 0, 0.23);
         -o-box-shadow: 0 -3px 24px 0px rgba(0, 0, 0, 0.23);
-
         .site-logo {
           position: absolute;
           left: 10px;
           top: 5px;
-
           a {
             @include transition(background-position, 0s, ease);
-
             background-position: 0 -370px;
             background-image: url("../img/logo-sprite.png");
             background-repeat: no-repeat;
-
             height: 52px;
             width: 303px;
             display: inline-block;
             margin: 9px 13px;
           }
         }
-
         .menu-container {
           padding: 0;
           width: max-content;
@@ -39,17 +35,14 @@
           right: 30px;
           display: inline-block;
         }
-
         .nav-buttons {
           flex: 0 0 px;
-
           /* don't grow, don't shrink, stay fixed at 230px */
           a,
           button {
             color: $light-grey;
             margin-right: 12px;
           }
-
           a.sign-up {
             padding: 8px 11px;
             font-size: 13px;
@@ -57,72 +50,59 @@
             color: #fff;
             margin: 0 25px;
           }
-
           form,
           a {
             display: inline;
           }
-
           input[type='text'] {
             display: none;
           }
-
           button {
             border: none;
             background: none;
             margin: 8px 0 0 7px;
             padding: 0;
           }
-
           img {
             width: 16px;
             height: 16px;
           }
         }
-
         .main-nav {
           ul {
             margin: 0;
             padding: 0;
-
             li {
               border-bottom: 4px solid transparent;
               max-height: 84px;
-
               a {
                 font-family: $open-sans, sans-serif;
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 56px;
               }
-
               img {
                 padding: 0 0 0 5px;
                 width: 9px;
               }
             }
-
             li.active {
               color: #30B7EA;
               border-bottom: 4px solid #00AEEF;
             }
           }
         }
-
         div {
           padding: 0;
         }
-
         a.has-image {
           &:before {
             content: "|";
             padding-right: 22px;
             color: #a6a6a6;
           }
-
           padding-right: 70px !important;
           position: relative;
-
           img {
             padding: 0 !important;
             position: absolute;
@@ -133,120 +113,111 @@
             border-radius: 30px;
           }
         }
-
-
       }
-
+      
       .main-nav {
         display: block;
         background-color: #fff;
       }
-
+      
       .toggle-mobile-nav-btn {
         display: none !important;
       }
-
-
+      
       .nav-buttons {
-        @media only screen and (min-width: 769px) {
+        top: 8px;
+        right: 16px !important;
+        @media only screen and (min-width: 1009px) {
           display: none;
         }
-
+        @media only screen and (max-width: 768px) {
+          top: 0;
+        }
         position: absolute;
         right: 0px;
-
         a {
           margin-top: 23px;
           margin-right: 20px;
-
           span.bars {
             svg {
               font-size: 18px;
             }
           }
         }
-
       }
-
-
       /* Large Devices, Wide Screens */
+      
       @media only screen and (max-width: 1200px) {
-
         /*========== For Main Navbar =================*/
         #grey-navbar {
           padding: 0px 5%;
         }
       }
-
-
-
- /*========== For Mobile =================*/
- 
- #nav-container-for-mobile {
-  nav.main-nav {
-    ul#main-menu {
-      margin: 0 20px;
-      li {
-        a {
-          font-weight: 300 !important;
-          color: #6b6b6b;
-          &.active {
-            color: #606060;
+      /*========== For Mobile =================*/
+      
+      #nav-container-for-mobile {
+        nav.main-nav {
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 4px;
+          background-color: rgb(244, 244, 244);
+          ul#main-menu {
+            margin: 0 20px;
+            li {
+              a {
+                font-weight: 300 !important;
+                color: #6b6b6b;
+                img {
+                  border-radius: 500px;
+                  position: absolute;
+                  top: 6px;
+                  left: 90px;
+                  width: 31px;
+                  object-fit: cover;
+                }
+                &.active {
+                  color: #606060;
+                }
+              }
+            }
           }
         }
       }
-    }
-  }
-}
-
-
-
-
-
-
       /* Special breakboint for nav */
+      
       @media only screen and (max-width: 1070px) {
         .main-nav {
           display: none;
         }
-
         .toggle-mobile-nav-btn {
           display: inline-block !important;
           width: 12px;
-
           &.collabsed {
             .bars {
               display: block;
               color: $light-grey;
             }
-
             .x {
               display: none;
             }
           }
-
           &.opend {
             .bars {
               display: none;
             }
-
             .x {
               display: block;
             }
           }
         }
-
         .nav-search {
           //  display: none;
         }
       }
-
+      
       @media only screen and (max-width: 992px) {
-
         /*========== For Main Navbar =================*/
         #grey-navbar {
           padding: 0px 0;
-
           nav {
             ul {
               li {
@@ -258,37 +229,28 @@
           }
         }
       }
-
       /* Small Devices, Tablets */
+      
       @media only screen and (max-width: 768px) {
-
         /*========== For Grey Navbar =================*/
         #grey-navbar {
           display: none;
         }
-
         /*========== For Main Navbar =================*/
         #main-nav-wrapper {
           height: 66px;
-
         }
-
         #main-nav {
           line-height: 0;
           text-align: center;
         }
-
         #main-menu {
           display: block;
         }
       }
-
       /* Extra Small Devices, Phones */
+      
       @media only screen and (max-width: 480px) {}
-
       /* Custom, iPhone Retina */
+      
       @media only screen and (max-width: 320px) {}
-
-
-
-

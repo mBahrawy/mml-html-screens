@@ -43,14 +43,14 @@ $sm-clean__box-shadow:									rgba(0, 0, 0, 0.15) !default;
 // :: 1.2. Breakpoints
 // ----------------------------------------------------------
 
-$sm-clean__desktop-vp:									1070px !default;		// switch from collapsible to desktop
+$sm-clean__desktop-vp:									991px !default;		// switch from collapsible to desktop
 
 
 
  
 /* All size bigger than breakpoint */
 
-@media only screen and (min-width: 1071px) {
+@media only screen and (min-width: 992px) {
 
 	.sm-clean {
 		background-color: transparent !important;
@@ -58,7 +58,7 @@ $sm-clean__desktop-vp:									1070px !default;		// switch from collapsible to d
 		
 			li {
 				a {
-					line-height: 49px;
+					line-height: 49px; 
 					&.active {
 						border-bottom: 4px solid $active-nav-item-underlined;
 						color: $active-nav-item-underlined !important;
@@ -78,7 +78,7 @@ $sm-clean__desktop-vp:									1070px !default;		// switch from collapsible to d
  
 /* All size smaller than breakpoint */
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 991px) {
 
 	.sm-clean{
 		width: 90%;

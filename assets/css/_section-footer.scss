@@ -1,4 +1,56 @@
 footer {
+  .container-fluid {
+    max-width: 1600px;
+  }
+
+
+  &.has-top-curves {
+
+    position: relative;
+    margin-top: 10px;
+    padding-top: 380px;
+
+    @media only screen and (max-width: 1600px) {
+      padding-top: 320px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      padding-top: 250px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding-top: 170px;
+    }
+
+    div.footer-top-curves {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 100%;
+      background-image: url("../img/footer-curve.svg");
+
+      top: -270px;
+      height: 500px;
+
+      @media only screen and (max-width: 1600px) {
+        top: -170px;
+        height: 330px;
+      }
+
+
+      @media only screen and (max-width: 991px) {
+        top: -120px;
+        height: 240px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        top: -85px;
+        height: 170px;
+      }
+
+    }
+  }
+
   a:hover {
     color: #6fb0cf;
 
@@ -102,19 +154,7 @@ footer {
       }
     }
 
-    &.social-links {
-      background-color: #0a0f13;
-      padding: 0 0px 0 16px;
-      display: inline-block;
-      position: relative;
-      z-index: 2;
 
-      @media only screen and (max-width: 768px) {
-        background-color: #0a1a27;
-        display: table;
-        margin: 0 auto 0px;
-      }
-    }
   }
 
   form {
@@ -122,14 +162,16 @@ footer {
       width: 100%;
       font-size: 12px;
       background-color: #344756;
-      color:#fff;
-      @include transition( all, 0.5s, ease);
-      &:focus{
+      color: #fff;
+      @include transition(all, 0.5s, ease);
+
+      &:focus {
         background-color: #ddd;
         color: #000000;
         font-weight: 600;
 
       }
+
       @include border-radius(500px);
     }
 
@@ -175,16 +217,50 @@ footer {
 
     background-color: rgba(255, 255, 255, 0.8);
     height: 1px;
-    width: 100%;
-    display: block;
-    margin-bottom: 70px;
+    width: 33.33%;
+    display: inline-block;
+    margin-bottom: 0;
     margin-bottom: 0;
     position: relative;
-    top: -12px;
-    margin-bottom: 70px;
+
   }
 
-  div.search-col{
+  div.social-group {
+    display: flex;
+    margin-bottom: 70px;
+
+    span.social-line {
+
+      background-color: rgba(255, 255, 255, 0.53);
+      height: 1px;
+      width: 50%;
+      display: inline-block;
+      margin-bottom: 0;
+      margin-bottom: 0;
+      position: relative;
+      top: 12px;
+
+    }
+
+    nav.social-links {
+      padding-left: 5px;
+      display: inline-block;
+      z-index: 2;
+      flex-basis: 140px;
+      min-width: 95px;
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  div.search-col {
     @media only screen and (max-width: 768px) {
       max-width: 380px;
       text-align: center;
