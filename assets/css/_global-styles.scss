@@ -200,7 +200,9 @@ p {
   &.btn-paypal {
     background-color: #31a2d6;
     color: #fff;
-
+    svg{
+      font-size: 18px;
+  }
     &:hover {
       background-color: #aacedf;
     }

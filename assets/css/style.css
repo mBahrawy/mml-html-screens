@@ -243,6 +243,8 @@ p {
   .btn.btn-paypal {
     background-color: #31a2d6;
     color: #fff; }
+    .btn.btn-paypal svg {
+      font-size: 18px; }
     .btn.btn-paypal:hover {
       background-color: #aacedf; }
   .btn.btn-default {
@@ -2364,6 +2366,25 @@ div.main-blue-header-theme {
     .settings-section form .input-field.inline-input-small input,
     .settings-section form .input-field.inline-input-small select {
       max-width: 120px; }
+
+.get-paid h4 {
+  margin-top: 50px; }
+.get-paid .input-field {
+  position: relative; }
+.get-paid button {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .get-paid button svg {
+    padding-right: 5px; }
+.get-paid p {
+  margin: 0 5px 8px 0;
+  display: inline-block; }
+
+.delete-account p {
+  color: #aa1f1f;
+  font-size: 14px;
+  margin-bottom: 50px; }
 
 /*==================================================
 =                     Sections                     =
