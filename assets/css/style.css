@@ -1129,6 +1129,80 @@ ul.slider-dots {
 .ui-timepicker-no-scrollbar .ui-timepicker {
   border: none; }
 
+#steps-progress .steps-progress-bar {
+  margin: 40px 0 80px;
+  display: flex;
+  justify-content: space-between; }
+  #steps-progress .steps-progress-bar label {
+    position: relative;
+    cursor: pointer; }
+    #steps-progress .steps-progress-bar label input {
+      display: none; }
+      #steps-progress .steps-progress-bar label input:checked + span + a {
+        background-color: #338bc6; }
+    #steps-progress .steps-progress-bar label a {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: #dde2e6;
+      border-radius: 50px;
+      position: relative;
+      z-index: 6; }
+    #steps-progress .steps-progress-bar label span {
+      display: inline-block;
+      min-width: 80px;
+      position: absolute;
+      top: 20px;
+      text-align: center;
+      left: -35px;
+      font-size: 11px;
+      line-height: 16px; }
+#steps-progress .progress-bar-container {
+  position: relative;
+  margin: 0 5px;
+  box-sizing: border-box; }
+  #steps-progress .progress-bar-container .progress-bar {
+    position: absolute;
+    z-index: 5;
+    top: 6px;
+    height: 3px;
+    width: 100%;
+    background-color: #dde2e6; }
+    #steps-progress .progress-bar-container .progress-bar div.actual-progress {
+      height: 3px;
+      width: 0;
+      background-color: #338bc6;
+      -moz-transition: width 0.8s ease;
+      -ms-transition: width 0.8s ease;
+      -webkit-transition: width 0.8s ease;
+      -o-transition: width 0.8s ease; }
+
+#steps-container {
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease; }
+  #steps-container .step:not(:first-child) {
+    display: none; }
+  #steps-container .step {
+    position: relative; }
+  #steps-container .step-button {
+    background-color: #ddd !important;
+    color: #000;
+    border-radius: 5px;
+    padding: 6px 18px;
+    opacity: 0.7;
+    position: absolute;
+    background: -5px; }
+    #steps-container .step-button:hover {
+      opacity: 1; }
+    #steps-container .step-button.next-step {
+      right: 0;
+      background-color: #ff6404 !important;
+      color: #ffffff; }
+    #steps-container .step-button.prevoius-step {
+      left: 0; }
+
 /*==================================================
 =                      Pages                       =
 ==================================================*/
