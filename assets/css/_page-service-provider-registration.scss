@@ -1,15 +1,28 @@
-
-#register-form-container , .content-wrapper{
+#register-form-container,
+.content-wrapper {
   margin: auto;
   text-align: left;
 
-  div.head {}
+  div.head#sign-up-header {
+    margin: 0 0 50px;
+      h3{
+          margin: 0 0 5px;
+      }
+      p{
+          margin: 0;
+          font-size: 13px;
+          color:#777777;
+      }
+  }
 
-  div.form-content, div.content {
+
+
+  div.form-content,
+  div.content {
     text-align: left;
     background-color: #fff;
     width: 100%;
-    padding: 50px;
+    padding: 50px 7% 120px;
     @include border-radius(4px);
     box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
     -webkit-box-shadow: 0 18px 50px -21px rgba(0, 0, 0, 0.62);
@@ -17,26 +30,33 @@
     -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
 
     .step {
-      margin: 20px 7%;
+      margin: 20px 0;
+
+      .input-row {
+        display: flex;
+        justify-content: space-between;
+      }
 
       .input-field {
         position: relative;
         margin-bottom: 10px;
+        padding-bottom: 15px;
 
         label {
-          display: none;
+
           position: absolute;
+          cursor: text;
           top: 20px;
-          left: 40px;
+          left: 14px;
           font-size: 15px;
-          color: #cacaca;
+          color: #a5a5a5;
+          @include transition(all, 0.4s, ease-out);
 
           &.active {
-            display: block;
             top: 5px;
-            color: #585858;
+            color: #909090;
             font-size: 10px;
-            font-weight: 600;
+            cursor: default;
           }
         }
 
@@ -52,7 +72,8 @@
         textarea {
           width: 100%;
           border: none;
-          padding: 13px 5px 5px 15px;
+          padding: 14px 5px 0px 15px;
+
         }
 
         textarea {
@@ -67,6 +88,14 @@
           border-bottom: 1px solid rgba(204, 204, 204, 0.52);
           background-color: rgba(200, 200, 200, 0.09);
           color: #3e3e3e;
+          outline-color: #ddd;
+          outline-width: 1px;
+          @include transition(all, 0.4s, ease-out);
+
+          &.active-field {
+            padding-top: 14px !important;
+            padding-bottom: 0px !important;
+          }
 
           &::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -77,64 +106,106 @@
 
           &:-ms-input-placeholder {
             /* Internet Explorer 10-11 */
-            color: rgb(219, 219, 219);
+            color: rgb(156, 156, 156);
+
+            &::-ms-input-placeholder {
+              /* Microsoft Edge */
+              color: rgb(156, 156, 156);
+            }
+
+
+
+          }
+
+          &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: transparent;
+            opacity: 1;
+            /* Firefox */
+          }
+
+          &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: transparent;
           }
 
           &::-ms-input-placeholder {
             /* Microsoft Edge */
-            color: rgb(219, 219, 219);
+            color: transparent;
           }
+
+
         }
 
-        select,
-        .input-numbers {
-          position: absolute;
-          right: 0;
-          top: 0;
+
+        select {
+
           height: 50px;
-          padding: 0 10px;
-          max-width: 80px;
-        }
-
-        select[name="state"] {
-          height: 52px;
           position: relative;
-          top: -4px;
+          top: 0px;
           left: 0;
           min-width: 100%;
+
         }
 
-        &.has-icon input {
-          padding-left: 40px;
+        &.has-icon {
+          label {
+            left: 40px;
+          }
+
+          input {
+            padding-left: 40px;
+          }
         }
 
         &.has-text {
           margin-bottom: 40px;
 
-          .input-numbers {
+          input,
+          select {
             top: -15px;
             height: 45px;
           }
         }
 
         &.has-checkbox {
+
+          label{
+            top: 0px;
+            left: 2px;
+          }
+          .form-error{
+            top: 22px !important;
+            left: 28px !important;
+        }
+          label{
+          
           input[type="checkbox"] {
             width: 16px;
             position: absolute;
-            top: -15px;
+            top: -8px;
+            opacity: 0.7;
+          }
+
+          input:checked, input:checked+p{
+            opacity: 1;
           }
 
           p {
             margin: 0 0 60px 25px;
+            cursor: pointer;
+            opacity: 0.7;
           }
+
+        }
         }
 
         &.half {
-          width: 47.5%;
+          width: 48%;
           display: inline-block;
 
-          &:nth-child(2n) {
-            margin-left: 4%;
+          &:nth-child(2n+1) {
+            //   margin-left: 4%;
           }
         }
 
@@ -143,12 +214,12 @@
           display: inline-block;
 
           & {
-            margin-left: 0 !important;
-            margin-right: 3%;
+            //  margin-left: 0 !important;
+            // margin-right: 3%;
           }
 
           &:nth-child(3n+2) {
-            margin-right: 0 !important;
+            //   margin-right: 0 !important;
           }
         }
 
@@ -164,7 +235,7 @@
           font-size: 14px;
           color: #828282;
           line-height: 22px;
-          margin-bottom: 30px;
+          margin-bottom: 0px;
           display: block;
         }
 
@@ -189,7 +260,64 @@
             margin: 0;
           }
         }
+
+        .form-error {
+          position: absolute;
+          left: 2px;
+          top: 47px;
+          font-size: 10px;
+        }
+
+
+
+        &.inline-input {
+
+          .select-container,
+          input {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 50px;
+            padding: 0 10px;
+            max-width: 80px;
+          }
+          .select-container{
+            padding: 0;
+            select{
+              width: 100%;
+              height: 50px;
+              padding: 0px 13px;
+            }
+          }
+
+
+          .form-error {
+            top: 24px !important;
+          }
+
+          .active-field {
+            padding-top: 5px !important;
+          }
+        }
+
       }
     }
   }
+
+  .reg-application-sent{
+    margin-top: 50px;
+    div.head{
+        display: none;
+    }
+    text-align: center;
+    
+    p{
+        font-size: 14px;
+    }
+    button{
+        display: block;
+        margin: 40px auto;
+    }  
+}
+
 }

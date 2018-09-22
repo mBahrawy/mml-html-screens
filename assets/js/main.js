@@ -1,7 +1,7 @@
 // Avoid `console` errors in browsers that lack a console.
 (function () {
   var method;
-  var noop = function () { };
+  var noop = function () {};
   var methods = [
     'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
     'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
@@ -82,17 +82,16 @@ window.onresize = function () {
 $(".toggle-mobile-nav-btn").click(function () {
 
   if ($state == false) {
-    $(".main-nav").slideDown("slow", function () { });
+    $(".main-nav").slideDown("slow", function () {});
     $state = true;
     $(".toggle-mobile-nav-btn").removeClass("collabsed").addClass("opend");
 
   } else {
-    $(".main-nav").slideUp("slow", function () { });
+    $(".main-nav").slideUp("slow", function () {});
     $state = false;
     $(".toggle-mobile-nav-btn").removeClass("opend").addClass("collabsed");
   }
 });
-
 
 // Testimonials Slider on home page
 // ==========================================================
@@ -374,6 +373,9 @@ $('select.licence-has-input').change(function () {
 
 
 
+
+
+
 // ========================================================
 //             For Progress bar with steps 
 // ========================================================
@@ -401,23 +403,19 @@ function stepsPlugin() {
   stepsProgress.append(stepsProgressBar);
   console.log("Total Steps number : " + stepsNumber);
   stepsProgressBar = $('.steps-progress-bar');
-  
+
 
   // For radio buttons
   //===============================
   for (var i = 1; stepsNumber >= i; i++) {
-    var radio = $('<input type="radio" name="step-pointer" >').addClass('step-pointer').attr('id', 'step-pointer-' + i);
-    var radioLabel = $('<label></label>').addClass('step-label-' + i);
-    var radioLabelSpan = $('<span></span>');
-    var radioBtn = $('<a></a>');
-
+    var radio = $('<input type="radio" name="step-pointer" >').addClass('step-pointer').attr('id', 'step-pointer-' + i),
+        radioLabel = $('<label></label>').addClass('step-label-' + i),
+        radioLabelSpan = $('<span></span>'),
+        radioBtn = $('<a></a>');
 
     $("#step-pointer-1").prop("checked", true);
-
     radioLabel.append(radio, radioLabelSpan, radioBtn);
-
     stepsProgressBar.append(radioLabel);
-
     var stepTitle = $('#step-' + i).find('.head h4').html();
     if (stepTitle) {
 
@@ -426,35 +424,69 @@ function stepsPlugin() {
     }
   }
 
+  // Radio button progress bar
+  //=======================================
+
   $('.step-pointer').click(function () {
-    var currentStepNumber = parseInt($(this).attr('id').replace('step-pointer-', ''));
-    radioButtonClick(currentStepNumber);
+
+    if ($(this).closest('form').length == 0) {
+      console.log($(this).closest('form').length);
+      var currentStepNumber = parseInt($(this).attr('id').replace('step-pointer-', '')),
+        thisForm = '#' + $(this).closest('form').attr('id');
+      radioButtonClick(currentStepNumber);
+
+    } else {
+      return false; // Will stop the submission of the form
+    }
   });
 
+  // Initiating  the first step
+  //=======================================
+  $('#step-1').show();
 
   // Next button
   //===============================
   $('.next-step').click(function (e) {
+
     var currentStep = $(this).parent('.step'),
       currentStepId = currentStep.attr('id'),
-      currentStepNumber = parseInt(currentStepId.replace('step-', ''));
-    e.preventDefault();
-    nextStep(currentStepNumber);
+      currentStepNumber = parseInt(currentStepId.replace('step-', '')),
+      thisForm = '#' + $(this).closest('form').attr('id');
+
+    $.validate({
+      form: thisForm,
+      modules: 'security, date',
+      onError: function ($form) {
+        console.log("Error");
+        return false; // Will stop the submission of the form
+      },
+      onSuccess: function ($form) {
+        console.log("Success");
+        $("#sign-up-header").slideUp();
+        nextStep(currentStepNumber);
+        return false; // Will stop the submission of the form
+
+      }
+    });
   });
 
 
   // Previous button
   //===============================
+
+
   $('.previous-step').click(function (e) {
     var currentStep = $(this).parent('.step'),
       currentStepId = currentStep.attr('id'),
       currentStepNumber = parseInt(currentStepId.replace('step-', ''));
-    e.preventDefault();
-    previousStep(currentStepNumber);
-  });
+      
+      previousStep(currentStepNumber);
 
+  });
 }
 
+// All used functions
+//===============================
 
 function nextStep(a) {
 
@@ -477,11 +509,8 @@ function nextStep(a) {
 
 
   }, 1000);
-
-
-
-
 }
+
 function previousStep(a) {
 
   smoothScrollToTop();
@@ -516,14 +545,16 @@ function radioButtonClick(k) {
 
 }
 
-
 function checkRadioButton(j) {
 
   for (var i = 1; j >= i; i++) {
-    $('label.step-label-' + i + ' > a').css("background-color", "#338bc6");
+    $('label.step-label-' + i + ' > a').css("background-color", $('.actual-progress').css('background-color'));
+    $('label.step-label-' + i + ' > a').prev('span').css("color", "rgb(80, 80, 80)");
   }
   for (i; stepsNumber >= i; i++) {
     $('label.step-label-' + i + ' > a').css("background-color", "rgb(221,226,230)");
+    $('label.step-label-' + i + ' > a').prev('span').css("color", "rgb(221,226,230)");
+
   }
 
 }
@@ -539,3 +570,186 @@ function smoothScrollToTop() {
   }, 1000);
 }
 
+
+
+
+// ========================================================
+//             For animated input labels 
+// ========================================================
+
+
+
+var inputField = $('.input-field input, .input-field textarea');
+
+
+$(inputField.prev('label')).click(function(){
+  $(this).next().trigger("focus");
+});
+
+$(inputField).click(function(){
+  activeField( $(this) );
+});
+
+$(inputField).focus(function(){
+  activeField( $(this) );
+});
+
+
+$(inputField).blur(function(){
+  blurField( $(this) );
+})
+
+
+function blurField(y){
+  var inputLabel = y.prev('label');
+  if( y.val() === "" ){
+      y.removeClass("active-field");
+      $(inputLabel).removeClass("active");  
+  }
+}
+
+function activeField(x){
+  var inputLabel = x.prev('label');
+  x.addClass("active-field");
+  $(inputLabel).addClass("active");
+}
+
+
+// ==========================================================
+//     I            Form Validator
+// ==========================================================
+
+$.validate({
+  
+  form: '#service-provider-registration',
+  modules: 'date, security'
+});
+
+// Add Custom validator 
+
+checkRepeatPassword();
+checkPasswordStrength();
+
+// Reset form using jQuery
+//$('#container form').get(0).reset();
+
+
+// Check password strength
+function checkPasswordStrength(){
+  $.formUtils.addValidator({
+    name : 'strongPassword',
+    validatorFunction : function(value, $el, config, language, $form) {
+
+      var password = $('input#password').val();
+      var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[-.!@#\$%\^&\*\>\<\=])(?=.{8,})");
+      if(strongRegex.test(password)){
+        return value;
+      }else{
+        return false;
+      }
+
+    },
+    errorMessage : 'Please enter a strong password'
+  });
+}
+
+// Check repeat password
+function checkRepeatPassword(){
+  $.formUtils.addValidator({
+    name : 'repeatPassword',
+    validatorFunction : function(value, $el, config, language, $form) {
+      var password = $('input#password').val();
+      return value  === password;
+    },
+    errorMessage : 'Repeat password didn\'t match'
+  });
+}
+
+
+// ========================================================
+//                 For input masks 
+// ========================================================
+
+// US phone number mask
+//=========================
+$('.us-phone-number-mask').keydown(function (e) {
+  var key = e.which || e.charCode || e.keyCode || 0;
+  $phone = $(this);
+
+  // Don't let them remove the starting '('
+  if ($phone.val().length === 1 && (key === 8 || key === 46)) {
+      $phone.val('('); 
+      return false;
+  } 
+  // Reset if they highlight and type over first char.
+  else if ($phone.val().charAt(0) !== '(') {
+      $phone.val('('+$phone.val()); 
+  }
+
+  // Auto-format- do not expose the mask as the user begins to type
+  if (key !== 8 && key !== 9) {
+      if ($phone.val().length === 4) {
+          $phone.val($phone.val() + ')');
+      }
+      if ($phone.val().length === 5) {
+          $phone.val($phone.val() + ' ');
+      }           
+      if ($phone.val().length === 9) {
+          $phone.val($phone.val() + '-');
+      }
+  }
+
+  // Allow numeric (and tab, backspace, delete) keys only
+  return (key == 8 || 
+          key == 9 ||
+          key == 46 ||
+          (key >= 48 && key <= 57) ||
+          (key >= 96 && key <= 105)); 
+})
+
+.bind('focus click', function () {
+  $phone = $(this);
+
+  if ($phone.val().length === 0) {
+      $phone.val('(');
+  }
+  else {
+      var val = $phone.val();
+      $phone.val('').val(val); // Ensure cursor remains at the end
+  }
+})
+
+.blur(function () {
+  $phone = $(this);
+
+  if ($phone.val() === '(') {
+      $phone.val('');
+  }
+});
+
+// Integer input
+//=========================
+
+$(".integer-number-mask").keydown(function (e) {
+  // Allow: backspace, delete, tab, escape, enter
+  if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
+       // Allow: Ctrl+A, Command+A
+      (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+       // Allow: home, end, left, right, down, up
+      (e.keyCode >= 35 && e.keyCode <= 40)) {
+           // let it happen, don't do anything
+           return;
+  }
+  // Ensure that it is a number and stop the keypress
+  if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+      e.preventDefault();
+  }
+});
+
+// No white spaces input
+//=========================
+
+$('.no-white-spaces-mask').keyup(function() {
+  this.value = this.value.replace(/\s/g,'');
+ });
+ 

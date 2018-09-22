@@ -1,24 +1,36 @@
+$progressBarColor : #338bc6;
+
 #steps-progress {
+  width: 97%;
+  display: block;
+  margin: auto;
+
   .steps-progress-bar {
 
-    margin: 40px 0 80px;
+    margin: 0px 0 80px;
     display: flex;
     justify-content: space-between;
 
     label {
       position: relative;
+      input:checked+span {
+        color: #5a5a5a ;
+      }
+
       cursor: pointer;
+
       input {
         display: none;
+
         &:checked+span+a {
-          background-color: #338bc6;
+          background-color: $progressBarColor;
         }
       }
 
       a {
         display: inline-block;
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 10px;
         background-color: rgb(221, 226, 230);
         border-radius: 50px;
         position: relative;
@@ -35,6 +47,7 @@
         left: -35px;
         font-size: 11px;
         line-height: 16px;
+        color: #ddd;
       }
     }
   }
@@ -43,18 +56,19 @@
     position: relative;
     margin: 0 5px;
     box-sizing: border-box;
+
     .progress-bar {
       position: absolute;
       z-index: 5;
-      top: 6px;
-      height: 3px;
+      top: 9px;
+      height: 2px;
       width: 100%;
       background-color: rgb(221, 226, 230);
 
       div.actual-progress {
-        height: 3px;
+        height: 2px;
         width: 0;
-        background-color: #338bc6;
+        background-color: $progressBarColor;
         -moz-transition: width 0.8s ease;
         -ms-transition: width 0.8s ease;
         -webkit-transition: width 0.8s ease;
@@ -68,6 +82,7 @@
   .step:not(:first-child) {
     display: none;
   }
+
   .step {
     position: relative;
   }
@@ -79,7 +94,10 @@
     padding: 6px 18px;
     opacity: 0.7;
     position: absolute;
-    background: -5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    bottom: -65px;
 
     &:hover {
       opacity: 1;
