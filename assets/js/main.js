@@ -96,7 +96,7 @@ $(".toggle-mobile-nav-btn").click(function () {
 // Testimonials Slider on home page
 // ==========================================================
 
-/*
+
 $('#testimonials-slider').slick({
   dots: true,
   speed: 1000,
@@ -195,7 +195,6 @@ $('#service-provider-slider').slick({
 
   ]
 });
-*/
 
 
 
@@ -401,7 +400,7 @@ function stepsPlugin() {
     stepsProgressBar = $('<div></div>').addClass('steps-progress-bar');
 
   stepsProgress.append(stepsProgressBar);
-  console.log("Total Steps number : " + stepsNumber);
+  //console.log("Total Steps number : " + stepsNumber);
   stepsProgressBar = $('.steps-progress-bar');
 
 
@@ -430,7 +429,7 @@ function stepsPlugin() {
   $('.step-pointer').click(function () {
 
     if ($(this).closest('form').length == 0) {
-      console.log($(this).closest('form').length);
+     // console.log($(this).closest('form').length);
       var currentStepNumber = parseInt($(this).attr('id').replace('step-pointer-', '')),
         thisForm = '#' + $(this).closest('form').attr('id');
       radioButtonClick(currentStepNumber);
@@ -457,11 +456,11 @@ function stepsPlugin() {
       form: thisForm,
       modules: 'security, date',
       onError: function ($form) {
-        console.log("Error");
+       // console.log("Error");
         return false; // Will stop the submission of the form
       },
       onSuccess: function ($form) {
-        console.log("Success");
+      //  console.log("Success");
         $("#sign-up-header").slideUp();
         nextStep(currentStepNumber);
         return false; // Will stop the submission of the form
@@ -489,7 +488,26 @@ function stepsPlugin() {
 //===============================
 
 function nextStep(a) {
+ 
+  console.log("Current step : " + a);
+  console.log("Total steps : " + stepsNumber);
+  console.log("--------------------");
 
+  // Check if we are in the final step
+  if (stepsNumber === a+1) {
+
+    smoothScrollToTop();
+
+    // Hardik, use this function below for back-end integration
+    // You will find this function below
+    sendBackEndData();
+
+  } else {
+    nextStepFn(a);
+  }
+}
+
+function nextStepFn(a){
   smoothScrollToTop();
 
   setTimeout(function () {
@@ -499,14 +517,11 @@ function nextStep(a) {
     progressBar(a, stepsNumber - 1);
     checkRadioButton(a + 1);
 
-
     $(currentStep).fadeOut('slow');
 
     setTimeout(function () {
       $(nextStep).fadeIn('slow');
     }, 550);
-
-
 
   }, 1000);
 }
@@ -570,7 +585,92 @@ function smoothScrollToTop() {
   }, 1000);
 }
 
+function showloader(){
 
+  var svgLoader = 'assets/img/loader.svg';
+  var gifLoader = 'assets/img/loader.gif';
+ 
+
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+  
+      if (msie > 0) // If Internet Explorer, return version number
+      {
+        $('body').prepend("<div id='loader-container'><div><img src='"+gifLoader+"'alt=' '></div></div>");
+      }
+      else  // If another browser, return 0
+      {
+        $('body').prepend("<div id='loader-container'><div><img src='"+svgLoader+"'alt=' '></div></div>");
+         
+      }
+      setTimeout(function () {
+    $("#loader-container").css("opacity", "1");
+  }, 600);
+
+}
+
+function hideLoader(){
+  $("#loader-container").css("opacity", "0");
+  setTimeout(function () {
+    $("#loader-container").remove();
+  }, 800);
+}
+
+function formSubmitErrorMessage(x){
+  if(x == "show"){
+  $('body').prepend(
+  "<div id='form-submit-error'>"+
+   "<div>"+
+    "<i class='fas fa-exclamation-triangle'></i>"+
+    "<p>Error happened during submitting, please try again</p>"+
+   "</div>"+
+  "</div>");
+  }else if(x == "hide"){
+  $("#form-submit-error").remove();
+  }
+}
+
+function sendBackEndData(){
+
+  // Do your work here Hardik;
+  // I will give you instructions follow my comments
+
+  formSubmitErrorMessage("hide"); // Hide any previous error message to recheck it again
+  showloader(); // show loader
+
+
+  // Submit data to back-end 
+  // you can remove this timer function
+
+  setTimeout(function () { // This timer for testing , remove it 
+
+    var submitError = false; // If error happened in back-end turn this to on to try again later;
+
+    /*
+        ----------------------------------------------------------------------
+      ----------------------- ADD YOU BACK-END CODES HERE ----------------
+     ----------------  CHECK FOR ERRORS, IF YES submitError = true-----
+   -----------------------------------------------------------------
+
+    */
+
+    // To exit registration on completion process, you must increment lastStep value 
+
+    if(submitError === false){  // checking error , this case no errors
+
+       nextStepFn(stepsNumber-1);// this for getting out of registration if back-end done successfully 
+       hideLoader(); // Hiding loader 
+
+    }else{  // Error happened, show error msg, try again
+
+      formSubmitErrorMessage("show");
+      hideLoader();
+      return false;
+    }
+
+
+  }, 4000);// This timer for testing , remove it 
+}
 
 
 // ========================================================
@@ -633,6 +733,9 @@ checkPasswordStrength();
 // Reset form using jQuery
 //$('#container form').get(0).reset();
 
+$('#repeatpassword').keyup(function(){
+  checkRepeatPasswordOnKeyPress();
+})
 
 // Check password strength
 function checkPasswordStrength(){
@@ -665,6 +768,18 @@ function checkRepeatPassword(){
   });
 }
 
+// change repeat password style on keypress if match password
+function checkRepeatPasswordOnKeyPress(){
+  var repeatPassword = $('#repeatpassword');
+  var passowrd =$('#password'); 
+
+  if( repeatPassword.val() === passowrd.val() ){
+   $('#repeatpassword').removeClass('error').addClass('valid');
+  }else{
+    $('#repeatpassword').removeClass('valid').addClass('error');
+
+  }
+}
 
 // ========================================================
 //                 For input masks 

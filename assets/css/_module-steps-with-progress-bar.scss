@@ -5,6 +5,18 @@ $progressBarColor : #338bc6;
   display: block;
   margin: auto;
 
+  @media only screen and (max-width: 480px) {
+    width: 93%;
+
+    label {
+      span {
+        font-size: 9px !important;
+        min-width: 70px !important;
+        left: -28px !important;
+      }
+    }
+  }
+
   .steps-progress-bar {
 
     margin: 0px 0 80px;
@@ -13,8 +25,9 @@ $progressBarColor : #338bc6;
 
     label {
       position: relative;
+
       input:checked+span {
-        color: #5a5a5a ;
+        color: #5a5a5a;
       }
 
       cursor: pointer;

@@ -200,9 +200,11 @@ p {
   &.btn-paypal {
     background-color: #31a2d6;
     color: #fff;
-    svg{
+
+    svg {
       font-size: 18px;
-  }
+    }
+
     &:hover {
       background-color: #aacedf;
     }
@@ -473,9 +475,11 @@ header.has-light-header-curve {
     @media only screen and (max-width: 991px) {
       height: 300px;
     }
+
     @media only screen and (max-width: 768px) {
       height: 200px;
     }
+
     @media only screen and (max-width: 480px) {
       height: 180px;
     }
@@ -503,7 +507,59 @@ header.has-light-header-curve {
   }
 }
 
+#loader-container {
+  opacity: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  background-color: rgba(255, 255, 255, 0.78);
+  @include transition(opacity, 0.5s, ease);
 
+  div {
+    display: table-cell;
+    vertical-align: middle;
+
+    img {
+      display: block;
+      margin: auto;
+      opacity: 0.8;
+    }
+  }
+}
+
+
+#form-submit-error {
+  position: fixed;
+  z-index: 11;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(194, 30, 30, 0.78);
+  color: #fff;
+  padding: 5px 15px;
+  box-sizing: border-box;
+
+  div {
+    max-width: 375px;
+    display: block;
+    margin: 0 auto;
+
+    p,
+    svg {
+      font-size: 14px;
+      color: #fff;
+      display: inline-block;
+      margin: 0;
+    }
+    svg{
+      margin-right: 5px;
+    }
+  }
+}
 
 
 
