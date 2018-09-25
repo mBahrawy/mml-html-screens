@@ -1,0 +1,14 @@
+.client-register-form{
+  $progressBarColor : #ff6404;
+  #steps-progress {
+    .steps-progress-bar {
+      label {
+        input {
+          &:checked+span+a {
+            background-color: $progressBarColor;
+          }
+        }
+      }
+    }
+  }
+}

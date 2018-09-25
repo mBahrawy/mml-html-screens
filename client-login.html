@@ -55,8 +55,8 @@
               <li>
                 <a href="#" class="">Login</a>
                 <ul>
-                  <li><a class="" href="client-login.html">Clients area</a></li>
-                  <li><a class="active" href="provider-login.html">Login as a Helper</a></li>
+                  <li><a class="active" href="client-login.html">Clients area</a></li>
+                  <li><a class="" href="provider-login.html">Login as a Helper</a></li>
                 </ul>
               </li>
               <li>
@@ -90,26 +90,34 @@
   <div id="wrapper">
 
     <section id="login-form-container" class="container">
-      <div class="row center-xs">
+      <div class="row center-xs middle-xs">
 
+          <div class="col-xs-5 sign-in-banner">
+            <div class="img-container">
+                <div>
+                    <h4>Get a help today</h4>
+                    <p>No more moving pain and wasting time <br>
+                        My Moving Labor makes moving easier !</p>
+                  </div>
+            </div>
 
+          </div>
 
-        <div class="col-xs-6 inner-container">
+        <div class="col-xs-4 sign-in-form-content">
 
           <div class="head" id="sign-up-header">
-            <h3>Helper login</h3>
-            <p>Don't have a helper account ? <br>
-              <a href="provider-profile-register.html">Create your account now </a></p>
+            <h3>Clients area</h3>
+            <p>Need to hire a helper ? <br>
+              <a href="client-profile-register.html">Create your account  now </a></p>
           </div>  
           <form action="#" method="post">
 
      
-
-          
+           
               <div class="input-field has-icon">
                   <i class="fas fa-user"></i>
                   <label>Username / Email</label>
-                  <input type="text" class="textbox text-box-registration" name="username" maxlength="15">
+                  <input type="text" id="username" class="textbox text-box-registration" name="username" maxlength="20">
                 </div>
   
                 <div class="input-field has-icon">
