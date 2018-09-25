@@ -248,19 +248,19 @@ $(function () {
 
 
 
-// Add new Equipment  Expand & Collapse 
+// Add new Equipment  Expand & Collapse
 // ==========================================================
 
 $('button.expand').click(function (e) {
   e.preventDefault();
-  $('div.collapse-container').css("max-height", "500px");
-  $('button.collapse').show();
+ // $('div.collapse-container').css("max-height", "500px");
+ // $('button.collapse').show();
 })
 
 $('button.collapse').click(function (e) {
   e.preventDefault();
-  $(this).hide();
-  $('div.collapse-container').css("max-height", "0");
+ // $(this).hide();
+ // $('div.collapse-container').css("max-height", "0");
 })
 
 

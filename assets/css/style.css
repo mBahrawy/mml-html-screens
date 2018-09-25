@@ -1973,7 +1973,7 @@ div.main-blue-header-theme {
         #register-form-container div.content .step .input-field svg,
         .content-wrapper div.form-content .step .input-field svg,
         .content-wrapper div.content .step .input-field svg {
-          color: #5c85be;
+          color: #b3b3b3;
           position: absolute;
           font-size: 18px;
           top: 18px;
@@ -2591,7 +2591,6 @@ div.main-blue-header-theme {
         top: 50px; }
   .settings-section .settings-body .add-new-equipment,
   .settings-section .settings-body .collapse-container {
-    max-height: 0;
     transition: max-height 0.5s ease-out;
     overflow: hidden; }
     .settings-section .settings-body .add-new-equipment .new-equipment-price-container,
@@ -2628,7 +2627,6 @@ div.main-blue-header-theme {
   .settings-section .settings-body .expand {
     outline: none; }
   .settings-section .settings-body .collapse {
-    display: none;
     outline: none;
     width: 12px; }
     .settings-section .settings-body .collapse svg {
@@ -2818,6 +2816,9 @@ div.main-blue-header-theme {
   color: #aa1f1f;
   font-size: 14px;
   margin-bottom: 50px; }
+
+.client-register-form #steps-progress .steps-progress-bar label input:checked + span + a {
+  background-color: #ff6404; }
 
 /*==================================================
 =                     Sections                     =
