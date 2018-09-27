@@ -33,13 +33,29 @@ div.main-blue-header-theme {
 
     ul#main-menu {
       li {
+        opacity: 0.8;
+        @include transition(opacity, 0.2s, ease );
+        &:hover{
+          opacity: 1;
+        }
         a {
           color: #fff;
           font-weight: 600;
         }
+        .sub-arrow{
+          border-color: rgba(230, 230, 230, 0.67) transparent transparent transparent;
+        }
+        ul{
+          li{
+            opacity: 1 !important;
+
+            a{
+              color: #111a3a;
+            }
+          }
+        }
       }
     }
-
   }
 }
 

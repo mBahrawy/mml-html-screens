@@ -37,6 +37,9 @@
     -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
     -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
     min-width: 1000px;
+    z-index: 3;
+    position: relative;
+    margin-bottom: -20px;
 
     @media only screen and (max-width: 1600px) {
       min-width: 800px;

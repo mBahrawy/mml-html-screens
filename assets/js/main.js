@@ -197,6 +197,37 @@ $('#service-provider-slider').slick({
 });
 
 
+// ========================================================
+//            For Service provider profile  page 
+// ========================================================
+
+// For service areas cities
+// ========================================================
+
+var serviceAreaCites = $('#service-area-cities'),
+    serviceAreaCitesText = $('#service-area-cities').html();
+serviceAreaCites.html('<ul id="cities-menu"></ul>');
+
+var citiesArray = new Array();
+citiesArray = serviceAreaCitesText.split(",");
+for(var i = 0; citiesArray.length > i ; i++){
+  var city = "<li>"+citiesArray[i].replace(/ +(?= )/g,'')+"</li>";
+  $('#cities-menu').append(city);
+}
+
+// For hiding empty fields
+// ========================================================
+
+var checkFileds= $('.check-empty');
+
+for(var i = 0 ; checkFileds.length > i; i++ ){
+  console.log("s");
+
+  if( $(checkFileds[i]).is(':empty')){
+    $(checkFileds[i]).remove();
+  }
+}
+
 
 // ========================================================
 //            For Service provider profile edit page 
@@ -209,6 +240,7 @@ $('#service-provider-slider').slick({
 
 $(function () {
   // For image picker
+  var image_profile_upload = '';
   $("#image-picker").change(function () {
 
     var file = this.files[0],
@@ -216,6 +248,7 @@ $(function () {
       img = $(this).siblings('img.picked-image')
     reader.onload = function (e) {
       img.attr('src', e.target.result);
+      image_profile_upload = e.target.result;
     }
     reader.readAsDataURL(file);
   });
@@ -225,20 +258,37 @@ $(function () {
   var maxSize = fileInput.data('max-size');
   var maxSizeInBytes = maxSize * 1000000;
 
-  $('form').submit(function (e) {
+  // $('form').submit(function (e) {
 
+  $('#image_upload').click(function () {
 
     if ($('form').find('input[type="file"]').length > 0) {
 
       if (fileInput.get(0).files.length) {
+
         var fileSize = fileInput.get(0).files[0].size; // in bytes
+        console.log(fileInput.get(0).files);
+        console.log(image_profile_upload);
+
         if (fileSize > maxSizeInBytes) {
 
           $('#image-picker+span').html('Your photo size is more than ' + maxSize + ' MB, please select another one');
           return false;
         } else {
+          var img = {
+                'img' : image_profile_upload
+            }
+          $.ajax({
+              url: "../Dashboard/ProfilePicUpload",
+              data: img, 
+              contentType: undefined,
+              type: 'post',
+              success : function(path){
+                // node.setAttribute('src', path);
+              }
+            });
           $('#image-picker+span').html('');
-
+          console.log('hii');
         }
       }
     }
