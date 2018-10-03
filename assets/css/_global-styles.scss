@@ -19,6 +19,7 @@ body {
   a,
   li,
   input,
+  div,
   textarea,
   label,
   select,
@@ -215,6 +216,10 @@ p {
   &.btn-default {
     background-color: #dadada;
     color: #333333;
+    opacity: 0.8;
+    &:hover{
+      opacity: 1;
+    };
   }
 
   &.btn-white {
@@ -345,7 +350,46 @@ div.button-group {
 
 }
 
+button#toggle-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  padding: 15px;
+  z-index: 9;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 0 18px 50px -21px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+  -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+  svg {
+    margin-right: 8px;
+  }
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
+}
 
+button.wide-blue{
+  display: block;
+  width:100%;
+  border:none;
+  padding: 10px;
+  border-radius:5px;
+  background-color: #2b6eb1;
+  color:#fff;
+  margin-top: 20px;
+  cursor: pointer;
+  opacity: 1;
+  &:hover{
+    opacity: 0.7;
+  }
+}
 
 /*============== TextBoxes =================*/
 
@@ -385,6 +429,29 @@ div.button-group {
   }
 }
 
+/*============== Date picker =================*/
+
+.datepicker-panel>ul>li {
+  border-radius: 500px;
+  height: 26px;
+  margin: 2px;
+  width: 26px;
+
+  &.picked[data-view="day picked"] {
+
+    background-color: #2b6eb1;
+    border-radius: 500px;
+    color: #fff !important;
+    &:hover {
+      background-color: #71a0cf;
+
+    }
+  }
+
+  &.highlighted {
+    border: 1px solid #c0daff;
+  }
+}
 
 /*==================================================
 =                  Used Objects             =
@@ -448,7 +515,7 @@ div.button-group {
 }
 
 header {
-  margin-bottom: 75px;
+ // margin-bottom: 75px;
 }
 
 header.has-light-header-curve {

@@ -1,0 +1,604 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My moving labor | Search</title>
+
+  <!-- Date picker -->
+  <link rel="stylesheet" href="node_modules/date-picker/datepicker.min.css">
+
+  <!--StyleSheets-->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:400,600,700,800" rel="stylesheet">
+
+  <!--FlexBox-->
+  <link href="node_modules/flexboxgrid/css/flexboxgrid.min.css" rel="stylesheet">
+
+  <!--normalizer-->
+  <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
+
+  <!--Font-awesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+
+  <!-- SmartMenus core CSS (required) -->
+  <link href="assets/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+
+  <!-- "sm-mint" menu theme (optional, you can use your own CSS, too) -->
+  <link href="assets/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+    <button id="toggle-sidebar"><i class="fas fa-chevron-left"></i>Search options</button>
+
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!--HEADER-->
+
+  <div class="main-blue-header-theme">
+    <header>
+      <div id="main-nav-wrapper" class="style-nav-2">
+        <div class="site-logo">
+          <a href="index.html"></a>
+        </div>
+        <div class="menu-container">
+          <div id="normal-nav-container">
+            <nav class="main-nav" role="navigation">
+              <!-- Sample menu definition -->
+              <ul id="main-menu" class="sm sm-clean">
+                <li>
+                  <a href="search-helpers.html" class="">Find a helper</a>
+                </li>
+                <li>
+                  <a href="about.html" class="">About</a>
+                </li>
+                <li>
+                  <a id="how-it-works-btn" href="#" class="">How it works</a>
+                </li>
+                <li>
+                  <a href="#" class="">Login</a>
+                  <ul>
+                    <li><a class="" href="client-login.html">Clients area</a></li>
+                    <li><a class="" href="provider-login.html">Login as a Helper</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="">Join us</a>
+                  <ul>
+                    <li><a class="" href="client-profile-register.html">New Client</a></li>
+                    <li><a class="" href="provider-profile-register.html">New Service provider</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="support.html" class="">Support</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <!-- Mobile menu toggle button (hamburger/x icon) -->
+          <a href="#" class="toggle-mobile-nav-btn collabsed">
+
+            <span class="bars">
+              <i class="fas fa-bars"></i>
+            </span>
+            <span class="x">
+              <i class="fas fa-times"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div id="nav-container-for-mobile">
+    </div>
+    <section id="hero" class="search-hero">
+      <div class="content">
+        <h1> Found <span id="search-result-number">18</span> matching Helpers</h1>
+        <h4 id="search-location"><i class="fas fa-map-marker-alt"></i>Denvar, 126544</h4>
+        <h4 id="search-date"><i class="fas fa-clock"></i>18.9.2018 </h4>
+        <h4 id="search-type"><i class="fas fa-truck-moving"></i>Moving labor</h4>
+      </div>
+    </section>
+  </div>
+
+  <div id="wrapper">
+
+    <section id="booking-navigation" class="container">
+      <div class="row center-xs">
+        <div class="col-sm-2 active booking-step">
+          <span>1</span>
+          <h5>Compare helpers</h5>
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="col-sm-2 booking-step">
+          <span>2</span>
+          <h5>Book a helper</h5>
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="col-sm-2 booking-step">
+          <span>3</span>
+          <h5>Active insurance</h5>
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="search-result-container" class="container responsive-top-margin responsive-bottom-padding with-bottom-separator">
+      <div class="row center-xs">
+        <div class="col-md-3 search-panel">
+
+          <div class="search-panel-floating">
+
+
+
+            <div class="search-field  sorting-input">
+              <div>
+                  <label class="right">Sorting</label>
+                <select name="" id="helper-sorting">
+                  <option value="">Nearest</option>
+                  <option value="">Highest rate</option>
+                  <option value="">Lowest rate</option>
+                  <option value="">High price</option>
+                  <option value="">Low price</option>
+                  <option value="">A-Z</option>
+                </select>
+              </div>
+            </div>
+
+
+
+            <div class="search-field has-icon">
+              <div>
+                  <label class="right">Location</label>
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="input-search-location" placeholder="Location">
+              </div>
+            </div>
+
+            <div class="search-field has-icon has-border-bottom">
+              <div>
+                  <label class="right">Date</label>
+                  <i class="fas fa-calendar-check"></i>
+                <input type="text" id="input-search-date" class="date-input-mask" placeholder="Date">
+              </div>
+            </div>
+
+            <div class="search-field has-border-bottom">
+              <label>Type of moving</label>
+              <div>
+                <i class="fas fa-truck-moving"></i>
+                <div class="search-input sorting-input">
+                  <select name="" id="helper-sorting">
+                    <option value="">Moving labor (No Truck)</option>
+                    <option value="">Local moving (Full Service with truck)</option>
+                    <option value="">Long distance (State wide)</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <div class="search-field has-icon has-border-bottom">
+                <label style="margin-top: 16px;">About your move <br>
+                  <div class="help" id="move-help">Not so sure what is needed ? <span>Bla Bla Bla Blaa</span></div>
+                </label>
+
+                <div>
+                    <label class="right" >Helpers number</label>
+                    <i class="fas fa-user"></i>
+                  <input name="helpers-number" type="number" class="integer-number-mask number-range-mask" min="1" max="999" value="1">
+                </div>
+                <div>
+                    <label  class="right">Hire hours</label>
+                    <i class="fas fa-user-clock"></i>
+                  <input name="helpers-hiring-hours" type="number" class="integer-number-mask number-range-mask" min="1" max="24" value="1">
+                </div>
+                <div>
+                  <label  class="right">Floors</label>
+                  <i class="fas fa-home"></i>
+                  <input name="helpers-floors" type="number" class="integer-number-mask number-range-mask" min="1" max="10" value="1">
+                </div>
+
+                <div>
+                  <ul>
+                    <li><label for="helper-move-over-400"><input type="checkbox" name="" id="helper-move-over-400">Items over 400 Lbs</label></li>
+                    <li><label for="helper-move-over-800"><input type="checkbox" name="" id="helper-move-over-800">Items over 800 Lbs</label></li>
+                    <li><label for="helper-move-upright-piano"><input type="checkbox" name="" id="helper-move-upright-piano">Upright piano moving</label></li>
+                    <li><label for="helper-move-baby-piano"><input type="checkbox" name="" id="helper-move-baby-piano">Baby Grand piano moving</label></li>
+                  </ul>
+                </div>
+                <div class="help" id="moving-large-items-help">Moving larger items ?<span>Bla Bla Bla Blaa</span></div>
+              </div>
+              <button id="modify-search" class="btn-default wide-blue">Apply Settings</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+
+          <div id="helper-123456" class="helper row content">
+            <div class="blue-line"></div>
+            <div class="head">
+              <h4 class="name">First Choice Movers</h4>
+              <h4 class="price">$270</h4>
+            </div>
+            <div class="review-rating">
+              <span class="review-stars">
+                <span class="stars-45 actual-rate-stars">
+                  <img src="assets/img/review-rating-template.png" alt="">
+                </span>
+              </span>
+              <span>4.5/5</span>
+            </div>
+
+            <button class="btn btn-small btn-default">View profile</button>
+
+            <div class="helper-bio">
+              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
+                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
+                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
+              <img src="assets/img/user-img.png" alt="helper_name">
+            </div>
+            <div class="links">
+              <div><i class="fas fa-star"></i><span>85</span>
+                <p>Reviews</p>
+              </div>
+              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
+              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
+            </div>
+            <div class="footer">
+              <h5>Price includes:</h5>
+              <p>
+                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
+                  class="price-per-hour">75</span> per hour after) <br>
+                Travel to your location <br>
+                Time starts upon arrival <br>
+              </p>
+              <a href="booking-helper.html" class="btn btn-orange">Hire</a>
+            </div>
+
+
+
+          </div>
+
+          <div id="helper-123456" class="helper row content">
+            <div class="blue-line"></div>
+            <div class="head">
+              <h4 class="name">First Choice Movers</h4>
+              <h4 class="price">$270</h4>
+            </div>
+            <div class="review-rating">
+              <span class="review-stars">
+                <span class="stars-45 actual-rate-stars">
+                  <img src="assets/img/review-rating-template.png" alt="">
+                </span>
+              </span>
+              <span>4.5/5</span>
+            </div>
+
+            <button class="btn btn-small btn-default">View profile</button>
+
+            <div class="helper-bio">
+              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
+                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
+                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
+              <img src="assets/img/user-img.png" alt="helper_name">
+            </div>
+            <div class="links">
+              <div><i class="fas fa-star"></i><span>85</span>
+                <p>Reviews</p>
+              </div>
+              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
+              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
+            </div>
+            <div class="footer">
+              <h5>Price includes:</h5>
+              <p>
+                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
+                  class="price-per-hour">75</span> per hour after) <br>
+                Travel to your location <br>
+                Time starts upon arrival <br>
+              </p>
+              <a href="booking-helper.html" class="btn btn-orange">Hire</a>
+            </div>
+
+
+
+          </div>
+
+          <div id="helper-123456" class="helper row content">
+            <div class="blue-line"></div>
+            <div class="head">
+              <h4 class="name">First Choice Movers</h4>
+              <h4 class="price">$270</h4>
+            </div>
+            <div class="review-rating">
+              <span class="review-stars">
+                <span class="stars-45 actual-rate-stars">
+                  <img src="assets/img/review-rating-template.png" alt="">
+                </span>
+              </span>
+              <span>4.5/5</span>
+            </div>
+
+            <button class="btn btn-small btn-default">View profile</button>
+
+            <div class="helper-bio">
+              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
+                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
+                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
+              <img src="assets/img/user-img.png" alt="helper_name">
+            </div>
+            <div class="links">
+              <div><i class="fas fa-star"></i><span>85</span>
+                <p>Reviews</p>
+              </div>
+              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
+              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
+            </div>
+            <div class="footer">
+              <h5>Price includes:</h5>
+              <p>
+                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
+                  class="price-per-hour">75</span> per hour after) <br>
+                Travel to your location <br>
+                Time starts upon arrival <br>
+              </p>
+              <a href="booking-helper.html" class="btn btn-orange">Hire</a>
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <section id="fqa-home-section" class="container responsive-top-margin responsive-bottom-padding with-bottom-separator">
+      <div class="row accordion">
+        <ul>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Who are the helpers ?</h2>
+            <p>The move Helpers you see on MyMovingLabor do loading and unloading jobs for a living
+              <br>
+              Many are professional labor-only moving companies that specialize in load and unload services. Others are
+              full-service moving companies willing to send their workers out on labor-only moving jobs</p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>What happens if they break my stuff ?</h2>
+            <p>Using the sibling and checked selectors, we can determine the styling of sibling elements based on the
+              checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML
+              accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Who is My Moving Labor ?</h2>
+            <p>By making the open state default for when :checked isn't detected, we can make this system accessable
+              for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can
+              be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="get-app-section" class="container center responsive-top-margin responsive-bottom-padding with-bottom-separator">
+      <div class="row center-xs">
+        <div class="col-md-6 col-xs-12 img-cont"><img src="assets/img/get-the-app.jpg" alt="Get the app-links"></div>
+        <div class="col-md-6 col-xs-12 body-cont">
+          <h2 class="bold-700">Get helped any time, any Place</h2>
+          <p class="sub">Download our Mobile App, Reach your helpers easier</p>
+          <div class="btn-group"><a href="#" class="btn btn-orange"><i class="fab fa-apple"></i> App Store</a><a href="#"
+              class="btn btn-white"><i class="fab fa-android"></i> Google Play</a></div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+
+
+
+  <footer class="has-top-curves">
+
+    <div class="footer-top-curves">
+    </div>
+
+    <div class="container-fluid">
+      <div class="row center-xs">
+        <div class="col-md-3 col-sm-12 break-width">
+          <a href="#">
+            <div class="footer-site-logo"></div>
+          </a>
+          <p>
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
+          </p>
+
+          <div class="social-group">
+            <span class="social-line"></span>
+            <nav class="social-links">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-google-plus-g fa-lg"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <span class="social-line"></span>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-4 break-width">
+          <h4>Home</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Search for a helper</a>
+              </li>
+              <li>
+                <a href="#">Education</a>
+              </li>
+              <li>
+                <a href="#">How it works</a>
+              </li>
+              <li>
+                <a href="#">Client’s area</a>
+              </li>
+              <li>
+                <a href="#">Join us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>Help</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Help topics</a>
+              </li>
+              <li>
+                <a href="#">FAQ’s</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of use</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>New helper ?</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Create account</a>
+              </li>
+              <li>
+                <a href="#">Fees</a>
+              </li>
+              <li>
+                <a href="#">Documentations</a>
+              </li>
+              <li>
+                <a href="#">Payments</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 col-sm-12 search-col">
+          <h4>Subscribe for news letter
+            <small>No spam, we promise</small>
+          </h4>
+          <form class="search-box-group" action="" name="search-form">
+            <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+          </form>
+          <nav class="app-links">
+            <h4>Get Our App</h4>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-apple fa-lg"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-android fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row center-xs copy-rights bottom-xs">
+        <div class="col-sm-4">
+          <span>Copy right 2018 © MyMovingLabor.com All rights are reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
+
+  <!-- Time picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+  <!-- Form valiator -->
+  <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+
+  <!-- Slick slider-->
+  <script src="assets/js/slick.min.js"></script>
+
+  <!-- For date picker-->
+  <script src="node_modules/date-picker/datepicker.min.js"></script>
+
+  <script>
+      $( function() {
+        $( "#input-search-date" ).datepicker({
+          format: "dd / mm / yyyy",
+          autoPick: true,
+          minDate: 0,
+        beforeShow: function() {
+        $(this).datepicker('option', 'maxDate', $('#to').val());
+      }
+
+        });
+
+      } );
+      </script>
+
+  <!-- Js codes -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+</html>

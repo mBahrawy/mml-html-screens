@@ -203,7 +203,7 @@ $('#service-provider-slider').slick({
 
 // For service areas cities
 // ========================================================
-
+/*
 var serviceAreaCites = $('#service-area-cities'),
     serviceAreaCitesText = $('#service-area-cities').html();
 serviceAreaCites.html('<ul id="cities-menu"></ul>');
@@ -213,7 +213,7 @@ citiesArray = serviceAreaCitesText.split(",");
 for(var i = 0; citiesArray.length > i ; i++){
   var city = "<li>"+citiesArray[i].replace(/ +(?= )/g,'')+"</li>";
   $('#cities-menu').append(city);
-}
+}*/
 
 // For hiding empty fields
 // ========================================================
@@ -421,8 +421,30 @@ $('select.licence-has-input').change(function () {
 })
 
 
+// ========================================================
+//                For search helpers page 
+// ========================================================
 
+// Show button on scrolled
+//====================================
 
+jQuery(function($) {
+  function fixDiv() {
+    var $cache = $('#toggle-sidebar');
+    if ($(window).scrollTop() > 250)
+      $cache.css({
+        'position': 'fixed',
+        'top': '0px'
+      });
+    else
+      $cache.css({
+        'position': 'fixed',
+        'top': '-70px'
+      });
+  }
+  $(window).scroll(fixDiv);
+  fixDiv();
+});
 
 
 // ========================================================
@@ -918,3 +940,17 @@ $('.no-white-spaces-mask').keyup(function() {
   this.value = this.value.replace(/\s/g,'');
  });
  
+
+// Input only number in range
+//=========================
+
+$('.number-range-mask').on('input', function () {
+    
+  var min = $(this).attr("min");
+  var max = $(this).attr("max");
+
+  var value = $(this).val();
+  if ((value !== '') && (value.indexOf('.') === -1)) {
+    $(this).val(Math.max(Math.min(value, max), min));
+  }
+});

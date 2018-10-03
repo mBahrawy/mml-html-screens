@@ -1,0 +1,43 @@
+#hero {
+  #booking-navigation {
+    .booking-step {
+      opacity: 0.5;
+      h5 {
+        color: #fff;
+      }
+      span {
+        background-color: #fff;
+        color: #2c6bb1;
+      }
+    }
+    .booking-step.active {
+      svg {
+        color: #fff;
+      }
+      opacity: 0.9;
+      h5 {
+        color: #fff;
+      }
+      span {
+        background-color: #fff;
+        color: #2c6bb1;
+      }
+    }
+  }
+}
+
+#booking-container{
+  margin-top: -170px;
+  background-color: #fff;
+  padding: 90px 50px 70px;
+  .steps-progress-bar{
+    label,span{
+      display: none;
+    }
+  }
+  form{
+    width:100%;
+    display: block;
+    
+  }
+}
