@@ -228,6 +228,15 @@ for(var i = 0 ; checkFileds.length > i; i++ ){
   }
 }
 
+// For success percentage bar
+// ==========================================================
+
+if($(".small-progress-bar").length > 0){
+  var persentageBar = $(".small-progress-bar");
+  persentageBarValue =  parseInt( $("p.success-percentage").html().match(/\d+/)[0] );
+  persentageBar.find(".actual-bar-value").css("width", persentageBarValue + "%");
+}
+
 
 // ========================================================
 //            For Service provider profile edit page 
@@ -296,7 +305,17 @@ $(function () {
   });
 });
 
+//  For Service cost section
+// =========================================================
+$('.service-cost-section select').change(function () {
 
+  if ($(this).val() == "yes") {
+    $(this).next('input').addClass("visible-input").prop('disabled', false);
+
+  } else {
+    $(this).next('input').removeClass("visible-input").prop('disabled', true).val("0");
+  }
+});
 
 // Add new Equipment  Expand & Collapse
 // ==========================================================

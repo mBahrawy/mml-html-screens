@@ -112,7 +112,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
@@ -173,6 +174,8 @@
                 <li class="">
                   <a href="#equipments-section">Equipments details</a>
                 </li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
+                </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
                 </li>
@@ -203,7 +206,8 @@
 
             <div class="input-field">
               <h5>Business name</h5>
-              <input type="text" class="textbox" name="primary-phone" value="Perfect choice movers" placeholder="Your business name" maxlength="15">
+              <input type="text" class="textbox" name="primary-phone" value="Perfect choice movers" placeholder="Your business name"
+                maxlength="15">
             </div>
 
 
@@ -212,14 +216,58 @@
               <textarea class="textbox " rows="6" name="business-bio" placeholder="Business summary" maxlength="15"></textarea>
             </div>
 
+            <div class="row head">
+                <h4>Moving service type</h4>
+            </div>
+
+            <div class="input-field service-type-checkbox">
+
+
+            <label>
+                <input type="checkbox" name="moving-service-type" value="Moving labor" id="">
+                <h4>1. Moving labor</h4>
+
+              <ul>
+                <li>Nearby moving</li>
+                <li>No truck needed</li>
+              </ul>
+            </label>
+
+            <label>
+              <input type="checkbox" name="moving-service-type" value="Local moving" id="">
+              <h4>2. Local moving</h4>
+              <ul>
+                <li>Full service</li>
+                <li>Loading & unloading</li>
+                <li>Need a truck</li>
+              </ul>
+            </label>
+
+            <label>
+              <input type="checkbox" name="moving-service-type" value="State wide moving" id="">
+              <h4>3. State wide moving</h4>
+              <ul>
+                <li>Moving over states</li>
+                <li>Need a truck</li>
+              </ul>
+            </label>
+
+          </div>
+          
+            <div class="row head">
+                <h4>Contacting info</h4>
+            </div>
+
             <div class="input-field inline-input ">
               <h5>Primary phone</h5>
-              <input type="tel" class="textbox " name="primary-phone" value="992-226-4403" placeholder="Primary phone" maxlength="15">
+              <input type="tel" class="textbox " name="primary-phone" value="992-226-4403" placeholder="Primary phone"
+                maxlength="15">
             </div>
 
             <div class="input-field inline-input">
               <h5>Alternate phone</h5>
-              <input type="tel" class="textbox " name="alternate-phone" value="559-876-0012" placeholder="Alternate phone" maxlength="15">
+              <input type="tel" class="textbox " name="alternate-phone" value="559-876-0012" placeholder="Alternate phone"
+                maxlength="15">
             </div>
 
 
@@ -230,12 +278,14 @@
 
             <div class="input-field inline-input">
               <h5>Address</h5>
-              <input type="text" class="textbox " name="business-address" value="66 Balue Street" placeholder="Business address" maxlength="15">
+              <input type="text" class="textbox " name="business-address" value="66 Balue Street" placeholder="Business address"
+                maxlength="15">
             </div>
 
             <div class="input-field inline-input">
               <h5>City</h5>
-              <input type="text" class="textbox " name="business-city" value="myCity" placeholder="Business address" maxlength="15">
+              <input type="text" class="textbox " name="business-city" value="myCity" placeholder="Business address"
+                maxlength="15">
             </div>
 
             <div class="input-field inline-input">
@@ -314,6 +364,223 @@
       </div>
     </section>
 
+    <!--  For Service cost section   -->
+    <section id="service-cost-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#business-section">Business details</a>
+                </li>
+                <li class="">
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class="active">
+                  <a href="#service-cost-section">Service cost</a>
+                </li>
+                <li class="">
+                  <a href="#service-area-section">Service area</a>
+                </li>
+                <li class="">
+                  <a href="#working-hours-section">Working hours</a>
+                </li>
+                <li class="">
+                  <a href="#truck-section">Truck details</a>
+                </li>
+                <li class="">
+                  <a href="#credentials-section">Credentials</a>
+                </li>
+                <li class="">
+                  <a href="#licenses-section">licenses</a>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+          <form action="#" method="get">
+
+            <div class="row head">
+              <h4>Your service cost</h4>
+            </div>
+
+            <div class="input-field  service-cost-section">
+              <h5>Your service hourly rate</h5>
+              <small>Be precise in your hourly rate, the average rate is $15/Hr</small>
+              <div class="floating-right">
+                <input name="hourly-rate" type="number" class="textbox integer-number-mask number-range-mask has-dollar-sign"
+                  min="1" max="500" value="10">
+              </div>
+            </div>
+
+            <div class="row head">
+              <h4>About stairs flights</h4>
+            </div>
+
+            <div class="input-field  service-cost-section">
+              <h5>Total number of stairs flights you can rise</h5>
+              <small>
+                The total number of rising stairs flights while moving items, <br>
+                This is needed in multi floors building
+              </small>
+              <div class="floating-right">
+
+                <input name="max-stairs-flights" type="number" class="textbox integer-number-mask number-range-mask has-dollar-sign"
+                  min="1" max="40" value="7">
+
+              </div>
+            </div>
+
+            <div class="input-field  service-cost-section">
+              <h5>Maximum free number of stairs flights</h5>
+              <small>
+                Number of free rising stairs flights, <br>This for small houses
+              </small>
+              <div class="floating-right">
+
+
+                <input name="max-free-stairs-flights" type="number" class="textbox integer-number-mask number-range-mask has-dollar-sign"
+                  min="1" max="20" value="3">
+
+
+              </div>
+            </div>
+
+            <div class="input-field service-cost-section">
+              <h5>Extra stairs flights rising cost</h5>
+              <small>
+                Cost per extra flight, <br>This for large multi floor building
+              </small>
+              <div class="floating-right">
+
+
+                <input name="extra-stairs-flights-cost" type="number" class="textbox integer-number-mask number-range-mask has-dollar-sign"
+                  min="1" max="1000" value="5">
+
+
+              </div>
+            </div>
+
+            <div class="row head">
+              <h4>About moving heavy items </h4>
+            </div>
+
+            <div class="input-field service-cost-section">
+              <h5>Do you move over 400Lbs and less 800Lbs ?</h5>
+              <small>If yes, add extra cost of this service if needed </small>
+
+              <div class="floating-right">
+
+                <select name="can-move-over-400-lbs" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+
+                <input type="text" name="over-400-lbs-extra-value" placeholder="$" class="textbox integer-number-mask  toggle-visibility has-dollar-sign">
+              </div>
+
+            </div>
+
+            <div class="input-field service-cost-section">
+              <h5>Do you move 800Lbs and above ?</h5>
+              <small>If yes, add extra cost of this service if needed</small>
+
+              <div class="floating-right">
+
+                <select name="can-move-over-800-lbs" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+
+                <input type="text" name="over-800-lbs-extra-value" placeholder="$" class="textbox integer-number-mask  toggle-visibility has-dollar-sign">
+              </div>
+            </div>
+
+            <div class="input-field service-cost-section">
+              <h5>Do you move Upright pianos ? </h5>
+              <div class="floating-right">
+
+                <select name="can-move-upright-pianos" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+
+                <input type="text" name="moving-upright-piano-cost" placeholder="$" class="textbox integer-number-mask  toggle-visibility has-dollar-sign">
+              </div>
+            </div>
+
+            <div class="input-field service-cost-section">
+
+              <h5>Do you move Baby grand pianos ?</h5>
+              <div class="floating-right">
+
+                <select name="can-move-baby-grand-pianos" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+                <input type="text" name="moving-baby-grand-piano-cost" placeholder="$" class="textbox integer-number-mask  toggle-visibility has-dollar-sign">
+              </div>
+            </div>
+            <div class="row head">
+              <h4>About your transporting equipment</h4>
+            </div>
+
+            <div class="input-field  service-cost-section">
+              <h5>Can you use a Truck ?</h5>
+              <div class="floating-right">
+
+                <select name="has-truck" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+                <input class="integer-number-mask textbox  toggle-visibility has-dollar-sign" placeholder="$" type="text"
+                  name="using-truck-cost">
+              </div>
+            </div>
+
+            <div class="input-field service-cost-section">
+              <h5>Can you use a Container ?</h5>
+              <div class="floating-right">
+
+                <select name="has-container" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+                <input class="integer-number-mask textbox  toggle-visibility has-dollar-sign" placeholder="$" type="text"
+                  name="using-container-cost">
+
+              </div>
+            </div>
+
+            <div class="input-field service-cost-section">
+              <h5>Can you use a Freight Trailer</h5>
+              <div class="floating-right">
+
+                <select name="has-freight-trailer" class="textbox">
+                  <option value="yes">Yes</option>
+                  <option selected="selected" value="No">No</option>
+                </select>
+                <input class="integer-number-mask textbox toggle-visibility has-dollar-sign" placeholder="$" type="text"
+                  name="using-container-cost">
+              </div>
+            </div>
+
+
+            <button class="btn btn-orange" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!--  For Equipments section   -->
     <section id="equipments-section" class="settings-section container responsive-bottom-padding">
       <div class="row">
@@ -329,7 +596,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="active">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
@@ -374,7 +642,8 @@
                       <i class="fas fa-trash-alt"></i>
                     </button>
                   </h5>
-                  <p>1-2 flat 4-wheeled furniture dollies with us for every job. Please note that these are not part of your order, if your move requires a dolly, please let us know so we can make sure they are brought.</p>
+                  <p>1-2 flat 4-wheeled furniture dollies with us for every job. Please note that these are not part of
+                    your order, if your move requires a dolly, please let us know so we can make sure they are brought.</p>
                   <p>[always included, no fee]</p>
                 </div>
                 <div class="equipment included">
@@ -388,7 +657,8 @@
                       <i class="fas fa-trash-alt"></i>
                     </button>
                   </h5>
-                  <p>1-2 Dollies with us for every job. Please note that these are not part of your order, if your move requires a dolly, please let us know so we can make sure they are brought. </p>
+                  <p>1-2 Dollies with us for every job. Please note that these are not part of your order, if your move
+                    requires a dolly, please let us know so we can make sure they are brought. </p>
                   <p>[always included, no fee]</p>
                 </div>
                 <div class="equipment included">
@@ -502,7 +772,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="active">
                   <a href="#service-area-section">Service area</a>
@@ -575,7 +846,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
@@ -755,7 +1027,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
@@ -816,7 +1089,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
@@ -939,11 +1213,13 @@
                     </label>
 
                     <label>
-                      <input type="checkbox" name="" class="credential-option" id="credential-policy-number">Has policy date
+                      <input type="checkbox" name="" class="credential-option" id="credential-policy-number">Has policy
+                      date
                     </label>
 
                     <label>
-                      <input type="checkbox" name="" class="credential-option" id="credential-policy-issuer">Has Policy issuer
+                      <input type="checkbox" name="" class="credential-option" id="credential-policy-issuer">Has Policy
+                      issuer
                     </label>
                   </div>
 
@@ -1004,7 +1280,8 @@
                   <a href="#business-section">Business details</a>
                 </li>
                 <li class="">
-                  <a href="#equipments-section">Equipments details</a>
+                  <a href="#equipments-section">Equipments details</a></li>
+                <li class=""><a href="#service-cost-section">Service cost</a>
                 </li>
                 <li class="">
                   <a href="#service-area-section">Service area</a>
@@ -1057,7 +1334,8 @@
 
               <div class="input-field has-licence-option">
                 <P>Do you carry business insurance?</P>
-                <small>Do you carry insurance that protects customer's goods? If approved you will be asked to provide a policy
+                <small>Do you carry insurance that protects customer's goods? If approved you will be asked to provide
+                  a policy
                   number.</small>
 
                 <select name="has_business_insurance" class="licence-has-input textbox">
@@ -1065,13 +1343,15 @@
                   <option selected="selected" value="No">No</option>
                 </select>
 
-                <input type="text" name="business-insurance-policy-number" placeholder="Enter insurance policy number" class="textbox">
+                <input type="text" name="business-insurance-policy-number" placeholder="Enter insurance policy number"
+                  class="textbox">
 
               </div>
 
               <div class="input-field has-licence-option">
                 <P>Are you a licensed full-service mover?</P>
-                <small>This means you own or lease commercial moving trucks and carry the proper state and federal licenses to legally
+                <small>This means you own or lease commercial moving trucks and carry the proper state and federal
+                  licenses to legally
                   provide intersate (multi-state) and/or intrastate (within your state) moving services.
                 </small>
 
@@ -1090,181 +1370,182 @@
 
           </form>
 
-          </div>
-
-
         </div>
+
+
+      </div>
     </section>
 
 
 
+  </div>
+
+  <footer class="has-top-curves">
+
+    <div class="footer-top-curves">
     </div>
 
-    <footer class="has-top-curves">
+    <div class="container-fluid">
+      <div class="row center-xs">
+        <div class="col-md-3 col-sm-12 break-width">
+          <a href="#">
+            <div class="footer-site-logo"></div>
+          </a>
+          <p>
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
+          </p>
 
-      <div class="footer-top-curves">
-      </div>
-
-      <div class="container-fluid">
-        <div class="row center-xs">
-          <div class="col-md-3 col-sm-12 break-width">
-            <a href="#">
-              <div class="footer-site-logo"></div>
-            </a>
-            <p>
-              This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
-            </p>
-
-            <div class="social-group">
-              <span class="social-line"></span>
-              <nav class="social-links">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-facebook-f fa-lg"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-
-                      <i class="fab fa-google-plus-g fa-lg"></i>
-
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <span class="social-line"></span>
-            </div>
-
-          </div>
-          <div class="col-md-2 col-xs-4 break-width">
-            <h4>Home</h4>
-
-            <nav>
-              <ul>
-                <li>
-                  <a href="#">Search for a helper</a>
-                </li>
-                <li>
-                  <a href="#">Education</a>
-                </li>
-                <li>
-                  <a href="#">How it works</a>
-                </li>
-                <li>
-                  <a href="#">Client’s area</a>
-                </li>
-                <li>
-                  <a href="#">Join us</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-
-
-          <div class="col-md-2 col-xs-4  break-width">
-            <h4>Help</h4>
-            <nav>
-              <ul>
-                <li>
-                  <a href="#">Help topics</a>
-                </li>
-                <li>
-                  <a href="#">FAQ’s</a>
-                </li>
-                <li>
-                  <a href="#">Support</a>
-                </li>
-                <li>
-                  <a href="#">Contact us</a>
-                </li>
-                <li>
-                  <a href="#">Privacy policy</a>
-                </li>
-                <li>
-                  <a href="#">Terms of use</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-md-2 col-xs-4  break-width">
-            <h4>New helper ?</h4>
-            <nav>
-              <ul>
-                <li>
-                  <a href="#">Create account</a>
-                </li>
-                <li>
-                  <a href="#">Fees</a>
-                </li>
-                <li>
-                  <a href="#">Documentations</a>
-                </li>
-                <li>
-                  <a href="#">Payments</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-md-3 col-sm-12 search-col">
-            <h4>Subscribe for news letter
-              <small>No spam, we promise</small>
-            </h4>
-            <form class="search-box-group" action="" name="search-form">
-              <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
-              <button type="submit">Subscribe</button>
-            </form>
-            <nav class="app-links">
-              <h4>Get Our App</h4>
+          <div class="social-group">
+            <span class="social-line"></span>
+            <nav class="social-links">
               <ul>
                 <li>
                   <a href="#">
-                    <i class="fab fa-apple fa-lg"></i>
+                    <i class="fab fa-twitter fa-lg"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fab fa-android fa-lg"></i>
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+
+                    <i class="fab fa-google-plus-g fa-lg"></i>
+
                   </a>
                 </li>
               </ul>
             </nav>
+            <span class="social-line"></span>
           </div>
+
         </div>
-        <div class="row center-xs copy-rights bottom-xs">
-          <div class="col-sm-4">
-            <span>Copy right 2018 © MyMovingLabor.com All rights are reserved</span>
-          </div>
+        <div class="col-md-2 col-xs-4 break-width">
+          <h4>Home</h4>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Search for a helper</a>
+              </li>
+              <li>
+                <a href="#">Education</a>
+              </li>
+              <li>
+                <a href="#">How it works</a>
+              </li>
+              <li>
+                <a href="#">Client’s area</a>
+              </li>
+              <li>
+                <a href="#">Join us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+
+
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>Help</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Help topics</a>
+              </li>
+              <li>
+                <a href="#">FAQ’s</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of use</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>New helper ?</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Create account</a>
+              </li>
+              <li>
+                <a href="#">Fees</a>
+              </li>
+              <li>
+                <a href="#">Documentations</a>
+              </li>
+              <li>
+                <a href="#">Payments</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 col-sm-12 search-col">
+          <h4>Subscribe for news letter
+            <small>No spam, we promise</small>
+          </h4>
+          <form class="search-box-group" action="" name="search-form">
+            <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+          </form>
+          <nav class="app-links">
+            <h4>Get Our App</h4>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-apple fa-lg"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-android fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </footer>
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
-    </script>
-    <!-- SmartMenus jQuery plugin -->
-    <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
+      <div class="row center-xs copy-rights bottom-xs">
+        <div class="col-sm-4">
+          <span>Copy right 2018 © MyMovingLabor.com All rights are reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
 
-    <!-- Time picker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <!-- Time picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 
-   <!-- Form valiator -->
-    <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+  <!-- Form valiator -->
+  <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
 
-    <!-- Slick slider-->  
-    <script src="assets/js/slick.min.js"></script>
+  <!-- Slick slider-->
+  <script src="assets/js/slick.min.js"></script>
 
 
-    <!-- Js codes -->
-    <script src="assets/js/main.js"></script>
+  <!-- Js codes -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 

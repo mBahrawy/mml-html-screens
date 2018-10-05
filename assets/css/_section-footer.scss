@@ -28,10 +28,10 @@ footer {
       right: 0;
       width: 100%;
       background-image: url("../img/footer-curve.svg");
-
+      background-size: 100% 100%;
       top: -270px;
-      height: 500px;
-
+      height: 500px;  
+      background-size: 100% 100%;
       @media only screen and (max-width: 1600px) {
         top: -170px;
         height: 330px;

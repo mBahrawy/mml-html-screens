@@ -515,7 +515,10 @@ button.wide-blue{
 }
 
 header {
- // margin-bottom: 75px;
+//  @media only screen and (min-width: 769px) {
+    margin-bottom: 75px;
+//  }
+ 
 }
 
 header.has-light-header-curve {
@@ -530,6 +533,7 @@ header.has-light-header-curve {
     width: 100%;
     z-index: -1;
     height: 460px;
+    background-size: 100% 100%;
 
     @media only screen and (max-width: 1600px) {
       height: 460px;
@@ -612,7 +616,7 @@ header.has-light-header-curve {
 
   div {
     max-width: 375px;
-    display: block;
+    display: block; 
     margin: 0 auto;
 
     p,

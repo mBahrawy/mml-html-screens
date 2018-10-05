@@ -4,6 +4,7 @@ div.main-blue-header-theme {
   }
 
   background-image: url(../img/hero-bg.svg);
+  background-size: 100% 100%;
 
   @media only screen and (max-width: 768px) {
     background-image: url(../img/hero-small-bg.svg);
