@@ -2,22 +2,28 @@
   #booking-navigation {
     .booking-step {
       opacity: 0.5;
+
       h5 {
         color: #fff;
       }
+
       span {
         background-color: #fff;
         color: #2c6bb1;
       }
     }
+
     .booking-step.active {
       svg {
         color: #fff;
       }
+
       opacity: 0.9;
+
       h5 {
         color: #fff;
       }
+
       span {
         background-color: #fff;
         color: #2c6bb1;
@@ -26,18 +32,555 @@
   }
 }
 
-#booking-container{
+#booking-container {
   margin-top: -170px;
   background-color: #fff;
   padding: 90px 50px 70px;
-  .steps-progress-bar{
-    label,span{
+
+  @media only screen and (max-width: 768px) {
+    margin-top: -130px;
+
+  }
+
+  .steps-progress-bar {
+
+    label,
+    span {
       display: none;
     }
   }
-  form{
-    width:100%;
+
+  form {
+    width: 100%;
     display: block;
-    
+
   }
+}
+
+#booking-container {
+
+  div.booking-step {
+    position: relative;
+    width: 100%;
+
+    div.head {
+      margin-top: -60px;
+      text-align: center;
+
+      h4 {
+        font-weight: 600;
+        margin-bottom: 15px;
+
+        small {
+          font-size: 14px;
+          letter-spacing: 1px;
+          color: #8b8b8b;
+
+          span {
+            font-weight: 600;
+            color: #8b8b8b;
+          }
+        }
+      }
+    }
+
+    div.progress-bar {
+      width: 80%;
+      background-color: #ddd;
+      height: 2px;
+      margin-bottom: 40px;
+      display: block;
+      margin: 36px auto 10px;
+
+      div {
+        background-color: #2b6eb1;
+        height: inherit;
+      }
+    }
+
+    div.booking-step-content.row {
+
+      div.right-aligned {
+        position: relative;
+
+        div.vr-line {
+
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          background-color: rgba(221, 221, 221, 0.59);
+          top: 0;
+          left: 3px;
+        }
+
+        div.booking-field {
+          position: relative;
+          margin-bottom: 20px;
+          padding-left: 20px;
+
+          @media only screen and (max-width: 768px) {
+            margin-bottom: 40px;
+
+          }
+
+          h5 {
+            position: absolute;
+            top: 1px;
+            left: -110%;
+            text-align: right;
+            font-weight: 600;
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            margin: 0;
+
+            @media only screen and (max-width: 768px) {
+
+              position: relative;
+              left: -2px;
+              top: -8px;
+              text-align: left;
+              display: list-item;
+              color: #6d6d6d;
+
+            }
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+            color: #808080;
+
+            small {
+              font-size: 12px;
+              font-weight: 600;
+              margin-top: -5px;
+              display: block;
+            }
+          }
+
+          div.input-group {
+            position: relative;
+
+            &.has-icon {
+              svg {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: #2b6eb1;
+              }
+
+              input {
+                padding-left: 35px;
+              }
+            }
+
+            &.half {
+              input {
+                width: 35%;
+              }
+            }
+          }
+
+          div.time-picker-container {
+            position: relative;
+            top: -20px;
+
+            @media only screen and (max-width: 768px) {
+
+              top: 0;
+
+            }
+
+            div {
+
+              display: inline-block;
+              width: 40%;
+              min-width: 82px;
+              margin-right: 10px;
+
+              p {
+                font-size: 10px;
+                margin: 0;
+              }
+
+              input {
+                width: 100%;
+              }
+            }
+          }
+
+        }
+
+        @media only screen and (max-width: 768px) {
+          margin-left: -4px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  div.btns-group {
+    margin: 40px 0 0 auto;
+    display: block;
+    width: fit-content;
+  }
+}
+
+#booking-container {
+  .checkbox-with-images {
+    display: flex;
+
+    label {
+      cursor: pointer;
+      flex-basis: 33.33%;
+
+      @media only screen and (max-width: 768px) {}
+
+      margin: 40px 0 20px;
+      opacity: 0.6;
+      @include transition(opacity, 0.2s, ease-out);
+
+      &.active-selection {
+        opacity: 1;
+      }
+
+
+      div.img {
+        background-image: url("../img/booking-icons-sprirtesheet.jpg");
+        width: 140px;
+        height: 80px;
+        display: block;
+        margin: auto;
+        background-size: cover;
+
+        &.img-1 {
+          background-position: 0 0;
+        }
+
+        &.img-2 {
+          background-position: 0 -80px;
+        }
+
+        &.img-3 {
+          background-position: 0 -160px;
+        }
+
+        &.img-4 {
+          background-position: 0 -240px;
+        }
+
+        &.img-5 {
+          background-position: 0 -320px;
+        }
+
+        &.img-6 {
+          background-position: 0 -400px;
+        }
+
+        &.img-7 {
+          background-position: 0 -480px;
+          height: 100px;
+        }
+
+        &.img-8 {
+          background-position: 0 -580px;
+          height: 100px;
+        }
+
+        &.img-9 {
+          background-position: 0 -670px;
+          height: 100px;
+        }
+
+        &.img-10 {
+          background-position: 0 -770px;
+          height: 100px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 100px;
+          height: 57px;
+
+          &.img-1 {
+            background-position: 0 0;
+          }
+
+          &.img-2 {
+            background-position: 0 -57px;
+          }
+
+          &.img-3 {
+            background-position: 0 -114px;
+          }
+
+          &.img-4 {
+            background-position: 0 -171px;
+          }
+
+          &.img-5 {
+            background-position: 0 -228px;
+          }
+
+          &.img-6 {
+            background-position: 0 -285px;
+          }
+
+          &.img-7 {
+            background-position: 0 -340px;
+            height: 70px;
+          }
+
+          &.img-8 {
+            background-position: 0 -415px;
+            height: 70px;
+          }
+
+          &.img-9 {
+            background-position: 0 -480px;
+            height: 70px;
+          }
+
+          &.img-10 {
+            background-position: 0 -555px;
+            height: 70px;
+          }
+        }
+      }
+
+
+
+      div.check {
+        display: block;
+        margin: 20px auto;
+        position: relative;
+        padding-left: 22px;
+        width: fit-content;
+        min-width: 100px;
+
+        @media only screen and (max-width: 768px) {
+          position: relative;
+          left: 20px;
+        }
+
+        h5 {
+          display: inline-block;
+          margin: 0;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 12px;
+            max-width: 54px;
+          }
+
+        }
+
+        input {
+          position: absolute;
+          top: 4px;
+          left: 0;
+        }
+      }
+
+    }
+  }
+}
+
+#booking-container {
+  div.check-box-list {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+      margin: 40px auto;
+
+      li {
+        line-height: 30px;
+
+        label {
+          font-weight: 600;
+          cursor: pointer;
+
+          input {
+            margin-right: 10px;
+
+            &,
+            &+p,
+            &+p+span {
+              opacity: 0.7;
+            }
+
+            &:checked,
+            &:checked+p,
+            &:checked+p+span {
+              opacity: 1;
+            }
+          }
+
+          p {
+            margin: 0;
+            display: inline-block;
+            font-weight: 600;
+          }
+
+          span {
+            color: #828282;
+            font-weight: 400;
+            font-size: 14px;
+
+            &::before {
+              content: ' - ';
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .input-fields {
+    margin: 0 40px;
+
+    .booking-field {
+      padding: 0 2%;
+      width: 100%;
+
+      h5 {
+        margin: 16px 0 2px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+
+      input {
+        width: 100%;
+
+      }
+
+      &.half {
+        width: 45%;
+        display: inline-block;
+
+        @media only screen and (max-width: 768px) {
+          width: 46%;
+        }
+      }
+
+      &.inline {
+
+        input {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .col-md-6 {
+      @media only screen and (max-width: 768px) {
+
+        width: 100%;
+
+        .booking-field {
+          padding: 0;
+        }
+
+        .booking-field.inline {
+          position: relative;
+
+          input {
+            position: absolute;
+            top: -5px;
+            width: 100px;
+            right: 0px;
+          }
+
+        }
+
+        .half:nth-child(2n) {
+          margin-left: 6%;
+
+        }
+      }
+    }
+  }
+  .contact-info{
+    text-align: left;
+    h5{
+      font-size: 12px !important;
+    }
+  }
+  .additional-info {
+    p {
+      margin: 40px 20px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    textarea {
+      width: 95%;
+      display: block;
+      margin: auto;
+      max-height: 500px;
+
+    }
+  }
+  .terms-of-use {
+
+    margin-top: 60px;
+    .terms {
+  
+      background-color: rgba(230, 230, 230, 0.41);
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+      max-height: 300px;
+      box-sizing: border-box;
+      overflow-y: scroll;
+      margin: 20px 0;
+  
+      p {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+      }
+  
+    }
+  
+    .has-checkbox {
+      position: relative;
+      label {
+        top: 0;
+        left: 2px;
+      }
+  
+      .form-error {
+        top: 22px !important;
+        left: 28px !important;
+      }
+  
+      label {
+  
+        input[type="checkbox"] {
+          width: 16px;
+          position: absolute;
+          top: 4px;
+          opacity: 0.7;
+        }
+        input:checked,
+        input:checked+p {
+          opacity: 1;
+        }
+  
+        p {
+          margin: 0 0 60px 25px;
+          cursor: pointer;
+          opacity: 0.7;
+        }
+  
+      }
+    }
+  }
+  
+
 }

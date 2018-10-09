@@ -9,7 +9,7 @@ div.main-blue-header-theme {
   @media only screen and (max-width: 768px) {
     background-image: url(../img/hero-small-bg.svg);
   }
-}
+} 
 
 #main-nav-wrapper.style-nav-2 {
   @media only screen and (min-width: 769px) {
@@ -175,6 +175,20 @@ div.main-blue-header-theme {
         font-weight: 600;
       }
 
+      button#service-zip{
+        text-align: left;
+      }
+
+      span.circle{
+        font-family: monospace;
+        font-size: 24px;
+        line-height: 0;
+        position: relative;
+        top: -2px;
+        left: 5px;
+        color: #5a5a5a;
+      }
+
       @media only screen and (max-width: 562px) {
 
         button.btn {
@@ -188,57 +202,6 @@ div.main-blue-header-theme {
       }
 
 
-    }
-
-    div.service-type-radio-group {
-      display: flex;
-      max-width: 60%;
-      max-width: 550px;
-      margin: 20px auto 0;
-
-      div.service-type {
-
-        opacity: 0.7;
-        flex-basis: 33.33%;
-        padding: 0 20px 0px 21px;
-        position: relative;
-
-        @media only screen and (max-width: 768px) {
-          padding-right: 0;
-        }
-
-        input[type='radio'] {
-          position: absolute;
-          left: 4px;
-          top: 7px;
-        }
-
-        p {
-          padding: 0;
-          margin: 0;
-          text-align: left;
-          color: #fff;
-
-          @media only screen and (max-width: 768px) {
-            font-size: 14px;
-          }
-
-          small {
-            display: block;
-            color: #fff;
-            font-size: 11px;
-
-            @media only screen and (max-width: 768px) {
-              line-height: 16px;
-              margin-top: 5px;
-            }
-          }
-        }
-
-        &.checked {
-          opacity: 1;
-        }
-      }
     }
   }
 }
@@ -930,4 +893,143 @@ div.main-blue-header-theme {
       }
     }
   }
+}
+
+
+.real-search-input-container {
+  div.real-search-input-bg {
+    background-color: rgba(255,255,255,0.17);
+    position: fixed;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: table;
+
+  div.real-search-input {
+    z-index: 25;
+
+    display: block;
+    margin: auto;
+    position: relative;
+    transition: all 0.2s ease-out;
+
+    .end-search {
+      position: absolute;
+      right: 5px;
+      top: -30px;
+      cursor: pointer;
+      color: #fff;
+
+    }
+    div.radius {
+      padding: 20px;
+      box-shadow: 0 5px 30px 2px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #fff;
+
+      div.input {
+        text-align: left;
+        position: relative;
+        border-bottom: 1px solid rgba(221,221,221,0.38);
+        color: #000000;
+         ::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: rgb(196,196,196);
+          color: rgb(162,162,162);
+        }
+         :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: rgb(162,162,162);
+        }
+         ::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: rgb(162,162,162);
+        }
+
+        svg {
+          color: #737373;
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          font-size: 17px;
+        }
+        input {
+          outline: none;
+          width: 100%;
+          border: none;
+          padding: 14px 10px 14px 35px;
+        }
+        #get-current-zip{
+          background-color:rgb(63,111,156);
+          cursor: pointer;
+          color:#fff;
+          border:none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius:8px;
+          font-size: 14px;
+          padding: 6px 7px;
+        
+          
+        }
+      }
+
+      .service-type-radio-group {
+        text-align: left;
+        margin-left: 10px;
+        label {
+          cursor: pointer;
+
+          position: relative;
+          input {
+            position: absolute;
+            top: 5px;
+            opacity: 0.7;
+            left: 0;
+            
+            &:checked, &:checked+p{
+              opacity: 1;
+            }
+          }
+
+          p {
+            padding-left: 20px;
+            opacity: 0.5;
+            small {
+              color: #8b8b8b;
+              margin-left: 4px;
+            }
+            
+  
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+
+}
+
+.real-search-input-container.activeInput {
+
+  // display: table;
+  visibility: visible;
+  opacity: 1;
+
 }

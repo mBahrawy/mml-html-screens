@@ -93,6 +93,57 @@ $(".toggle-mobile-nav-btn").click(function () {
   }
 });
 
+// Hero search bar on home page
+// ==========================================================
+
+if ($('.text-box-simulator').length > 0) {
+  $('#service-zip, #service-date,.end-search,.real-search-input-bg').click(function () {
+    window.inputSimulator = $('.text-box-simulator');
+    window.currentWidthOfInput = inputSimulator.get()[0].scrollWidth;
+    window.currentTopPosition = inputSimulator.offset().top;
+  })
+
+  $('#service-zip, #service-date').click(function () {
+    showSearchBar();
+    return false;
+  });
+
+  $('.end-search,.real-search-input-bg').click(function () {
+    hideSearchBar();
+    return false;
+  });
+
+  $("#search-service-zip").change(function () {
+    $("#service-zip").html("Zip : " + $(this).val());
+    $('.real-search-input').css("width", currentWidthOfInput + 6);
+  });
+
+  $("#input-search-date").change(function () {
+    $("#service-date").html("Date : " + $(this).val());
+    $('.real-search-input').css("width", currentWidthOfInput + 6);
+  });
+}
+
+if ($('.real-search-input').length > 0){
+  $('.real-search-input').css("top", $('.text-box-simulator').offset().top - 10 + "px");
+}
+
+function showSearchBar() {
+  $('.real-search-input-container').addClass('activeInput');
+  $('.real-search-input').css("width", currentWidthOfInput + 6);
+  $(' .real-search-input').css("top", currentTopPosition - 10 + "px");
+  $('.real-search-input').animate({
+    top: currentTopPosition + "px",
+  }, 100);
+}
+
+function hideSearchBar() {
+  $('.real-search-input').animate({
+    top: currentTopPosition + 10 + "px",
+  }, 100);
+  $('.real-search-input-container').removeClass('activeInput');
+}
+
 // Testimonials Slider on home page
 // ==========================================================
 
@@ -236,6 +287,46 @@ if($(".small-progress-bar").length > 0){
   persentageBarValue =  parseInt( $("p.success-percentage").html().match(/\d+/)[0] );
   persentageBar.find(".actual-bar-value").css("width", persentageBarValue + "%");
 }
+
+// For Booking page, checking input change opacity
+// ==========================================================
+
+var targetCheckBox = $('.checkbox-with-images label input');
+if (targetCheckBox.length > 0) {
+  targetCheckBox.change(function () {
+    
+    if ($(this).is(':checked')) {
+      $(this).parent('div').parent('label').addClass('active-selection');
+      console.log("ok");
+    } else {
+      $(this).parent('div').parent('label').removeClass('active-selection');
+      console.log("no");
+
+    }
+  })
+};
+
+
+
+// For Date picker
+// ==========================================================
+
+if($("#input-search-date").length > 0){
+  $(function () {
+    $("#input-search-date").datepicker({
+      format: "dd / mm / yyyy",
+      autoPick: true,
+      minDate: 0,
+      autoHide:true,
+      beforeShow: function () {
+        $(this).datepicker('option', 'maxDate', $('#to').val());
+      }
+    });
+  });
+}
+
+
+
 
 
 // ========================================================

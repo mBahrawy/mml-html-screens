@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My moving labor | Search</title>
+  <title>My moving labor | Booking</title>
 
   <!-- Date picker -->
   <link rel="stylesheet" href="node_modules/date-picker/datepicker.min.css">
@@ -32,12 +32,9 @@
 
   <!-- "sm-mint" menu theme (optional, you can use your own CSS, too) -->
   <link href="assets/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" />
-
-
 </head>
 
 <body>
-    <button id="toggle-sidebar"><i class="fas fa-chevron-left"></i>Search options</button>
 
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -104,270 +101,194 @@
     <div id="nav-container-for-mobile">
     </div>
     <section id="hero" class="search-hero">
-      <div class="content">
-        <h1> Found <span id="search-result-number">18</span> matching Helpers</h1>
-        <h4 id="search-location"><i class="fas fa-map-marker-alt"></i>Denvar, 126544</h4>
-        <h4 id="search-date"><i class="fas fa-clock"></i>18.9.2018 </h4>
-        <h4 id="search-type"><i class="fas fa-truck-moving"></i>Moving labor</h4>
-      </div>
-    </section>
-  </div>
-
-  <div id="wrapper">
-
-    <section id="booking-navigation" class="container">
-      <div class="row center-xs">
-        <div class="col-sm-2 active booking-step">
-          <span>1</span>
-          <h5>Compare helpers</h5>
-          <i class="fas fa-angle-double-right"></i>
-        </div>
-        <div class="col-sm-2 booking-step">
-          <span>2</span>
-          <h5>Book a helper</h5>
-          <i class="fas fa-angle-double-right"></i>
-        </div>
-        <div class="col-sm-2 booking-step">
-          <span>3</span>
-          <h5>Active insurance</h5>
-          <i class="fas fa-angle-double-right"></i>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="search-result-container" class="container responsive-top-margin responsive-bottom-padding with-bottom-separator">
-      <div class="row center-xs">
-        <div class="col-md-3 search-panel">
-
-          <div class="search-panel-floating">
-
-
-
-            <div class="search-field  sorting-input">
-              <div>
-                  <label class="right">Sorting</label>
-                <select name="" id="helper-sorting">
-                  <option value="">Nearest</option>
-                  <option value="">Highest rate</option>
-                  <option value="">Lowest rate</option>
-                  <option value="">High price</option>
-                  <option value="">Low price</option>
-                  <option value="">A-Z</option>
-                </select>
+        <section id="booking-navigation" class="container">
+            <div class="row center-xs">
+              <div class="col-sm-2  booking-step">
+                <span>1</span>
+                <h5>Compare helpers</h5>
+                <i class="fas fa-angle-double-right"></i>
+              </div>
+              <div class="col-sm-2 active booking-step">
+                <span>2</span>
+                <h5>Book a helper</h5>
+                <i class="fas fa-angle-double-right"></i>
+              </div>
+              <div class="col-sm-2 booking-step">
+                <span>3</span>
+                <h5>Active insurance</h5>
+                <i class="fas fa-angle-double-right"></i>
               </div>
             </div>
+          </section>
+      </section>
+    </div>
 
+    <div id="wrapper">
 
+      <section id="search-result-container" class="container responsive-top-margin responsive-bottom-padding with-bottom-separator">
+        <div class="row center-xs">
+          <div class="col-md-10  form-content">
+            <div id="booking-container" class="helper row content">
+            <!--   <form action="#" method="post" id="service-provider-registration"> -->
+              <div id="booking-step-2" class="booking-step">
 
-            <div class="search-field has-icon">
-              <div>
-                  <label class="right">Location</label>
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" id="input-search-location" placeholder="Location">
-              </div>
-            </div>
-
-            <div class="search-field has-icon has-border-bottom">
-              <div>
-                  <label class="right">Date</label>
-                  <i class="fas fa-calendar-check"></i>
-                <input type="text" id="input-search-date" class="date-input-mask" placeholder="Date">
-              </div>
-            </div>
-
-            <div class="search-field has-border-bottom">
-              <label>Type of moving</label>
-              <div>
-                <i class="fas fa-truck-moving"></i>
-                <div class="search-input sorting-input">
-                  <select name="" id="helper-sorting">
-                    <option value="">Moving labor (No Truck)</option>
-                    <option value="">Local moving (Full Service with truck)</option>
-                    <option value="">Long distance (State wide)</option>
-                  </select>
-
+                <div class="head">
+                  <h4>
+                    Your location
+                    <br>
+                  </h4>
                 </div>
-              </div>
 
-              <div class="search-field has-icon has-border-bottom">
-                <label style="margin-top: 16px;">About your move <br>
-                  <div class="help" id="move-help">Not so sure what is needed ? <span>Bla Bla Bla Blaa</span></div>
+                <div class="progress-bar">
+                    <div style="width:80%;"></div>
+                </div>
+
+                <div class="booking-step-content checkbox-with-images">
+                                          
+                <label for="location-house">
+                  <div class="img img-7"></div>
+                  <div class="check">
+                    <h5>House</h5>
+                    <input type="radio" name="type-of-location" id="location-house" value="location-house">
+                  </div>
                 </label>
 
-                <div>
-                    <label class="right" >Helpers number</label>
-                    <i class="fas fa-user"></i>
-                  <input name="helpers-number" type="number" class="integer-number-mask number-range-mask" min="1" max="999" value="1">
-                </div>
-                <div>
-                    <label  class="right">Hire hours</label>
-                    <i class="fas fa-user-clock"></i>
-                  <input name="helpers-hiring-hours" type="number" class="integer-number-mask number-range-mask" min="1" max="24" value="1">
-                </div>
-                <div>
-                  <label  class="right">Floors</label>
-                  <i class="fas fa-home"></i>
-                  <input name="helpers-floors" type="number" class="integer-number-mask number-range-mask" min="1" max="10" value="1">
+                <label for="location-apt">
+                  <div class="img img-8"></div>
+                  <div class="check">
+                    <h5>Condo/Apt.</h5>
+                    <input type="radio" name="type-of-location" id="location-apt" value="location-apt">
+                  </div>
+                </label>
+
+                <label for="location-office">
+                  <div class="img img-9"></div>
+                  <div class="check">
+                    <h5>Office</h5>
+                    <input type="radio" name="type-of-location" id="location-office" value="location-office">
+                  </div>
+                </label>
+
+                <label for="location-storage">
+                  <div class="img img-10"></div>
+                  <div class="check">
+                    <h5>Storage Unit</h5>
+                    <input type="radio" name="type-of-location" id="location-storage" value="location-storage">
+                  </div>
+                </label>
+
+
+
+
+
+              </div>
+
+
+
+              <div class="booking-step-content input-fields row">
+                <div class="col-md-6">
+
+                  <div class="booking-field full">
+                    <h5>Street</h5>
+                    <input name="client-street-name" type="text" class="textbox">
+                  </div>
+
+                  <div class="booking-field full inline">
+                    <h5>Flights of stairs at this location ?</h5>
+                    <input name="helpers-floors"  min="1" max="10" value="1" type="number" class="textbox integer-number-mask number-range-mask">
+                  </div>
+
+          <!--    <div class="booking-field full inline">
+                    <h5>What city or zip code are you moving to ? 
+                      <small>( It’s helpfull for us to know how far you’re moving  )</small>
+                    </h5>
+                    <input name="client-street-address-to-move" type="text" class="textbox">
+                  </div>
+                -->
+
+
+
                 </div>
 
-                <div>
-                  <ul>
-                    <li><label for="helper-move-over-400"><input type="checkbox" name="" id="helper-move-over-400">Items over 400 Lbs</label></li>
-                    <li><label for="helper-move-over-800"><input type="checkbox" name="" id="helper-move-over-800">Items over 800 Lbs</label></li>
-                    <li><label for="helper-move-upright-piano"><input type="checkbox" name="" id="helper-move-upright-piano">Upright piano moving</label></li>
-                    <li><label for="helper-move-baby-piano"><input type="checkbox" name="" id="helper-move-baby-piano">Baby Grand piano moving</label></li>
-                  </ul>
+                <div class="col-md-6">
+                  <div class="booking-field half">
+                    <h5>City</h5>
+                    <input name="client-city" type="text" class="textbox">
+                  </div>
+                  <div class="booking-field half">
+                    <h5>State</h5>
+                    <input disabled name="client-state" type="text" class="textbox">
+                  </div>
+                  <div class="booking-field half">
+                    <h5>APT./Suite</h5>
+                    <input  name="client-apt-suite-no" type="text" class="textbox">
+                  </div>
+                  <div class="booking-field half">
+                    <h5>Zip</h5>
+                    <input disabled name="client-zip" type="text" class="textbox">
+                  </div>
                 </div>
-                <div class="help" id="moving-large-items-help">Moving larger items ?<span>Bla Bla Bla Blaa</span></div>
+
+
+
               </div>
-              <button id="modify-search" class="btn-default wide-blue">Apply Settings</button>
+
+
+
+
+              <div class="btns-group">
+                <a href="search-helpers.html" class="btn booking-default-btn next-step"><i class="fas fa-chevron-left"></i>Compare helpers again</a>
+                <a href="booking-helper-step-6.html"class="btn booking-primary-btn next-step">Next <i class="fas fa-chevron-right"></i></a>
+              </div>
 
             </div>
           </div>
+    <!--</form>  -->
+      </div>
+
+      <div id="helper-123456" class="col-md-10 helper  content">
+        <div class="blue-line"></div>
+        <div class="head">
+          <h4 class="name">First Choice Movers</h4>
+          <h4 class="price">$270</h4>
+        </div>
+        <div class="review-rating">
+          <span class="review-stars">
+            <span class="stars-45 actual-rate-stars">
+              <img src="assets/img/review-rating-template.png" alt="">
+            </span>
+          </span>
+          <span>4.5/5</span>
         </div>
 
-        <div class="col-md-9">
+        <button class="btn btn-small btn-default">View profile</button>
 
-          <div id="helper-123456" class="helper row content">
-            <div class="blue-line"></div>
-            <div class="head">
-              <h4 class="name">First Choice Movers</h4>
-              <h4 class="price">$270</h4>
-            </div>
-            <div class="review-rating">
-              <span class="review-stars">
-                <span class="stars-45 actual-rate-stars">
-                  <img src="assets/img/review-rating-template.png" alt="">
-                </span>
-              </span>
-              <span>4.5/5</span>
-            </div>
-
-            <button class="btn btn-small btn-default">View profile</button>
-
-            <div class="helper-bio">
-              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
-                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
-                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
-              <img src="assets/img/user-img.png" alt="helper_name">
-            </div>
-            <div class="links">
-              <div><i class="fas fa-star"></i><span>85</span>
-                <p>Reviews</p>
-              </div>
-              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
-              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
-            </div>
-            <div class="footer">
-              <h5>Price includes:</h5>
-              <p>
-                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
-                  class="price-per-hour">75</span> per hour after) <br>
-                Travel to your location <br>
-                Time starts upon arrival <br>
-              </p>
-              <a href="booking-helper-step-1.html" class="btn btn-orange">Hire</a>
-            </div>
-
-
-
-          </div>
-
-          <div id="helper-123456" class="helper row content">
-            <div class="blue-line"></div>
-            <div class="head">
-              <h4 class="name">First Choice Movers</h4>
-              <h4 class="price">$270</h4>
-            </div>
-            <div class="review-rating">
-              <span class="review-stars">
-                <span class="stars-45 actual-rate-stars">
-                  <img src="assets/img/review-rating-template.png" alt="">
-                </span>
-              </span>
-              <span>4.5/5</span>
-            </div>
-
-            <button class="btn btn-small btn-default">View profile</button>
-
-            <div class="helper-bio">
-              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
-                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
-                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
-              <img src="assets/img/user-img.png" alt="helper_name">
-            </div>
-            <div class="links">
-              <div><i class="fas fa-star"></i><span>85</span>
-                <p>Reviews</p>
-              </div>
-              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
-              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
-            </div>
-            <div class="footer">
-              <h5>Price includes:</h5>
-              <p>
-                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
-                  class="price-per-hour">75</span> per hour after) <br>
-                Travel to your location <br>
-                Time starts upon arrival <br>
-              </p>
-              <a href="booking-helper-step-1.html" class="btn btn-orange">Hire</a>
-            </div>
-
-
-
-          </div>
-
-          <div id="helper-123456" class="helper row content">
-            <div class="blue-line"></div>
-            <div class="head">
-              <h4 class="name">First Choice Movers</h4>
-              <h4 class="price">$270</h4>
-            </div>
-            <div class="review-rating">
-              <span class="review-stars">
-                <span class="stars-45 actual-rate-stars">
-                  <img src="assets/img/review-rating-template.png" alt="">
-                </span>
-              </span>
-              <span>4.5/5</span>
-            </div>
-
-            <button class="btn btn-small btn-default">View profile</button>
-
-            <div class="helper-bio">
-              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
-                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
-                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
-              <img src="assets/img/user-img.png" alt="helper_name">
-            </div>
-            <div class="links">
-              <div><i class="fas fa-star"></i><span>85</span>
-                <p>Reviews</p>
-              </div>
-              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
-              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
-            </div>
-            <div class="footer">
-              <h5>Price includes:</h5>
-              <p>
-                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
-                  class="price-per-hour">75</span> per hour after) <br>
-                Travel to your location <br>
-                Time starts upon arrival <br>
-              </p>
-              <a href="booking-helper-step-1.html" class="btn btn-orange">Hire</a>
-            </div>
-
-
-
-          </div>
-
-
-
+        <div class="helper-bio">
+          <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
+            and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
+            Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
+          <img src="assets/img/user-img.png" alt="helper_name">
         </div>
-    </section>
+        <div class="links">
+          <div><i class="fas fa-star"></i><span>85</span>
+            <p>Reviews</p>
+          </div>
+          <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
+          <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
+        </div>
+        <div class="footer">
+          <h5>Price includes:</h5>
+          <p>
+            <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
+              class="price-per-hour">75</span> per hour after) <br>
+            Travel to your location <br>
+            Time starts upon arrival <br>
+          </p>
+          <a href="booking-helper.html" class="btn btn-orange">Hire</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -582,8 +503,6 @@
 
   <!-- Js codes -->
   <script src="assets/js/main.js"></script>
-
-
 
 </body>
 </html>

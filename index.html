@@ -8,6 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My moving labor | Home</title>
 
+  <!-- Date picker -->
+  <link rel="stylesheet" href="node_modules/date-picker/datepicker.min.css">
+
+
   <!--StyleSheets-->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -54,7 +58,7 @@
               <!-- Sample menu definition -->
               <ul id="main-menu" class="sm sm-clean">
                 <li>
-                  <a  href="search-helpers.html" class="">Find a helper</a>
+                  <a href="search-helpers.html" class="">Find a helper</a>
                 </li>
                 <li>
                   <a href="about.html" class="">About</a>
@@ -72,7 +76,7 @@
                 <li>
                   <a href="#" class="">Join us</a>
                   <ul>
-                    <li><a class=""href="client-profile-register.html">New Client</a></li>
+                    <li><a class="" href="client-profile-register.html">New Client</a></li>
                     <li><a class="" href="provider-profile-register.html">New Service provider</a></li>
                   </ul>
                 </li>
@@ -109,32 +113,72 @@
           The easiest way to compare and book movers
         </h1>
         <h4>Choose from +2500 certified helper. Pay a low hourly rate.</h4>
-        <form action="#">
+
+
+        <form action="search-helpers.html" method="get">
 
           <div class="text-box-simulator">
             <i class="fas fa-search"></i>
-            <button id="service-state">New york .</button>
-            <button id="service-location">12 Balvue street .</button>
-            <button id="service-date">20th october 2018</button>
+            <button id="service-zip">Zip : 22335</button>
+            <span class="circle"> . </span>
+            <button id="service-date">Date : 7 / 10 / 2018</button>
             <button type="submit" class="btn btn-medium btn-dark-blue">Find helper</button>
           </div>
 
-          <div class="service-type-radio-group">
-            <div class="service-type checked">
-              <input type="radio" checked name="service-type" value="Moving labor">
-              <p>Moving labor <small>No truck provided</small></p>
-            </div>
-            <div class="service-type">
-              <input type="radio" name="service-type" value="Local moving">
-              <p>Local moving <small>Full service with truck</small></p>
-            </div>
-            <div class="service-type">
-              <input type="radio" name="service-type" value="Long distance">
-              <p>Long distance <small>State wide, Nation wide</small></p>
-            </div>
+          <div class="real-search-input-container">
+            <div class="real-search-input">
+              <span class="end-search"> <i class="fas fa-times"></i></span>
+              <div class="radius">
+
+                <div class="input">
+                  <i class="fas fa-thumbtack"></i>
+                  <input type="text" name="search-service-zip" maxlength="7" id="search-service-zip" placeholder="Zip code" class="integer-number-mask">
+                  <button id="get-current-zip">
+                       Get location
+                  </button>
+                </div>
+
+                <div class="input">
+                  <i class="far fa-calendar-minus"></i>
+                  <input type="text" id="input-search-date" name="search-date" class="date-input-mask" placeholder="Date">
+
+                </div>
 
 
+
+                <div class="service-type-radio-group">
+
+
+                  <label for="moving-labor">
+                    <input type="radio" checked name="service-type" value="Moving labor" id="moving-labor">
+                    <p>Moving labor <small>No truck provided</small></p>
+                  </label>
+
+
+                  <label for="local-moving">
+                    <input type="radio" name="service-type" value="Local Moving" id="local-moving">
+                    <p>Local moving <small>Full service with truck</small></p>
+                  </label>
+
+                  <label for="state-wide">
+                    <input type="radio" name="service-type" value="State wide" id="state-wide">
+                    <p>Long distance <small>State wide, Nation wide</small></p>
+                  </label>
+
+
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+            <div class="real-search-input-bg"></div>
           </div>
+
+
 
 
         </form>
@@ -144,7 +188,7 @@
     </section>
   </div>
 
- 
+
 
   <div id="wrapper">
 
@@ -514,50 +558,50 @@
     </section>
 
 
-  <section id="available-states-section" class="">
-  <div class="row head">
-    <h2 class="bold-600">My moving labor has movers nation wide</h2>
-  </div>
-<div class="row center-xs">
-  <div class="col-xs-4">
-    <ul>
-      <li>NEW YORK<span>31</span></li>
-      <li>CHICAGO<span>10</span></li>
-      <li>HOUSTON<span>87</span></li>
-      <li>SAN DIEGO<span>12</span></li>
-      <li>COLORADO SPRINGS<span>3</span></li>
-      <li>PORTLAND<span>35</span></li>
-    </ul>
-  </div>
-  <div class="col-xs-4">
-    <ul>
-      <li>TUCSON<span>12</span></li>
-      <li>FORT WORTH<span>21</span></li>
-      <li>ORLANDO<span>8</span></li>
-      <li>SPOKANE<span>7</span></li>
-      <li>ATLANTA<span>12</span></li>
-      <li>LAS VEGAS<span>9</span></li>
-      <li>TAMPA<span>36</span></li>
-    </ul>
-  </div>
-  <div class="col-xs-4">
-    <ul>
-      <li>DENVER<span>34</span></li>
-      <li>CHARLOTTE<span>52</span></li>
-      <li>LOS ANGELES<span>40</span></li>
-      <li>SAN ANTONIO<span>5</span></li>
-      <li>WASHINGTON<span>19</span></li>
-      <li>COLUMBUS<span>12</span></li>
-      <li>DALLAS<span>13</span></li>
-    </ul>
+    <section id="available-states-section" class="">
+      <div class="row head">
+        <h2 class="bold-600">My moving labor has movers nation wide</h2>
+      </div>
+      <div class="row center-xs">
+        <div class="col-xs-4">
+          <ul>
+            <li>NEW YORK<span>31</span></li>
+            <li>CHICAGO<span>10</span></li>
+            <li>HOUSTON<span>87</span></li>
+            <li>SAN DIEGO<span>12</span></li>
+            <li>COLORADO SPRINGS<span>3</span></li>
+            <li>PORTLAND<span>35</span></li>
+          </ul>
+        </div>
+        <div class="col-xs-4">
+          <ul>
+            <li>TUCSON<span>12</span></li>
+            <li>FORT WORTH<span>21</span></li>
+            <li>ORLANDO<span>8</span></li>
+            <li>SPOKANE<span>7</span></li>
+            <li>ATLANTA<span>12</span></li>
+            <li>LAS VEGAS<span>9</span></li>
+            <li>TAMPA<span>36</span></li>
+          </ul>
+        </div>
+        <div class="col-xs-4">
+          <ul>
+            <li>DENVER<span>34</span></li>
+            <li>CHARLOTTE<span>52</span></li>
+            <li>LOS ANGELES<span>40</span></li>
+            <li>SAN ANTONIO<span>5</span></li>
+            <li>WASHINGTON<span>19</span></li>
+            <li>COLUMBUS<span>12</span></li>
+            <li>DALLAS<span>13</span></li>
+          </ul>
 
 
 
-  </div>
-</div>
-  </section>
+        </div>
+      </div>
+    </section>
 
-</div>
+  </div>
 
 
 
@@ -706,7 +750,7 @@
       </div>
     </div>
   </footer>
-  
+
   </div>
 
   <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
@@ -720,8 +764,17 @@
 
   <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
 
+  <!-- Time picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+  <!-- Form valiator -->
+  <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+
   <!-- Slick slider-->
   <script src="assets/js/slick.min.js"></script>
+
+  <!-- For date picker-->
+  <script src="node_modules/date-picker/datepicker.min.js"></script>
 
   <!-- Js codes -->
   <script src="assets/js/main.js"></script>

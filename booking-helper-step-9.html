@@ -8,6 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My moving labor | Booking</title>
 
+  <!-- Date picker -->
+  <link rel="stylesheet" href="node_modules/date-picker/datepicker.min.css">
+
   <!--StyleSheets-->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -32,7 +35,6 @@
 </head>
 
 <body>
-    <button id="toggle-sidebar"><i class="fas fa-chevron-left"></i>Search options</button>
 
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -118,136 +120,124 @@
               </div>
             </div>
           </section>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <div id="wrapper">
+    <div id="wrapper">
 
+      <section id="search-result-container" class="container responsive-top-margin responsive-bottom-padding with-bottom-separator">
+        <div class="row center-xs">
+          <div class="col-md-10  form-content">
+            <div id="booking-container" class="helper row content">
+            <!--   <form action="#" method="post" id="service-provider-registration"> -->
+              <div id="booking-step-2" class="booking-step">
 
-
-
-    <section id="search-result-container" class="container responsive-top-margin responsive-bottom-padding with-bottom-separator">
-      <div class="row center-xs">
- 
-
-        <div class="col-md-10  form-content">
-
-
-
-          <div id="booking-container" class="helper row content">
-
-              <form action="#" method="post" id="service-provider-registration">
-                <div id="steps-container">
-                  <div id="steps-progress">
-                    <div class="progress-bar-container">
-                      <div class="progress-bar">
-                        <div class="actual-progress"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="step-1" class="step">
-                      <div class="head">
-                        <h4>
-                          a
-                        </h4>
-                      </div>
-                      <button class="step-button next-step">Next</button>
-
-                    </div>
-
-                    <div id="step-2" class="step">
-                        <div class="head">
-                          <h4>
-                            b
-                          </h4>
-                        </div>
-                        <button class="step-button next-step">Next</button>
-                        <button class="step-button previous-step">Previous</button>
-                      </div>
-
-                      <div id="step-3" class="step">
-                          <div class="head">
-                            <h4>
-                              c
-                            </h4>
-                          </div>
-                          <button class="step-button next-step">Next</button>
-                          <button class="step-button previous-step">Previous</button>
-                        </div>
-
-                        <div id="step-4" class="step">
-                            <div class="head">
-                              <h4>
-                                d
-                              </h4>
-                            </div>
-  
-                          </div>
-
-
-
-
+                <div class="head">
+                  <h4>
+                    Terms of use
+                  </h4>
                 </div>
-              </form>
 
+                <div class="progress-bar">
+                    <div style="width:80%;"></div>
+                </div>
 
+                <div class="booking-step-content terms-of-use">
+                  
+                        <div class="terms">
+                          <P>
+                           t nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
+                            feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                            elit.
+                            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+                            nec
+                            tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
+                            elit.
+      
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Mauris
+                            in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit.
+                            Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
+                            feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Mauris
+                            in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit.
+                            Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
+                            feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Mauris
+                            in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit.
+                            Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
+                            feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                          </P>
+                        </div>
 
-          </div>
+                        
+                        <div class="input-field has-checkbox">
+                          <label>
+                            <input id="agree_checked" type="checkbox">
+                            <P> I have read this and I accept terms of use</P>
+                          </label>
+                        </div>
+                        
+              
+                </div>
 
-
-
-
-
-          <div id="helper-123456" class="helper row content">
-            <div class="blue-line"></div>
-            <div class="head">
-              <h4 class="name">First Choice Movers</h4>
-              <h4 class="price">$270</h4>
-            </div>
-            <div class="review-rating">
-              <span class="review-stars">
-                <span class="stars-45 actual-rate-stars">
-                  <img src="assets/img/review-rating-template.png" alt="">
-                </span>
-              </span>
-              <span>4.5/5</span>
-            </div>
-
-            <button class="btn btn-small btn-default">View profile</button>
-
-            <div class="helper-bio">
-              <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
-                and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
-                Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
-              <img src="assets/img/user-img.png" alt="helper_name">
-            </div>
-            <div class="links">
-              <div><i class="fas fa-star"></i><span>85</span>
-                <p>Reviews</p>
+              <div class="btns-group">
+                <a href="search-helpers.html" class="btn booking-default-btn next-step"><i class="fas fa-chevron-left"></i>Compare helpers again</a>
+                <a href="booking-helper-step-8.html"class="btn booking-primary-btn next-step">Next <i class="fas fa-chevron-right"></i></a>
               </div>
-              <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
-              <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
+
             </div>
-            <div class="footer">
-              <h5>Price includes:</h5>
-              <p>
-                <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
-                  class="price-per-hour">75</span> per hour after) <br>
-                Travel to your location <br>
-                Time starts upon arrival <br>
-              </p>
-              <a href="booking-helper.html" class="btn btn-orange">Hire</a>
-            </div>
-
-
-
           </div>
+    <!--</form>  -->
+      </div>
 
-
-
+      <div id="helper-123456" class="col-md-10 helper  content">
+        <div class="blue-line"></div>
+        <div class="head">
+          <h4 class="name">First Choice Movers</h4>
+          <h4 class="price">$270</h4>
         </div>
-    </section>
+        <div class="review-rating">
+          <span class="review-stars">
+            <span class="stars-45 actual-rate-stars">
+              <img src="assets/img/review-rating-template.png" alt="">
+            </span>
+          </span>
+          <span>4.5/5</span>
+        </div>
+
+        <button class="btn btn-small btn-default">View profile</button>
+
+        <div class="helper-bio">
+          <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
+            and how hectic it can become. First Choice Movers are hear to make your moving day a breeze, First
+            Choice Movers are hear to make your moving day a breeze ...<a href="#">More</a></p>
+          <img src="assets/img/user-img.png" alt="helper_name">
+        </div>
+        <div class="links">
+          <div><i class="fas fa-star"></i><span>85</span>
+            <p>Reviews</p>
+          </div>
+          <div><i class="fas fa-user"></i> <a href="provider-login.html">View Profile</a></div>
+          <div><i class="fas fa-envelope"></i> <a href="massenger.html">Contact helper</a></div>
+        </div>
+        <div class="footer">
+          <h5>Price includes:</h5>
+          <p>
+            <span class="helpers-number">2</span> helpers for <span class="service-time">2</span> hours ($<span
+              class="price-per-hour">75</span> per hour after) <br>
+            Travel to your location <br>
+            Time starts upon arrival <br>
+          </p>
+          <a href="booking-helper.html" class="btn btn-orange">Hire</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -456,6 +446,9 @@
 
   <!-- Slick slider-->
   <script src="assets/js/slick.min.js"></script>
+
+  <!-- For date picker-->
+  <script src="node_modules/date-picker/datepicker.min.js"></script>
 
   <!-- Js codes -->
   <script src="assets/js/main.js"></script>
