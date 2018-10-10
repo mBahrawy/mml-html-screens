@@ -201,13 +201,14 @@ p {
   &.btn-paypal {
     background-color: #31a2d6;
     color: #fff;
+    opacity: 1;
 
     svg {
       font-size: 18px;
     }
 
     &:hover {
-      background-color: #aacedf;
+      opacity: 0.8;
     }
   }
 

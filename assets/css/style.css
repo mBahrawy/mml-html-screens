@@ -247,11 +247,12 @@ p {
       background-color: #3b4f8e; }
   .btn.btn-paypal {
     background-color: #31a2d6;
-    color: #fff; }
+    color: #fff;
+    opacity: 1; }
     .btn.btn-paypal svg {
       font-size: 18px; }
     .btn.btn-paypal:hover {
-      background-color: #aacedf; }
+      opacity: 0.8; }
   .btn.btn-default {
     background-color: #dadada;
     color: #333333;
@@ -4249,7 +4250,10 @@ div.main-blue-header-theme {
     height: 2px;
     margin-bottom: 40px;
     display: block;
-    margin: 36px auto 10px; }
+    margin: 36px auto 35px; }
+    @media only screen and (max-width: 768px) {
+      #booking-container div.booking-step div.progress-bar {
+        margin: 14px auto 35px; } }
     #booking-container div.booking-step div.progress-bar div {
       background-color: #2b6eb1;
       height: inherit; }
@@ -4537,6 +4541,108 @@ div.main-blue-header-theme {
       margin: 0 0 60px 25px;
       cursor: pointer;
       opacity: 0.7; }
+
+@media only screen and (max-width: 768px) {
+  .order-details {
+    margin: 20px 10px !important; } }
+
+.reservation-payment .before-payment-tips {
+  flex-basis: 31.11%;
+  margin: 40px 0.5%;
+  background-color: #f7f7f7;
+  padding: 0 10px 20px;
+  margin-right: 10px;
+  border-radius: 8px; }
+  @media only screen and (max-width: 768px) {
+    .reservation-payment .before-payment-tips {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+      margin-top: 10px; } }
+  .reservation-payment .before-payment-tips h5 {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px; }
+    .reservation-payment .before-payment-tips h5 span {
+      margin-right: 8px;
+      font-weight: 800; }
+  .reservation-payment .before-payment-tips p {
+    margin: 0 0 0 18px;
+    font-size: 14px;
+    color: #696969;
+    position: relative; }
+    .reservation-payment .before-payment-tips p::before {
+      content: '.';
+      position: absolute;
+      font-family: monospace;
+      left: -14px;
+      top: -4px;
+      font-size: 20px; }
+    .reservation-payment .before-payment-tips p span {
+      font-weight: 600;
+      text-decoration: underline; }
+
+div.head.left {
+  border-radius: 8px;
+  position: relative;
+  background-color: #f7f7f7;
+  padding: 15px 20px 4px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0 30px !important;
+  display: block !important; }
+  div.head.left h4 {
+    text-align: left;
+    margin: 0; }
+    div.head.left h4 svg {
+      margin-right: 5px;
+      color: #30c64b; }
+  div.head.left a#edit-reservation {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    border-radius: 4px;
+    background-color: #4b4b4b;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 13px; }
+
+div.final-price h4 {
+  font-weight: 500 !important; }
+  div.final-price h4 span {
+    font-weight: 600;
+    margin-left: 5px;
+    letter-spacing: 1px; }
+div.final-price #checkout {
+  margin-right: auto;
+  display: block; }
+
+.payment-done {
+  text-align: left !important;
+  margin: 80px 0 120px; }
+  @media only screen and (max-width: 768px) {
+    .payment-done {
+      text-align: center !important; } }
+  @media only screen and (max-width: 768px) {
+    .payment-done h4 {
+      margin-top: -20px; } }
+  .payment-done h4 svg {
+    color: #27b14a;
+    margin-right: 10px; }
+  .payment-done p {
+    margin-bottom: 34px;
+    color: #848484; }
+  @media only screen and (max-width: 768px) {
+    .payment-done div {
+      margin-bottom: 30px; } }
+  .payment-done div a {
+    padding: 8px 18px;
+    margin-left: auto;
+    text-transform: capitalize;
+    text-align: left;
+    display: inline-block; }
+  .payment-done div a.btn-active-insurance {
+    background-color: #26547e; }
 
 /*==================================================
 =                     Sections                     =
