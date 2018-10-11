@@ -1483,6 +1483,70 @@ ul.slider-dots {
 .animateToaster-enter {
   opacity: 0; }
 
+#how-it-works {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99; }
+  #how-it-works .video-container {
+    position: relative;
+    display: block;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    display: table; }
+    #how-it-works .video-container .v-align {
+      display: table-cell;
+      vertical-align: middle; }
+      #how-it-works .video-container .v-align .h-align {
+        display: block;
+        margin: auto;
+        position: relative;
+        width: 80%;
+        max-width: 1000px; }
+        #how-it-works .video-container .v-align .h-align h3 {
+          margin: 0;
+          color: #fff;
+          top: -65px;
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29); }
+          @media only screen and (max-width: 768px) {
+            #how-it-works .video-container .v-align .h-align h3 {
+              top: -55px;
+              font-size: 20px; } }
+        #how-it-works .video-container .v-align .h-align span {
+          color: #fff;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          font-size: 20px;
+          cursor: pointer; }
+          #how-it-works .video-container .v-align .h-align span svg {
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29); }
+        @media only screen and (max-width: 1200px) {
+          #how-it-works .video-container .v-align .h-align {
+            max-width: 700px; } }
+        @media only screen and (max-width: 768px) {
+          #how-it-works .video-container .v-align .h-align {
+            width: 80%;
+            max-width: 500px; } }
+        #how-it-works .video-container .v-align .h-align video {
+          width: 100%;
+          border-radius: 5px;
+          box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+          -webkit-box-shadow: 0 18px 50px -21px rgba(0, 0, 0, 0.62);
+          -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+          -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59); }
+  #how-it-works .dark-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.49);
+    width: 100%;
+    height: 100%; }
+
 /*==================================================
 =                      Pages                       =
 ==================================================*/
@@ -4197,6 +4261,57 @@ div.main-blue-header-theme {
       -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
       -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59); }
 
+#wrapper,
+#toggle-sidebar {
+  position: relative;
+  left: 0; }
+
+#wrapper {
+  transition: left 1s cubic-bezier(0, 0.49, 0, 1.37); }
+
+#toggle-sidebar {
+  transition: left 0.2s ease-in-out; }
+  #toggle-sidebar img {
+    width: 10px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px; }
+
+@media only screen and (max-width: 991px) {
+  body.active-sidebar .col-md-3.search-panel {
+    position: relative;
+    z-index: 1000000 !important;
+    display: block !important;
+    width: 0 !important;
+    flex-basis: 0; }
+    body.active-sidebar .col-md-3.search-panel .search-panel-floating {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0;
+      z-index: 1000000 !important;
+      background-color: #fff;
+      padding: 17px 16px 200px !important;
+      width: 250px;
+      box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+      -webkit-box-shadow: 0 18px 50px -21px rgba(0, 0, 0, 0.62);
+      -moz-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59);
+      -o-box-shadow: 0 10px 89px -25px rgba(0, 0, 0, 0.59); }
+      body.active-sidebar .col-md-3.search-panel .search-panel-floating ul {
+        margin: 10px 0 !important; }
+        body.active-sidebar .col-md-3.search-panel .search-panel-floating ul li {
+          line-height: 20px !important; }
+          body.active-sidebar .col-md-3.search-panel .search-panel-floating ul li label {
+            font-size: 12px !important; }
+            body.active-sidebar .col-md-3.search-panel .search-panel-floating ul li label input {
+              position: relative;
+              top: 2px; }
+
+  body.active-sidebar #wrapper {
+    position: relative;
+    left: 180px !important; }
+
+  body.active-sidebar #toggle-sidebar {
+    left: 150px !important; } }
 #hero #booking-navigation .booking-step {
   opacity: 0.5; }
   #hero #booking-navigation .booking-step h5 {
