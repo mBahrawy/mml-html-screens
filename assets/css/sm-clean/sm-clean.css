@@ -87,7 +87,7 @@ font-family: 'Lato', sans-serif;
 /* All size smaller than breakpoint */
 @media only screen and (max-width: 991px) {
   .sm-clean {
-    width: 90%;
+    width: 100%;
     margin: 10px auto 6px;
     background-color: transparent !important; }
     .sm-clean li a, .sm-clean li a:hover, .sm-clean li a:focus, .sm-clean li a:active {
@@ -97,7 +97,7 @@ font-family: 'Lato', sans-serif;
       font-weight: 600 !important;
       line-height: 21px; }
     .sm-clean li a.active {
-      border-bottom: 3px solid #00AEEF; } }
+      border-left: 3px solid #00AEEF; } }
 .sm-clean {
   background: #fff;
   border-radius: 0px;
@@ -119,21 +119,29 @@ font-family: 'Lato', sans-serif;
   .sm-clean a .sub-arrow {
     position: absolute;
     top: 50%;
-    margin-top: -19px;
+    margin-top: -11px;
     left: auto;
-    right: 4px;
-    width: 37px;
-    height: 37px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
     overflow: hidden;
     font: bold 12px/37px monospace !important;
     text-align: center;
     text-shadow: none;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 0px; }
+    background: #fff;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px; }
   .sm-clean a .sub-arrow::before {
     content: '>'; }
+    .sm-clean a .sub-arrow::before::before {
+      position: relative;
+      top: -2px; }
   .sm-clean a.highlighted .sub-arrow::before {
-    content: '-'; }
+    content: '-';
+    position: relative;
+    top: -4px; }
   .sm-clean > li:first-child > a, .sm-clean > li:first-child > :not(ul) a {
     border-radius: 0px 0px 0 0; }
   .sm-clean > li:last-child > a, .sm-clean > li:last-child > *:not(ul) a, .sm-clean > li:last-child > ul, .sm-clean > li:last-child > ul > li:last-child > a, .sm-clean > li:last-child > ul > li:last-child > *:not(ul) a, .sm-clean > li:last-child > ul > li:last-child > ul, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-clean > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul {
@@ -148,12 +156,10 @@ font-family: 'Lato', sans-serif;
     background: rgba(179, 179, 179, 0.1); }
     .sm-clean ul a, .sm-clean ul a:hover, .sm-clean ul a:focus, .sm-clean ul a:active {
       font-size: 12px;
-      padding: 8px 52px;
+      padding: 8px 28px;
       background-color: #fff;
       color: #4D5A6B;
-      font-family: "meta-serf-pro", sans-serif;
-      font-size: 15px;
-      font-weight: 300 !important;
+      font-size: 13px;
       line-height: 24px; }
     .sm-clean ul ul a,
     .sm-clean ul ul a:hover,

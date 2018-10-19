@@ -1,0 +1,621 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard</title>
+  <!--StyleSheets-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:400,600,700,800" rel="stylesheet">
+  <!--FlexBox-->
+  <link href="node_modules/flexboxgrid/css/flexboxgrid.min.css" rel="stylesheet">
+  <!--normalizer-->
+  <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
+  <!--Font-awesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <!-- SmartMenus core CSS (required) -->
+  <link href="assets/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+  <!-- "sm-mint" menu theme (optional, you can use your own CSS, too) -->
+  <link href="assets/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" />
+
+  <!-- jQuery Form validation -->
+  <link href="node_modules/jquery-form-validator/form-validator/theme-default.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!--[if lte IE 9]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
+  <!--HEADER-->
+  <header class="has-light-header-curve">
+    <div class="light-header-curve">
+    </div>
+    <div id="main-nav-wrapper" class="">
+      <div class="site-logo">
+        <a href="index.html"></a>
+      </div>
+      <div class="menu-container">
+        <div id="normal-nav-container">
+          <nav class="main-nav" role="navigation">
+            <!-- Sample menu definition -->
+            <ul id="main-menu" class="sm sm-clean">
+              <li>
+                <a href="index.html" class="">Home</a>
+              </li>
+
+              <li>
+                <a href="client-dashboard-current.html" class="active">Current move</a>
+                <ul>
+                  <li><a class="" href="client-dashboard-moves-history.html">Moves History</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="client-profile.html" class="">Profile</a>
+                <ul>
+                  <li><a class="" href="client-profile-edit.html">Edit your profile</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="">Messages</a>
+              </li>
+
+              <li>
+                <a href="#" class="">Help</a>
+                <ul>
+                  <li><a id="how-it-works-btn" href="#" class="">How it works</a></li>
+                  <li><a class="" href="client-insurance.html">Insurance</a></li>
+                  <li><a class="" href="support.html">Support</a></li>
+                  <li><a class="" href="client-fqa.html">FQA</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="">Account</a>
+                <ul>
+                  <li><a class="" href="client-account-settings.html">Settings</a></li>
+                  <li><a class="" href="client-payment-invoices.html">Invoices</a></li>
+                  <li><a class="" href="client-payment-transaction-history.html">Transaction history</a></li>
+                  <li><a class="" href="#">Log out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <!-- Mobile menu toggle button (hamburger/x icon) -->
+        <a href="#" class="toggle-mobile-nav-btn collabsed">
+          <span class="bars">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="x">
+            <i class="fas fa-times"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    
+    <div id="nav-container-for-mobile"> </div>
+  </header>
+  <div id="wrapper">
+
+    <div class="main-current-move-header container">
+      <div class="row center-xs">
+        <div class="col-xs-10">
+
+          <!--In case pending order 
+          <h2>
+              Status: <span class="order-pending">Pending <i class="fas fa-user-clock"></i></span> 
+              <small>Mover will be receive your order, we will let you know once he conformed it</small>
+              <small>Your order ID : 5565888452</small>
+            </h2>
+          -->
+          <!--In case accepted order-->
+          <h2>
+            Status: <span class="order-accepted">Order accepted <i class="fas fa-user-check"></i></span>
+            <small>Mover accept your order, Please contact your mover for more info</small>
+            <small>Your order ID : 5565888452</small>
+          </h2>
+
+          <!--In case active order, this case only at day of move
+          <h2>
+              Status: <span class="order-active">Order is active <i class="fas fa-truck"></i></span> 
+              <small>Today is the moving date, Mover is in his way to you, Working hours will be calculated just when arriving</small>
+              <small>Your order ID : 5565888452</small>
+          </h2>
+          -->
+
+          <!--In case is ended
+          <h2>
+              Status: <span class="order-ended">Order is ended <i class="fas fa-check"></i></span> 
+              <small>Your order is ended and mover received his payment, if you need any help please <a href="#">contact us</a></small>
+              <small>Your order ID : 5565888452</small>
+          </h2>
+          -->
+
+        </div>
+      </div>
+    </div>
+
+    <section id="client-current-order-about-mover" class="container client-dashboard">
+      <div class="row center-xs">
+        <div class="col-md-10 client-dashboard-container">
+          <div class="tabs">
+
+            <ul>
+              <li><button class="tab-btn active-tab">Move details</button></li>
+              <li><button class="tab-btn">About Mover</button></li>
+              <li><button class="tab-btn">Payment details</button></li>
+              <li><button class="tab-btn">Active insurance</button></li>
+              <li><button class="tab-btn">Equipment</button></li>
+              <li><button class="tab-btn">Truck</button></li>
+            </ul>
+
+          </div>
+
+          <div class="tab-body row">
+
+            <div class="col-sm-12">
+
+              <h4>Main info</h4>
+              <ul>
+                <li><span>Move type :</span>Moving labor</li>
+                <li><span>Location :</span>12234, NY</li>
+                <li><span>Date :</span>5 / 12 / 2018</li>
+                <li><span>Building type:</span>Storage</li>
+              </ul>
+
+              <h4>Extra info</h4>
+              <ul>
+                <li><span>No. of hours :</span>4 hours <small>Extra hour costs $20</small></li>
+                <li><span>No. of helpers :</span>2 helpers</li>
+                <li><span>No. of floors</span>6 floors <small>Extra floor costs $80</small></li>
+                <li><span>Moving over 800Lbs :</span>Yes<small></small></li>
+              </ul>
+
+            </div>
+
+
+            <div class="col-sm-12">
+              <div class="btn-group">
+                <button class="btn btn-primary ">End order <i class="fas fa-thumbs-up"></i></button>
+                <button class="btn btn-dark ">Cancel order <i class="fas fa-times"></i></button>
+                <button class="btn btn-default ">Report problem <i class="fas fa-exclamation-triangle"></i></button>
+              </div>
+            </div>
+
+
+
+            <div class="col-sm-12">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189605.82256095222!2d-72.83851929843374!3d42.051950463804495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2seg!4v1537135844913"
+                width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="client-current-order-move-details" class="container client-dashboard">
+      <div class="row center-xs">
+        <div class="col-md-10 client-dashboard-container">
+          <div class="tabs">
+
+            <ul>
+              <li><button class="tab-btn">Move details</button></li>
+              <li><button class="tab-btn active-tab">About Mover</button></li>
+              <li><button class="tab-btn">Payment details</button></li>
+              <li><button class="tab-btn">Active insurance</button></li>
+              <li><button class="tab-btn">Equipment</button></li>
+              <li><button class="tab-btn">Truck</button></li>
+            </ul>
+
+          </div>
+
+          <div class="tab-body row about-mover">
+
+            <div class="col-sm-8">
+
+              <h4>Pro Movers</h4>
+
+              <div class="review-rating">
+                <span class="review-stars">
+                  <span class="stars-45 actual-rate-stars">
+                    <img src="assets/img/review-rating-template-white.png" alt="">
+                  </span>
+                </span>
+                <span>4.5/5</span>
+              </div>
+
+
+              <div>
+                <p>Qualified gentlemen with over 12 years in the moving profession, we know how fast moving day arrives
+                  and how hectic it can become. First Choice Movers are hear to make your moving day a breeze.</p>
+              </div>
+
+
+              <button class="btn btn-default">Profile</button>
+              <button class="btn btn-default">Contact</button>
+
+            </div>
+
+
+            <div class="col-sm-4">
+              <div class="mover-img"><img src="assets/img/user-img.png" alt="Mover name"></div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="client-current-order-payment-details" class="container client-dashboard">
+      <div class="row center-xs">
+        <div class="col-md-10 client-dashboard-container">
+          <div class="tabs">
+
+            <ul>
+              <li><button class="tab-btn">Move details</button></li>
+              <li><button class="tab-btn">About Mover</button></li>
+              <li><button class="tab-btn active-tab">Payment details</button></li>
+              <li><button class="tab-btn">Active insurance</button></li>
+              <li><button class="tab-btn">Equipment</button></li>
+              <li><button class="tab-btn">Truck</button></li>
+            </ul>
+
+          </div>
+
+          <div class="tab-body row">
+
+            <div class="col-sm-12">
+
+              <p>Your payment is securely hold by Escrow service, when you confirm ending move successfully we approve
+                payment to mover</p>
+
+              <h4>Your bill : $400</h4>
+              <ul>
+                <li><span>Hours of working :</span>4 X $50 = $200</li>
+                <li><span>Moving over 800$</span>= $100</li>
+                <li><span>Moving piano</span>= $100</li>
+              </ul>
+
+
+            </div>
+
+
+            <div class="col-sm-12">
+              <button class="btn btn-default">Invoice</button>
+              <button class="btn btn-default">Transaction history</button>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="client-current-order-active-insurance" class="container client-dashboard">
+      <div class="row center-xs">
+        <div class="col-md-10 client-dashboard-container">
+          <div class="tabs">
+
+            <ul>
+              <li><button class="tab-btn">Move details</button></li>
+              <li><button class="tab-btn">About Mover</button></li>
+              <li><button class="tab-btn">Payment details</button></li>
+              <li><button class="tab-btn  active-tab">Active insurance</button></li>
+              <li><button class="tab-btn">Equipment</button></li>
+              <li><button class="tab-btn">Truck</button></li>
+            </ul>
+
+          </div>
+
+          <div class="tab-body row">
+
+            <div class="col-sm-12">
+
+              <p>Leave this tab right now just add it , will be modified later</p>
+
+
+            </div>
+
+
+            <div class="col-sm-12">
+              <button class="btn btn-default">More about our active insurance</button>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="client-current-order-equipment" class="container client-dashboard">
+      <div class="row center-xs">
+        <div class="col-md-10 client-dashboard-container">
+
+          <div class="tabs">
+            <ul>
+              <li><button class="tab-btn">Move details</button></li>
+              <li><button class="tab-btn">About Mover</button></li>
+              <li><button class="tab-btn">Payment details</button></li>
+              <li><button class="tab-btn">Active insurance</button></li>
+              <li><button class="tab-btn  active-tab">Equipment</button></li>
+              <li><button class="tab-btn">Truck</button></li>
+            </ul>
+          </div>
+
+          <div class="tab-body row equipment">
+            <div class="col-sm-12">
+
+              <h4>About mover equipment</h4>
+              <p>This is Photoshop's version of Lorem Ipsum. Pr oin gravida nibh vel velit auctor aliquet. Aenean
+                sollicitudi tn, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                Duis sed odio sit amet nibh vulputate cursus a sit amet mauri s. Morbi accumsan ipsum velit. Nam nec
+                tellus a odio tincidunt auctor a ornare od io.</p>
+
+              <section class="equipment-profile-section">
+
+                <div class="loop-equipment">
+                  <div class="items-list type-1">
+                    <div class="item">
+                      <i class="fas fa-check"></i>
+                      <h5>Furniture dolly:</h5>
+                      <p>1-2 flat 4-wheeled furniture dollies with us for every job. Please note that these are not
+                        part of
+                        your order, if your move requires a dolly, please let us know so we can make sure they are
+                        brought.
+                      </p>
+                      <p>[always included, no fee]</p>
+                    </div>
+                    <div class="item">
+                      <i class="fas fa-check"></i>
+                      <h5>Hand truck:</h5>
+                      <p>1-2 Dollies with us for every job. Please note that these are not part of your order, if your
+                        move
+                        requires a dolly, please let us know so we can make sure they are brought.</p>
+                      <p>[always included, no fee]</p>
+                    </div>
+
+                    <div class="item">
+                      <i class="fas fa-check"></i>
+                      <h5>Hand tools for assembly:</h5>
+                      <p>[always included, no fee]</p>
+                    </div>
+
+                  </div>
+                  <div class="items-list type-2">
+
+                    <div class="item">
+                      <i class="fas fa-dollar-sign"></i>
+                      <h5>Plastic wrap:</h5>
+                      <p>[flat price, $20.00]</p>
+                    </div>
+
+                    <div class="item">
+                      <i class="fas fa-dollar-sign"></i>
+                      <h5>Rope:</h5>
+                      <p>[flat price, $5.00]</p>
+                    </div>
+
+                    <div class="item"></div>
+                  </div>
+                </div>
+
+              </section>
+
+
+
+            </div>
+            <div class="col-sm-12">
+              <button class="btn btn-default">Ask for special equipment</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="client-current-order-truck" class="container client-dashboard">
+      <div class="row center-xs">
+        <div class="col-md-10 client-dashboard-container">
+
+          <div class="tabs">
+            <ul>
+              <li><button class="tab-btn">Move details</button></li>
+              <li><button class="tab-btn">About Mover</button></li>
+              <li><button class="tab-btn">Payment details</button></li>
+              <li><button class="tab-btn">Active insurance</button></li>
+              <li><button class="tab-btn">Equipment</button></li>
+              <li><button class="tab-btn  active-tab">Truck</button></li>
+            </ul>
+          </div>
+
+          <div class="tab-body row equipment">
+            <div class="col-sm-12">
+
+              <h4>About mover Truck</h4>
+              <p>Loop truck info here, if this job is 'Moving labor' or the mover doesnt have a truck hide this tab</p>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer class="has-top-curves">
+    <div class="footer-top-curves">
+    </div>
+    <div class="container-fluid">
+      <div class="row center-xs">
+        <div class="col-md-3 col-sm-12 break-width">
+          <a href="#">
+            <div class="footer-site-logo"></div>
+          </a>
+          <p>
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
+          </p>
+          <div class="social-group">
+            <span class="social-line"></span>
+            <nav class="social-links">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-google-plus-g fa-lg"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <span class="social-line"></span>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-4 break-width">
+          <h4>Home</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Search for a helper</a>
+              </li>
+              <li>
+                <a href="#">Education</a>
+              </li>
+              <li>
+                <a href="#">How it works</a>
+              </li>
+              <li>
+                <a href="#">Client’s area</a>
+              </li>
+              <li>
+                <a href="#">Join us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>Help</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Help topics</a>
+              </li>
+              <li>
+                <a href="#">FAQ’s</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of use</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>New helper ?</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Create account</a>
+              </li>
+              <li>
+                <a href="#">Fees</a>
+              </li>
+              <li>
+                <a href="#">Documentations</a>
+              </li>
+              <li>
+                <a href="#">Payments</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 col-sm-12 search-col">
+          <h4>Subscribe for news letter
+            <small>No spam, we promise</small>
+          </h4>
+          <form class="search-box-group" action="" name="search-form">
+            <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+          </form>
+          <nav class="app-links">
+            <h4>Get Our App</h4>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-apple fa-lg"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-android fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row center-xs copy-rights bottom-xs">
+        <div class="col-sm-4">
+          <span>Copy right 2018 © MyMovingLabor.com All rights are reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
+
+  <!-- Time picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+  <!-- Form valiator -->
+  <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+
+  <!-- Slick slider-->
+  <script src="assets/js/slick.min.js"></script>
+
+  <!-- Js codes -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

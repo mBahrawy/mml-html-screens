@@ -81,7 +81,7 @@ $sm-clean__desktop-vp:									991px !default;		// switch from collapsible to de
 @media only screen and (max-width: 991px) {
 
 	.sm-clean{
-		width: 90%;
+		width: 100%;
 		margin: 10px auto 6px;
 		background-color: transparent !important;
 
@@ -105,7 +105,7 @@ $sm-clean__desktop-vp:									991px !default;		// switch from collapsible to de
 
 
 				&.active{
-					border-bottom: 3px solid  $active-nav-item-underlined;
+					border-left: 3px solid  $active-nav-item-underlined;
 
 				}
 
@@ -294,23 +294,32 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		.sub-arrow {
 			position: absolute;
 			top: 50%;
-			margin-top: -(ceil($sm-clean__toggle-size / 2));
+			margin-top: -11px;
 			left: auto;
-			right: $sm-clean__toggle-spacing;
-			width: $sm-clean__toggle-size;
-			height: $sm-clean__toggle-size;
+			right: 12px;
+			width: 28px;
+			height: 28px;
 			overflow: hidden;
 			font: bold #{$sm-clean__font-size-small}/#{$sm-clean__toggle-size} monospace !important;
 			text-align: center;
 			text-shadow: none;
-			background: $sm-clean__collapsible-toggle-bg;
-			border-radius: $sm-clean__border-radius;
+      background: #fff;
+      
+      @include border-radius(100px);
+
+      
 		}
 		.sub-arrow::before {
-			content: '>';
+      content: '>';
+      &::before{
+        position: relative;
+        top: -2px;
+      }
 		}
 		&.highlighted .sub-arrow::before {
-			content: '-';
+      content: '-';
+      position: relative;
+      top: -4px;
 		}
 	}
 
@@ -341,13 +350,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:active {
 				font-size: $sm-clean__font-size-small;
 				// add indentation for sub menus text
-				padding: 8px 52px;
+				padding: 8px 28px;
 				background-color: #fff;
-
 				color: $dim-grey;	
-				font-family: $metaSerfPro, sans-serif;
-				font-size: 15px;	
-				font-weight: 300 !important;	
+	//			font-family: $metaSerfPro, sans-serif;
+				font-size: 13px;	
 				line-height: 24px;
 
 			}

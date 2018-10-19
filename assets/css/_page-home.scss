@@ -142,7 +142,7 @@ div.main-blue-header-theme {
       }
 
       @media only screen and (max-width: 392px) {
-        height: 55px;
+       // height: 55px;
       }
 
       svg {
@@ -169,7 +169,6 @@ div.main-blue-header-theme {
 
       button.btn {
         margin: 0 0 0 20px;
-        ;
         height: 45px;
         text-transform: capitalize;
         font-weight: 600;
@@ -198,10 +197,14 @@ div.main-blue-header-theme {
           padding: 4px 21px;
           height: 40px;
         }
-
       }
 
+      @media only screen and (max-width: 562px) {
 
+        button.btn {
+          top: 37px;
+        }
+      }
     }
   }
 }

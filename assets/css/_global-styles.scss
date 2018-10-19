@@ -104,7 +104,7 @@ h3 {
   line-height: 36px;
 
   @media only screen and (max-width: 480px) {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 28px;
 
   }
@@ -549,9 +549,9 @@ button.wide-blue{
 }
 
 header {
-//  @media only screen and (min-width: 769px) {
-  //  margin-bottom: 75px;
-//  }
+  @media only screen and (min-width: 769px) {
+    margin-bottom: 75px;
+  }
  
 }
 
