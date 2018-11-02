@@ -1,0 +1,480 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edit profile</title>
+  <!--StyleSheets-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:400,600,700,800" rel="stylesheet">
+  <!--FlexBox-->
+  <link href="node_modules/flexboxgrid/css/flexboxgrid.min.css" rel="stylesheet">
+  <!--normalizer-->
+  <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
+  <!--Font-awesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <!-- SmartMenus core CSS (required) -->
+  <link href="assets/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+  <!-- "sm-mint" menu theme (optional, you can use your own CSS, too) -->
+  <link href="assets/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" />
+
+  <!-- jQuery Form validation -->
+  <link href="node_modules/jquery-form-validator/form-validator/theme-default.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!--[if lte IE 9]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
+  <!--HEADER-->
+  <header class="has-light-header-curve">
+
+    <div class="light-header-curve">
+
+    </div>
+
+    <div id="main-nav-wrapper" class="">
+      <div class="site-logo">
+        <a href="index.html"></a>
+      </div>
+      <div class="menu-container">
+        <div id="normal-nav-container">
+          <nav class="main-nav" role="navigation">
+            <!-- Sample menu definition -->
+            <ul id="main-menu" class="sm sm-clean">
+              <li>
+                <a href="index.html" class="">Home</a>
+              </li>
+
+            <li>
+                <a href="#">Moves</a>
+                <ul>
+                  <li><a class="" href="client-dashboard-current.html">Current move</a></li>
+                  <li><a class="" href="client-dashboard-moves-history.html">Moves History</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Profile</a>
+                <ul>
+                  <li><a href="client-profile.html">Show profile</a></li>
+                  <li><a class="active" href="client-profile-edit.html">Edit your profile</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="">Messages</a>
+              </li>
+
+              <li>
+                <a href="#" class="">Help</a>
+                <ul>
+                  <li><a id="how-it-works-btn" href="#" class="">How it works</a></li>
+                  <li><a class="" href="client-insurance.html">Insurance</a></li>
+                  <li><a class="" href="client-support.html">Support</a></li>
+                  <li><a class="" href="client-fqa.html">FQA</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="has-image">Account
+                  <img class="user-img" src="assets/img/man.jpg" alt="user-name"> </a>
+                  <ul>
+                  <li><a class="" href="client-account-settings.html">Settings</a></li>
+                  <li><a class="" href="client-payment-invoices.html">Invoices</a></li>
+                  <li><a class="" href="client-payment-transaction-history.html">Transaction history</a></li>
+                  <li><a class="" href="#">Log out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <!-- Mobile menu toggle button (hamburger/x icon) -->
+        <a href="#" class="toggle-mobile-nav-btn collabsed">
+          <span class="bars">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="x">
+            <i class="fas fa-times"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div id="nav-container-for-mobile"> </div>
+
+  </header>
+
+  <div class="main-wrapper">
+
+
+    <!--  For Profile picture   -->
+    <section id="profile-picture-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+                <li class="active">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="">
+                  <a href="#locatiob-section">Your location</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-sm-9 col-xs-12 settings-body">
+          <div class="row head">
+            <h4>Public profile picture</h4>
+          </div>
+          <form action="#" method="get" enctype="multipart/form-data">
+            <div class="row container-fluid">
+
+              <div class="input-field">
+                <img class="picked-image" src="assets/img/man.jpg">
+                <label for="image-picker" class="btn btn-dark">Change photo</label>
+                <!--Img size limit in Megabyte-->
+                <input name='file' class="btn btn-orange" type="file" id="image-picker" accept="image/*" data-max-size="2" />
+                <span class="error-field"></span>
+              </div>
+            </div>
+            <button class="btn btn-orange" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--  For Business section   -->
+    <section id="locatiob-section" class="settings-section container responsive-bottom-padding">
+      <div class="row">
+        <div class="col-sm-3 sidebar-col">
+          <div>
+            <nav class="settings-sidebar">
+              <h4>Profile settings</h4>
+              <ul>
+
+                <li class="">
+                  <a href="#profile-picture-section">Profile picture</a>
+                </li>
+                <li class="active">
+                  <a href="#locatiob-section">Your location</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-sm-9 settings-body">
+
+          <form action="#" method="get">
+
+              <div class="row head">
+                <h4>About your current location</h4>
+              </div>
+  
+              <div class="input-field location-type-radio">
+  
+  
+              <label>
+                  <input type="radio" name="location-type" value="House" id="">
+                  <h4>House</h4>
+              </label>
+  
+              <label>
+                <input type="radio" name="location-type" value="Condo/Apt." id="">
+                <h4>Condo/Apt.</h4>
+              </label>
+  
+              <label>
+                <input type="radio" name="location-type" value="Office" id="">
+                <h4>Office</h4>
+              </label>
+
+              <label>
+                  <input type="radio" name="location-type" value="Storage Unit" id="">
+                  <h4>Storage Unit</h4>
+             </label>
+            </div>
+
+
+
+
+            <div class="row head">
+                <h4>Your address</h4>
+              </div>
+  
+  
+             
+
+
+              <div class="input-field inline-input">
+                  <h5> APT./Suite</h5>
+                  <input type="text" class="textbox " name="client-address-apt" value="8" maxlength="15" placeholder="Apartment No.">
+                </div>
+
+                <div class="input-field inline-input">
+                    <h5>Floor No.</h5>
+                    <input class="input-numbers textbox" type="number" maxlength="2" value="2" max="100" name="floor_no">
+                  </div>
+
+
+              <div class="input-field inline-input">
+                <h5>Address</h5>
+                <input type="text" class="textbox " name="client-address" value="66 Balue Street" placeholder="Current address"
+                  maxlength="15">
+              </div>
+  
+              <div class="input-field inline-input">
+                <h5>City</h5>
+                <input type="text" class="textbox " name="client-city" value="myCity" placeholder="City"
+                  maxlength="15">
+              </div>
+  
+              <div class="input-field inline-input">
+                <h5>State</h5>
+  
+                <select name="state" class="textbox">
+                  <option value="">State</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CA">California</option>
+                  <option value="CO" selected="selected">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="DC">District Of Columbia</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+              <div class="input-field inline-input">
+                <h5>Zip code</h5>
+                <input type="text" class="textbox " name="client-zip" value="112233" placeholder="Zip code" maxlength="15">
+              </div>
+            <button class="btn btn-orange" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="has-top-curves">
+
+    <div class="footer-top-curves">
+    </div>
+
+    <div class="container-fluid">
+      <div class="row center-xs">
+        <div class="col-md-3 col-sm-12 break-width">
+          <a href="#">
+            <div class="footer-site-logo"></div>
+          </a>
+          <p>
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
+          </p>
+
+          <div class="social-group">
+            <span class="social-line"></span>
+            <nav class="social-links">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+
+                    <i class="fab fa-google-plus-g fa-lg"></i>
+
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <span class="social-line"></span>
+          </div>
+
+        </div>
+        <div class="col-md-2 col-xs-4 break-width">
+          <h4>Home</h4>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Search for a helper</a>
+              </li>
+              <li>
+                <a href="#">Education</a>
+              </li>
+              <li>
+                <a href="#">How it works</a>
+              </li>
+              <li>
+                <a href="#">Client’s area</a>
+              </li>
+              <li>
+                <a href="#">Join us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+
+
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>Help</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Help topics</a>
+              </li>
+              <li>
+                <a href="#">FAQ’s</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of use</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>New helper ?</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Create account</a>
+              </li>
+              <li>
+                <a href="#">Fees</a>
+              </li>
+              <li>
+                <a href="#">Documentations</a>
+              </li>
+              <li>
+                <a href="#">Payments</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 col-sm-12 search-col">
+          <h4>Subscribe for news letter
+            <small>No spam, we promise</small>
+          </h4>
+          <form class="search-box-group" action="" name="search-form">
+            <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+          </form>
+          <nav class="app-links">
+            <h4>Get Our App</h4>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-apple fa-lg"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-android fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row center-xs copy-rights bottom-xs">
+        <div class="col-sm-4">
+          <span>Copy right 2018 © MyMovingLabor.com All rights are reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
+
+  <!-- Time picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+  <!-- Form valiator -->
+  <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+
+  <!-- Slick slider-->
+  <script src="assets/js/slick.min.js"></script>
+
+
+  <!-- Js codes -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

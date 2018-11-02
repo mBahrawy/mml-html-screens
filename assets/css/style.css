@@ -637,6 +637,8 @@ form.search-box-group {
   opacity: 0.95;
   display: flex;
   margin: 0;
+  position: relative;
+  z-index: 222;
   box-shadow: 0 -3px 24px 0px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 -3px 24px 0px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 -3px 24px 0px rgba(0, 0, 0, 0.23);
@@ -722,6 +724,7 @@ form.search-box-group {
       right: 12px;
       z-index: 2;
       width: 40px !important;
+      height: 40px !important;
       border-radius: 30px; }
 
 .main-nav {
@@ -2716,6 +2719,7 @@ div.main-blue-header-theme {
     #user-quick-panel .user-info img {
       border-radius: 500px;
       width: 110px;
+      height: 110px;
       float: left; }
     #user-quick-panel .user-info div {
       float: left;
@@ -4965,6 +4969,82 @@ div.final-price #checkout {
       .client-dashboard .client-dashboard-container div.tab-body.equipment .equipment-profile-section .loop-equipment .items-list.type-2 svg {
         color: #1e89d1;
         left: 10px; }
+
+.client-profile div.user-info {
+  border-right: none !important; }
+.client-profile.clients-reviews-container {
+  border-top: 0;
+  margin-top: -80px; }
+  @media only screen and (max-width: 480px) {
+    .client-profile.clients-reviews-container {
+      margin-top: 40px; } }
+  .client-profile.clients-reviews-container #reviews-sorting {
+    background-color: #fff;
+    border: 1px solid #ddd; }
+
+.input-field.location-type-radio label {
+  position: relative;
+  width: 21%;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 18px; }
+  @media only screen and (max-width: 768px) {
+    .input-field.location-type-radio label {
+      display: block;
+      width: 100%; } }
+  .input-field.location-type-radio label input {
+    position: absolute;
+    top: 8px;
+    left: 0; }
+  .input-field.location-type-radio label h4 {
+    margin: 0;
+    display: inline-block; }
+    @media only screen and (max-width: 991px) {
+      .input-field.location-type-radio label h4 {
+        font-size: 14px; } }
+
+.clients-reviews-container.moves-history .clients-reviews .review.row {
+  background-color: #ffffff;
+  padding: 15px 15px 25px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8); }
+  .clients-reviews-container.moves-history .clients-reviews .review.row .main-review-info .review-client-name {
+    margin-bottom: 6px; }
+  .clients-reviews-container.moves-history .clients-reviews .review.row .main-review-info .review-budget {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    font-size: 19px; }
+  .clients-reviews-container.moves-history .clients-reviews .review.row .review-body h5 {
+    margin-bottom: 10px;
+    color: #2e65b0; }
+  .clients-reviews-container.moves-history .clients-reviews .review.row .review-body ul {
+    margin: 0;
+    padding-left: 18px; }
+    .clients-reviews-container.moves-history .clients-reviews .review.row .review-body ul li {
+      font-size: 14px;
+      line-height: 20px; }
+      .clients-reviews-container.moves-history .clients-reviews .review.row .review-body ul li span {
+        font-weight: 600; }
+
+section#client-insurance, section#client-fqa, section#client-support {
+  background-color: #fff;
+  min-height: 500px;
+  padding: 15px 15px 25px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  z-index: 11;
+  position: relative; }
 
 /*==================================================
 =                     Sections                     =

@@ -1,0 +1,114 @@
+.client-profile {
+  div.user-info {
+    border-right: none !important;
+  }
+
+  &.clients-reviews-container {
+    border-top: 0;
+    margin-top: -80px;
+    @media only screen and (max-width: 480px) {
+      margin-top: 40px;
+    }
+
+    #reviews-sorting {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+  } 
+}
+
+.input-field.location-type-radio {
+  label {
+    position: relative;
+    width: 21%;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 18px;
+    @media only screen and (max-width: 768px) {
+      display: block;
+      width: 100%;
+
+    }
+    input{
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+    h4 {
+      margin: 0;
+      display: inline-block;
+      
+          @media only screen and (max-width: 991px) {
+
+      font-size: 14px;
+      }
+    }
+  }
+}
+
+.clients-reviews-container.moves-history{
+  .clients-reviews{
+    .review.row{
+      background-color: #ffffff;
+      padding: 15px 15px 25px;
+      box-sizing: border-box;
+      margin-bottom: 50px;
+      border-radius: 4px;
+      box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+      -webkit-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+      -moz-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+      -o-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+
+
+        .main-review-info {
+          .review-client-name{
+            margin-bottom: 6px;
+          }
+          .review-budget {
+          position: absolute;
+          right: 5px;
+          top: 6px;
+          font-size: 19px;
+          }
+        }
+      
+        .review-body{
+          h5{
+            margin-bottom: 10px;
+            color: #2e65b0;
+            
+          }
+          ul{
+            margin: 0;
+            padding-left: 18px;
+            li{
+                font-size: 14px;
+              line-height: 20px;
+              span{
+                font-weight: 600;
+                
+              }
+            }
+          }
+        }
+
+
+    }
+  }
+}
+
+
+section#client-insurance,section#client-fqa,section#client-support{
+  background-color: #fff;
+  min-height: 500px;
+  padding: 15px 15px 25px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 5px 50px -21px rgba(0, 0, 0, 0.8);
+  z-index: 11;
+  position: relative;
+}
