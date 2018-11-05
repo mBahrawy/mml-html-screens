@@ -972,7 +972,36 @@ function activeField(x){
   var inputLabel = x.prev('label');
   x.addClass("active-field");
   $(inputLabel).addClass("active");
-}
+
+
+}// ==========================================================
+//                Rating forms
+// ==========================================================
+
+var optionRadio = $('.input-field-radios label input');
+optionRadio.change(function(){
+
+  if ($(this).is(':checked')){
+    $(this).closest('.input-field-radios').find('label').removeClass("checked");
+    $(this).closest('label').addClass("checked");
+  }
+
+  var starVal = $(this).val();
+  var x = "progress-"+starVal*20;
+  $(this).closest('.input-field-radios').find('.label .rate').html(starVal+"/5");
+
+
+
+
+  $(this).closest('.input-field-radios').find('.charts-container').find('.pie-wrapper').removeClass("progress-100 progress-80 progress-60 progress-40 progress-20 progress-0");
+
+  $(this).closest('.input-field-radios').find('.charts-container').find('.pie-wrapper').addClass(x);
+  
+
+});
+
+
+
 
 
 // ==========================================================

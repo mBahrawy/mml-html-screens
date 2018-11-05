@@ -1,0 +1,455 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mover review</title>
+  <!--StyleSheets-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:400,600,700,800" rel="stylesheet">
+  <!--FlexBox-->
+  <link href="node_modules/flexboxgrid/css/flexboxgrid.min.css" rel="stylesheet">
+  <!--normalizer-->
+  <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
+  <!--Font-awesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <!-- SmartMenus core CSS (required) -->
+  <link href="assets/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+  <!-- "sm-mint" menu theme (optional, you can use your own CSS, too) -->
+  <link href="assets/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" />
+
+  <!-- jQuery Form validation -->
+  <link href="node_modules/jquery-form-validator/form-validator/theme-default.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!--[if lte IE 9]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
+  <!--HEADER-->
+  <header class="has-light-header-curve">
+    <div class="light-header-curve">
+    </div>
+    <div id="main-nav-wrapper" class="">
+      <div class="site-logo">
+        <a href="index.html"></a>
+      </div>
+      <div class="menu-container">
+        <div id="normal-nav-container">
+          <nav class="main-nav" role="navigation">
+            <!-- Sample menu definition -->
+            <ul id="main-menu" class="sm sm-clean">
+              <li>
+                <a href="search-helpers.html" class="">link</a>
+              </li>
+              <li>
+                <a href="search-helpers.html" class="">link</a>
+              </li>
+              <li>
+                <a href="search-helpers.html" class="">link</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <!-- Mobile menu toggle button (hamburger/x icon) -->
+        <a href="#" class="toggle-mobile-nav-btn collabsed">
+          <span class="bars">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="x">
+            <i class="fas fa-times"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div id="nav-container-for-mobile"> </div>
+  </header>
+  <div id="wrapper">
+
+    <section id="login-form-container" class="container">
+      <div class="row center-xs">
+
+
+
+        <div class="col-xs-8 inner-container review-container client-review">
+
+          <div class="head" id="sign-up-header">
+            <h3>Your feedback to mover : <span>Mover name</span></h3>
+            <p>Your feedback will be hidden until the mover write his feedback to you</p>
+          </div>
+          <form action="#" method="post">
+
+            <div class="input-field-radios">
+              <h4>How do you evaluate this service ?</h4>
+
+              <label for="rating-star-5">
+                <div class="star 5-star-img"></div><input type="radio" name="rating-star" id="rating-star-5" value="5">Excellent
+              </label>
+              <label for="rating-star-4">
+                <div class="star 4-star-img"></div><input type="radio" name="rating-star" id="rating-star-4" value="4">Good
+              </label>
+              <label for="rating-star-3">
+                <div class="star 3-star-img"></div><input type="radio" name="rating-star" id="rating-star-3" value="3">Average
+              </label>
+              <label for="rating-star-2">
+                <div class="star 2-star-img"></div><input type="radio" name="rating-star" id="rating-star-2" value="2">Poor
+              </label>
+              <label for="rating-star-1">
+                <div class="star 1-star-img"></div><input type="radio" name="rating-star" id="rating-star-1" value="1">Worst
+              </label>
+
+
+              <div class="set-size charts-container">
+                <div class="pie-wrapper progress-0 style-2">
+                  <span class="label"><span class="rate">?/5</span>
+                    <span class="smaller">Service</span></span>
+                  <div class="pie">
+                    <div class="left-side half-circle"></div>
+                    <div class="right-side half-circle"></div>
+                  </div>
+                  <div class="shadow"></div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <div class="input-field">
+              <label>Your feedback to mover : </label>
+              <textarea class="textbox text-box-review" name="review-body" cols="30" rows="10"></textarea>
+            </div>
+
+
+            <div class="input-field-radios">
+              <h4>How do you evaluate this attitude ?</h4>
+
+              <label for="attitude-star-5">
+                <div class="star 5-star-img"></div><input type="radio" name="attitude-star" id="attitude-star-5" value="5">5
+                Stars
+              </label>
+              <label for="attitude-star-4">
+                <div class="star 4-star-img"></div><input type="radio" name="attitude-star" id="attitude-star-4" value="4">4
+                Stars
+              </label>
+              <label for="attitude-star-3">
+                <div class="star 3-star-img"></div><input type="radio" name="attitude-star" id="attitude-star-3" value="3">3
+                Stars
+              </label>
+              <label for="attitude-star-2">
+                <div class="star 2-star-img"></div><input type="radio" name="attitude-star" id="attitude-star-2" value="2">2
+                Stars
+              </label>
+              <label for="attitude-star-1">
+                <div class="star 1-star-img"></div><input type="radio" name="attitude-star" id="attitude-star-1" value="1">1
+                Star
+              </label>
+
+              <div class="set-size charts-container">
+                <div class="pie-wrapper progress-0 style-2">
+                  <span class="label"><span class="rate">?/5</span>
+                    <span class="smaller">Attitude</span></span>
+                  <div class="pie">
+                    <div class="left-side half-circle"></div>
+                    <div class="right-side half-circle"></div>
+                  </div>
+                  <div class="shadow"></div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <div class="input-field-radios">
+              <h4>How do you evaluate this experience when moving stuff ?</h4>
+
+              <label for="experience-star-5">
+                <div class="star 5-star-img"></div><input type="radio" name="experience-star" id="experience-star-5"
+                  value="5">5 Stars
+              </label>
+              <label for="experience-star-4">
+                <div class="star 4-star-img"></div><input type="radio" name="experience-star" id="experience-star-4"
+                  value="4">4 Stars
+              </label>
+              <label for="experience-star-3">
+                <div class="star 3-star-img"></div><input type="radio" name="experience-star" id="experience-star-3"
+                  value="3">3 Stars
+              </label>
+              <label for="experience-star-2">
+                <div class="star 2-star-img"></div><input type="radio" name="experience-star" id="experience-star-2"
+                  value="2">2 Stars
+              </label>
+              <label for="experience-star-1">
+                <div class="star 1-star-img"></div><input type="radio" name="experience-star" id="experience-star-1"
+                  value="1">1 Star
+              </label>
+
+              <div class="set-size charts-container">
+                <div class="pie-wrapper progress-0 style-2">
+                  <span class="label"><span class="rate">?/5</span>
+                    <span class="smaller">Experience</span></span>
+                  <div class="pie">
+                    <div class="left-side half-circle"></div>
+                    <div class="right-side half-circle"></div>
+                  </div>
+                  <div class="shadow"></div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="input-field-radios">
+              <h4>How do you evaluate this equipment/vehicles</h4>
+              <label for="equipment-star-5">
+                <div class="star 1-star-img"></div><input type="radio" name="equipment-star" id="equipment-star-5"
+                  value="5">5 Stars
+              </label>
+              <label for="equipment-star-4">
+                <div class="star 2-star-img"></div><input type="radio" name="equipment-star" id="equipment-star-4"
+                  value="4">4 Stars
+              </label>
+              <label for="equipment-star-3">
+                <div class="star 3-star-img"></div><input type="radio" name="equipment-star" id="equipment-star-3"
+                  value="3">3 Stars
+              </label>
+              <label for="equipment-star-2">
+                <div class="star 4-star-img"></div><input type="radio" name="equipment-star" id="equipment-star-2"
+                  value="2">2 Stars
+              </label>
+              <label for="equipment-star-1">
+                <div class="star 5-star-img"></div><input type="radio" name="equipment-star" id="equipment-star-1"
+                  value="1">1 Star
+              </label>
+
+
+
+              <div class="set-size charts-container">
+                <div class="pie-wrapper progress-0 style-2">
+                  <span class="label"><span class="rate">?/5</span>
+                    <span class="smaller">Equipment</span></span>
+                  <div class="pie">
+                    <div class="left-side half-circle"></div>
+                    <div class="right-side half-circle"></div>
+                  </div>
+                  <div class="shadow"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="input-field-radios">
+              <h4>How do you evaluate this arrival on time ?</h4>
+              <label for="arrival-star-5">
+                <div class="star 1-star-img"></div><input type="radio" name="arrival-star" id="arrival-star-5" value="5">5
+                Stars
+              </label>
+              <label for="arrival-star-4">
+                <div class="star 2-star-img"></div><input type="radio" name="arrival-star" id="arrival-star-4" value="4">4
+                Stars
+              </label>
+              <label for="arrival-star-3">
+                <div class="star 3-star-img"></div><input type="radio" name="arrival-star" id="arrival-star-3" value="3">3
+                Stars
+              </label>
+              <label for="arrival-star-2">
+                <div class="star 4-star-img"></div><input type="radio" name="arrival-star" id="arrival-star-2" value="2">2
+                Stars
+              </label>
+              <label for="arrival-star-1">
+                <div class="star 5-star-img"></div><input type="radio" name="arrival-star" id="arrival-star-1" value="1">1
+                Star
+              </label>
+
+
+              <div class="set-size charts-container">
+                <div class="pie-wrapper progress-0 style-2">
+                  <span class="label"><span class="rate">?/5</span>
+                    <span class="smaller">Arrival time</span></span>
+                  <div class="pie">
+                    <div class="left-side half-circle"></div>
+                    <div class="right-side half-circle"></div>
+                  </div>
+                  <div class="shadow"></div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <button type="submit" class="btn btn-orange">Submit your feedback</button>
+
+          </form>
+        </div>
+      </div>
+  </div>
+  </section>
+  </div>
+
+  <footer class="has-top-curves">
+    <div class="footer-top-curves">
+    </div>
+    <div class="container-fluid">
+      <div class="row center-xs">
+        <div class="col-md-3 col-sm-12 break-width">
+          <a href="#">
+            <div class="footer-site-logo"></div>
+          </a>
+          <p>
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vetl velit auctor aliquet.
+          </p>
+          <div class="social-group">
+            <span class="social-line"></span>
+            <nav class="social-links">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-google-plus-g fa-lg"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <span class="social-line"></span>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-4 break-width">
+          <h4>Home</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Search for a helper</a>
+              </li>
+              <li>
+                <a href="#">Education</a>
+              </li>
+              <li>
+                <a href="#">How it works</a>
+              </li>
+              <li>
+                <a href="#">Client’s area</a>
+              </li>
+              <li>
+                <a href="#">Join us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>Help</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Help topics</a>
+              </li>
+              <li>
+                <a href="#">FAQ’s</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of use</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 col-xs-4  break-width">
+          <h4>New helper ?</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Create account</a>
+              </li>
+              <li>
+                <a href="#">Fees</a>
+              </li>
+              <li>
+                <a href="#">Documentations</a>
+              </li>
+              <li>
+                <a href="#">Payments</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 col-sm-12 search-col">
+          <h4>Subscribe for news letter
+            <small>No spam, we promise</small>
+          </h4>
+          <form class="search-box-group" action="" name="search-form">
+            <input type="email" name="search-box" class="textbox" id="search-box" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+          </form>
+          <nav class="app-links">
+            <h4>Get Our App</h4>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-apple fa-lg"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-android fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row center-xs copy-rights bottom-xs">
+        <div class="col-sm-4">
+          <span>Copy right 2018 © MyMovingLabor.com All rights are reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="assets/js/vendor/jquery.smartmenus.min.js"></script>
+
+  <!-- Time picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+  <!-- Form valiator -->
+  <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+
+  <!-- Slick slider-->
+  <script src="assets/js/slick.min.js"></script>
+
+  <!-- Js codes -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
