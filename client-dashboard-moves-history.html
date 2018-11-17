@@ -47,11 +47,7 @@
               </li>
 
               <li>
-                <a href="#">Moves</a>
-                <ul>
-                  <li><a href="client-dashboard-current.html">Current move</a></li>
-                  <li><a class="active" href="client-dashboard-moves-history.html">Moves History</a></li>
-                </ul>
+                <a href="client-dashboard-moves-history.html">Moves</a>
               </li>
               <li>
                 <a href="#">Profile</a>
@@ -106,19 +102,30 @@
   <div id="wrapper">
 
     <section class="container content-wrapper clients-reviews-container  client-profile moves-history">
-      <h3>Moves History<br>
+      <h3>Your all moves list<br>
         <small>
-          3 Previous Moves
+          3 total Moves
         </small></h3>
 
-      <select name="" id="reviews-sorting">
-        <option value="">Newest First</option>
-        <option value="">Oldest First</option>
-        <option value="">High budget</option>
-        <option value="">Low budget</option>
-        <option value="">Hight rating</option>
-        <option value="">Low rating</option>
-      </select>
+      <div class="moves-control-buttons">
+
+        <button id="bending" class=""><i class="fas fa-clock"></i> Bending (3)</button>
+        <button id="accepted" class="active"><i class="fas fa-user-check"></i> Accepted (1)</button>
+        <button id="active" class=""><i class="fas fa-truck"></i> Active (0)</button>
+        <button id="ended" class=""><i class="fas fa-box-open"></i> Ended (4)</button>
+        <button id="cancelled" class=""><i class="fas fa-times-circle"></i> Cancelled (1)</button>
+
+        <select name="" id="reviews-sorting">
+          <option value="">Newest First</option>
+          <option value="">Oldest First</option>
+          <option value="">High budget</option>
+          <option value="">Low budget</option>
+          <option value="">Hight rating</option>
+          <option value="">Low rating</option>
+        </select>
+
+      </div>
+
 
       <div class="clients-reviews">
 
@@ -153,6 +160,70 @@
                   < 400Lbs</li> <li><span>Using truck :</span> Yes
                 </li>
               </ul>
+
+
+<!-- This for pending move -
+              <div class="status pending">
+                <div class="my-img">
+                </div>
+                <h4>Status : Pending</h4>
+                <small>This move is not yet confirmed from the mover's end</small>
+
+              </div>
+            -->
+
+
+       <!-- This for accepted move -->
+              <div class="status accepted">
+                <div class="my-img">
+                </div>
+                <h4>Status : Accepted</h4>
+                <small>This move is accepted by Mover, Waiting for your date to move.</small>
+
+              </div>
+              
+            
+
+
+        <!-- This for active move 
+              <div class="status active">
+                <div class="my-img">
+                </div>
+                <h4>Status : Active</h4>
+                <small>Today is your moving day, Please wait for the movers to arrive.</small>
+
+              </div>
+               
+            -->
+
+
+            
+
+        <!-- This for ended move 
+              <div class="status ended">
+                <div class="my-img">
+                </div>
+                <h4>Status : Ended</h4>
+                <small>This Move has ended, Don't forget to rate the Mover.</small>
+              </div>
+               
+            -->
+           
+
+     <!-- This for cancelled move 
+              <div class="status cancelled">
+                <div class="my-img">
+                </div>
+                <h4>Status : Cancelled</h4>
+                <small>This move has been cancelled</small>
+              </div>
+               
+            -->
+
+
+
+
+
             </div>
           </div>
         </div>
